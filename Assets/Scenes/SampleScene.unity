@@ -876,6 +876,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -7.052
       objectReference: {fileID: 0}
+    - target: {fileID: -5259225927154676129, guid: 3d60a6268d147cf449a0ce90301a09ee,
+        type: 3}
+      propertyPath: m_Name
+      value: Player Red
+      objectReference: {fileID: 0}
+    - target: {fileID: -4425609515867240179, guid: 3d60a6268d147cf449a0ce90301a09ee,
+        type: 3}
+      propertyPath: m_Name
+      value: Player Yellow
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 3d60a6268d147cf449a0ce90301a09ee,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -950,6 +960,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TabPlace
+      objectReference: {fileID: 0}
+    - target: {fileID: 748748645750174535, guid: 3d60a6268d147cf449a0ce90301a09ee,
+        type: 3}
+      propertyPath: m_Name
+      value: Player Orange
       objectReference: {fileID: 0}
     - target: {fileID: 8304545770963488453, guid: 3d60a6268d147cf449a0ce90301a09ee,
         type: 3}
