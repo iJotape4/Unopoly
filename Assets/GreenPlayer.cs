@@ -12,6 +12,9 @@ public class GreenPlayer : MonoBehaviour
     int rpposiicion;
     public int punto;
     bool movimie;
+
+    public int Player1Turn = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +27,15 @@ public class GreenPlayer : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.X) && !movimie)
         {
-            punto = Random.Range(2, 12);
+            if (Player1Turn != ControlPlayer.control.Turno)
+            {
+                return;
+            }
+            else if (Player1Turn == ControlPlayer.control.Turno)
+            {
+            }
+
+            punto = Random.Range(2,12  );
             Debug.Log("Resul"+punto);
             total = punto;
             Resultado.text = " " + total;
@@ -36,6 +47,14 @@ public class GreenPlayer : MonoBehaviour
             {
                 Debug.Log("Resultado");
             }
+            if (Player1Turn.Equals(ControlPlayer.control.Turno))
+            {
+                if (Player1Turn > 2)
+                {
+                }
+                ControlPlayer.control.Turno = +2;
+            }
+
         }
     }
     IEnumerator Move()
@@ -46,7 +65,8 @@ public class GreenPlayer : MonoBehaviour
 
         }
         movimie = true;
-        while (punto > 0)
+        if (Player1Turn.Equals(ControlPlayer.control.Turno))
+            while (punto > 0)
         {
             Vector3 nextPos = Rott.Puesto[rpposiicion + 0].position;
             while (MoveToNexNode(nextPos)) { yield return null; }
