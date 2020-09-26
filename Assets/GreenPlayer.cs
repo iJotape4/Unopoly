@@ -12,6 +12,8 @@ public class GreenPlayer : MonoBehaviour
     int rpposiicion;
     public int punto;
     bool movimie;
+    public int resto;
+    bool startGame;
 
     public int Player1Turn = 1;
 
@@ -20,6 +22,8 @@ public class GreenPlayer : MonoBehaviour
     {
         total =0;
         Resultado.text = "";
+
+
     }
 
     // Update is called once per frame
@@ -35,17 +39,20 @@ public class GreenPlayer : MonoBehaviour
             {
             }
 
-            punto = Random.Range(2,12  );
+            punto = Random.Range(2,13);
             Debug.Log("Resul"+punto);
             total = punto;
             Resultado.text = " " + total;
+           
             if (rpposiicion + punto < Rott.Puesto.Count)
             {
                 StartCoroutine(Move());
             }
             else
             {
-                Debug.Log("Resultado");
+                resto = (rpposiicion + punto) - 40;
+                punto = 40 - rpposiicion;
+                StartCoroutine(Move(resto));
             }
             if (Player1Turn.Equals(ControlPlayer.control.Turno))
             {
@@ -65,6 +72,7 @@ public class GreenPlayer : MonoBehaviour
 
         }
         movimie = true;
+
         if (Player1Turn.Equals(ControlPlayer.control.Turno))
             while (punto > 0)
         {
@@ -77,6 +85,44 @@ public class GreenPlayer : MonoBehaviour
         }
         movimie = false;
         }
+
+    //Método para completar una vuelta
+    IEnumerator Move(int resto)
+    {
+        {
+            if (movimie)
+            {
+                yield break;
+
+            }
+            movimie = true;
+
+            if (Player1Turn.Equals(ControlPlayer.control.Turno))
+                while (punto > 0)
+                {
+                    Vector3 nextPos = Rott.Puesto[rpposiicion + 0].position;
+                    while (MoveToNexNode(nextPos)) { yield return null; }
+
+                    yield return new WaitForSeconds(0.1f);
+                    punto--;
+                    rpposiicion++;
+                }
+                punto = resto;
+                rpposiicion = 0;
+                while (punto > 0)
+                {
+                    Vector3 nextPos = Rott.Puesto[rpposiicion + 0].position;
+                    while (MoveToNexNode(nextPos)) { yield return null; }
+
+                    yield return new WaitForSeconds(0.1f);
+                    punto--;
+                    rpposiicion++;
+                }
+
+            movimie = false;
+        }
+    }
+
     bool MoveToNexNode(Vector3 goal)
     {
         return goal != (transform.position = Vector3.MoveTowards(transform.position, goal, 2f *Time.deltaTime));

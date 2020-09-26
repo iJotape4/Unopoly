@@ -11,6 +11,7 @@ public class BluePlayer : MonoBehaviour
     int rpposiicion;
     public int punto;
     bool movimie;
+    public int resto;
 
     public int PlayerTurn = 2;
 
@@ -44,7 +45,9 @@ public class BluePlayer : MonoBehaviour
             }
             else
             {
-                Debug.Log("Resultado");
+                resto = (rpposiicion + punto) - 40;
+                punto = 40 - rpposiicion;
+                StartCoroutine(Move(resto));
             }
             if (PlayerTurn.Equals(ControlPlayer.control.Turno))
             {
@@ -75,6 +78,42 @@ public class BluePlayer : MonoBehaviour
                 rpposiicion++;
             }
         movimie = false;
+    }
+
+    IEnumerator Move(int resto)
+    {
+        {
+            if (movimie)
+            {
+                yield break;
+
+            }
+            movimie = true;
+
+            if (PlayerTurn.Equals(ControlPlayer.control.Turno))
+                while (punto > 0)
+                {
+                    Vector3 nextPos = Rott.Puesto[rpposiicion + 0].position;
+                    while (MoveToNexNode(nextPos)) { yield return null; }
+
+                    yield return new WaitForSeconds(0.1f);
+                    punto--;
+                    rpposiicion++;
+                }
+            punto = resto;
+            rpposiicion = 0;
+            while (punto > 0)
+            {
+                Vector3 nextPos = Rott.Puesto[rpposiicion + 0].position;
+                while (MoveToNexNode(nextPos)) { yield return null; }
+
+                yield return new WaitForSeconds(0.1f);
+                punto--;
+                rpposiicion++;
+            }
+
+            movimie = false;
+        }
     }
     bool MoveToNexNode(Vector3 goal)
     {
