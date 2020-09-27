@@ -1,7 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Scripting.APIUpdating;
 using UnityEngine.UI;
 
 public class GreenPlayer : MonoBehaviour
@@ -11,10 +9,9 @@ public class GreenPlayer : MonoBehaviour
     public GO Rott;
     int rpposiicion;
     public int punto;
-    bool movimie;
-    public int resto;
-    bool startGame;
-
+    public static bool movimie;
+    public int resto;   
+    public bool AnotherMove;
     public int Player1Turn = 1;
 
     // Start is called before the first frame update
@@ -29,7 +26,8 @@ public class GreenPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X) && !movimie)
+        AnotherMove = BluePlayer.movimie;
+        if (Input.GetKeyDown(KeyCode.X) && !movimie && !AnotherMove )
         {
             if (Player1Turn != ControlPlayer.control.Turno)
             {

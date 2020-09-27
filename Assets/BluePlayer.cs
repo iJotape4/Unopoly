@@ -10,10 +10,13 @@ public class BluePlayer : MonoBehaviour
     public GO Rott;
     int rpposiicion;
     public int punto;
-    bool movimie;
-    public int resto;
+    public static bool movimie;
+    public int resto; 
+    
 
     public int PlayerTurn = 2;
+
+    public bool AnotherMove;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +28,9 @@ public class BluePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z) && !movimie)
+       // GreenPlayer GreenMov = GetComponent<GreenPlayer>();
+        AnotherMove = GreenPlayer.movimie;
+        if (Input.GetKeyDown(KeyCode.Z) && !movimie && !AnotherMove)
         {
             if (PlayerTurn != ControlPlayer.control.Turno)
             {
