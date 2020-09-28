@@ -69,3 +69,11 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+Library/ScriptAssemblies/Assembly-CSharp.dll
+Library/ScriptAssemblies/Assembly-CSharp.pdb
+Library/SourceAssetDB
+Library/StateCache/Hierarchy/b04584-mainStage.json
+Library/StateCache/SceneView/50d6f9-mainStage.json
+Library/ArtifactDB
+Assets/Scripts/SimpleCameraController.cs

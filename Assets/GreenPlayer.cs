@@ -19,6 +19,10 @@ public class GreenPlayer : MonoBehaviour
     public Quaternion Arriba = new Quaternion(0.0f, 1.0f, 0.0f, 0.0f);
     public Quaternion Derecha = new Quaternion(0.0f, -0.7f, 0.0f, 0.7f);
 
+    public Vector3 PosAbj = new Vector3(-0.0127f, 0.0234f, 0.0063f);
+    public Vector3 PosIzq = new Vector3(-0.02294f, -0.0027f, 0.0063f);
+    public Vector3 PosArr = new Vector3(0.0009f, -0.0205f, 0.00441f);
+    public Vector3 PosDer = new Vector3(0.0224f, -0.003f, 0.0063f);
 
     //public Camera camara;
 
@@ -93,23 +97,9 @@ public class GreenPlayer : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             punto--;
             rpposiicion++;
-                Camera camara = GetComponentInChildren<Camera>();
-                if (rpposiicion < 10)
-                {
-                    camara.transform.rotation = Abajo;
-                }
-                else if (rpposiicion >= 30)
-                {           
-                    camara.transform.rotation = Derecha;
-                   
-                }else if (rpposiicion >= 20)
-                {
-                    camara.transform.rotation = Arriba;
-                }
-                else if (rpposiicion >= 10)
-                {
-                    camara.transform.rotation = Izquierda;
-                }
+
+                MoveCamera();
+
             }
         movimie = false;
         }
@@ -145,7 +135,8 @@ public class GreenPlayer : MonoBehaviour
                     yield return new WaitForSeconds(0.1f);
                     punto--;
                     rpposiicion++;
-                }
+                MoveCamera();
+            }
 
             movimie = false;
         }
@@ -157,5 +148,30 @@ public class GreenPlayer : MonoBehaviour
 
     }
 
+    void  MoveCamera()
+    {
+        Camera camara = GetComponentInChildren<Camera>();
+        if (rpposiicion < 10)
+        {
+            camara.transform.rotation = Abajo;
+            camara.transform.localPosition = PosAbj;
+        }
+        else if (rpposiicion >= 30)
+        {
+            camara.transform.rotation = Derecha;
+            camara.transform.localPosition = PosDer;
+
+        }
+        else if (rpposiicion >= 20)
+        {
+            camara.transform.rotation = Arriba;
+            camara.transform.localPosition = PosArr;
+        }
+        else if (rpposiicion >= 10)
+        {
+            camara.transform.localPosition = PosIzq;
+            camara.transform.rotation = Izquierda;
+        }
+    }
      
     }

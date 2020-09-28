@@ -1247,6 +1247,10 @@ MonoBehaviour:
   Izquierda: {x: 0, y: 0.7, z: 0, w: 0.7}
   Arriba: {x: 0, y: 1, z: 0, w: 0}
   Derecha: {x: 0, y: -0.7, z: 0, w: 0.7}
+  PosAbj: {x: -0.0127, y: 0.0234, z: 0.0063}
+  PosIzq: {x: -0.02294, y: -0.0027, z: 0.0063}
+  PosArr: {x: 0.0009, y: -0.0205, z: 0.00441}
+  PosDer: {x: 0.0224, y: -0.003, z: 0.0063}
 --- !u!1 &1444346812
 GameObject:
   m_ObjectHideFlags: 0
