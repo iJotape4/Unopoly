@@ -15,7 +15,6 @@ public class BluePlayer : MonoBehaviour
     
 
     public int PlayerTurn = 2;
-
     public bool AnotherMove;
 
     // Start is called before the first frame update
@@ -28,7 +27,6 @@ public class BluePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // GreenPlayer GreenMov = GetComponent<GreenPlayer>();
         AnotherMove = GreenPlayer.movimie;
         if (Input.GetKeyDown(KeyCode.Z) && !movimie && !AnotherMove)
         {

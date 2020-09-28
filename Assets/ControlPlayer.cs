@@ -1,12 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityTemplateProjects;
 
 public class ControlPlayer : MonoBehaviour
 {
     public int Turno = 0;
     public int LImitedeTurno = 2;
     public static ControlPlayer control;
+    public SimpleCameraController.CameraState camara;
+
+    
+   public BluePlayer Blue;
+
     void Start()
     {
         control = this.GetComponent<ControlPlayer>();
@@ -17,5 +23,8 @@ public class ControlPlayer : MonoBehaviour
         {
             Turno = 2;
         }
+
+        GreenPlayer GreenMov = GetComponent<GreenPlayer>();
+       camara.Translate( GreenMov.transform.position);
     }
 }

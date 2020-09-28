@@ -14,6 +14,14 @@ public class GreenPlayer : MonoBehaviour
     public bool AnotherMove;
     public int Player1Turn = 1;
 
+    public Quaternion Abajo = new Quaternion(0.0f, 0.0f, 0.0f, 1.0f);
+    public Quaternion Izquierda = new Quaternion(0.0f, 0.7f, 0.0f, 0.7f);
+    public Quaternion Arriba = new Quaternion(0.0f, 1.0f, 0.0f, 0.0f);
+    public Quaternion Derecha = new Quaternion(0.0f, -0.7f, 0.0f, 0.7f);
+
+
+    //public Camera camara;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +34,10 @@ public class GreenPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        Camera camara = GetComponentInChildren<Camera>();
+        Debug.Log("camara rotate" + camara.transform.rotation);
+      
         AnotherMove = BluePlayer.movimie;
         if (Input.GetKeyDown(KeyCode.X) && !movimie && !AnotherMove )
         {
@@ -37,7 +49,7 @@ public class GreenPlayer : MonoBehaviour
             {
             }
 
-            punto = Random.Range(2,13);
+            punto = Random.Range(40,40);
             Debug.Log("Resul"+punto);
             total = punto;
             Resultado.text = " " + total;
@@ -59,6 +71,7 @@ public class GreenPlayer : MonoBehaviour
                 }
                 ControlPlayer.control.Turno = +2;
             }
+           
 
         }
     }
@@ -80,7 +93,24 @@ public class GreenPlayer : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             punto--;
             rpposiicion++;
-        }
+                Camera camara = GetComponentInChildren<Camera>();
+                if (rpposiicion < 10)
+                {
+                    camara.transform.rotation = Abajo;
+                }
+                else if (rpposiicion >= 30)
+                {           
+                    camara.transform.rotation = Derecha;
+                   
+                }else if (rpposiicion >= 20)
+                {
+                    camara.transform.rotation = Arriba;
+                }
+                else if (rpposiicion >= 10)
+                {
+                    camara.transform.rotation = Izquierda;
+                }
+            }
         movimie = false;
         }
 
