@@ -24,7 +24,5 @@ public class ControlPlayer : MonoBehaviour
             Turno = 2;
         }
 
-        GreenPlayer GreenMov = GetComponent<GreenPlayer>();
-       camara.Translate( GreenMov.transform.position);
     }
 }

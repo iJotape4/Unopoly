@@ -67,6 +67,8 @@
     <Compile Include="Assets\ControlPlayer.cs" />
     <Compile Include="Assets\GO.cs" />
     <Compile Include="Assets\GreenPlayer.cs" />
+    <Compile Include="Assets\Player.cs" />
+    <Compile Include="Assets\Scripts\Backup\GreenPlayerB.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Tutorial_Info\Scripts\Readme.cs" />
     <Reference Include="Unity.Timeline.Editor">
