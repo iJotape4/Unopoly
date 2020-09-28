@@ -14,6 +14,8 @@ public class GreenPlayer : MonoBehaviour
     public bool AnotherMove;
     public int Player1Turn = 1;
 
+    public Camera BlueCam;
+
     public Quaternion Abajo = new Quaternion(0.0f, 0.0f, 0.0f, 1.0f);
     public Quaternion Izquierda = new Quaternion(0.0f, 0.7f, 0.0f, 0.7f);
     public Quaternion Arriba = new Quaternion(0.0f, 1.0f, 0.0f, 0.0f);
@@ -22,7 +24,7 @@ public class GreenPlayer : MonoBehaviour
     public Vector3 PosAbj = new Vector3(-0.0127f, 0.0234f, 0.0063f);
     public Vector3 PosIzq = new Vector3(-0.02294f, -0.0027f, 0.0063f);
     public Vector3 PosArr = new Vector3(0.0009f, -0.0205f, 0.00441f);
-    public Vector3 PosDer = new Vector3(0.0224f, -0.003f, 0.0063f);
+    public Vector3 PosDer = new Vector3(0.0224f, -0.0226f, 0.0063f);
 
     //public Camera camara;
 
@@ -40,7 +42,7 @@ public class GreenPlayer : MonoBehaviour
     {
         
         Camera camara = GetComponentInChildren<Camera>();
-        Debug.Log("camara rotate" + camara.transform.rotation);
+       
       
         AnotherMove = BluePlayer.movimie;
         if (Input.GetKeyDown(KeyCode.X) && !movimie && !AnotherMove )
@@ -53,7 +55,7 @@ public class GreenPlayer : MonoBehaviour
             {
             }
 
-            punto = Random.Range(40,40);
+            punto = Random.Range(2,13);
             Debug.Log("Resul"+punto);
             total = punto;
             Resultado.text = " " + total;
@@ -81,6 +83,7 @@ public class GreenPlayer : MonoBehaviour
     }
     IEnumerator Move()
         {
+        Camera camara = GetComponentInChildren<Camera>();
         if (movimie)
         {
             yield break;
@@ -89,7 +92,8 @@ public class GreenPlayer : MonoBehaviour
         movimie = true;
 
         if (Player1Turn.Equals(ControlPlayer.control.Turno))
-            while (punto > 0)
+            
+        while (punto > 0)
         {
             Vector3 nextPos = Rott.Puesto[rpposiicion + 0].position;
             while (MoveToNexNode(nextPos)) { yield return null; }
@@ -102,13 +106,15 @@ public class GreenPlayer : MonoBehaviour
 
             }
         movimie = false;
-        }
+        camara.enabled = false;
+        BlueCam.enabled = true;        
+    }
 
     //Método para completar una vuelta
     IEnumerator Move(int resto)
     {
-        {
-            if (movimie)
+        Camera camara = GetComponentInChildren<Camera>();
+        if (movimie)
             {
                 yield break;
 
@@ -116,7 +122,8 @@ public class GreenPlayer : MonoBehaviour
             movimie = true;
 
             if (Player1Turn.Equals(ControlPlayer.control.Turno))
-                while (punto > 0)
+         
+        while (punto > 0)
                 {
                     Vector3 nextPos = Rott.Puesto[rpposiicion + 0].position;
                     while (MoveToNexNode(nextPos)) { yield return null; }
@@ -124,6 +131,7 @@ public class GreenPlayer : MonoBehaviour
                     yield return new WaitForSeconds(0.1f);
                     punto--;
                     rpposiicion++;
+                    MoveCamera();
                 }
                 punto = resto;
                 rpposiicion = 0;
@@ -137,9 +145,9 @@ public class GreenPlayer : MonoBehaviour
                     rpposiicion++;
                 MoveCamera();
             }
-
-            movimie = false;
-        }
+        camara.enabled = false;
+        BlueCam.enabled = true;
+        movimie = false;       
     }
 
     bool MoveToNexNode(Vector3 goal)
