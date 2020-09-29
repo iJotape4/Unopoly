@@ -24,17 +24,10 @@ public class GreenPlayer : Player
             {
                 return;
             }
-            else if (PlayerTurn == ControlPlayer.control.Turno)
-            {
-            }
-
             LanzarDado(PlayerTurn);
 
             if (PlayerTurn.Equals(ControlPlayer.control.Turno))
             {
-                if (PlayerTurn > 2)
-                {
-                }
                 ControlPlayer.control.Turno = +2;
             }
         }

@@ -19,17 +19,11 @@ public class BluePlayer : Player
             {
                 return;
             }
-            else if (PlayerTurn == ControlPlayer.control.Turno)
-            {
-            }
 
             LanzarDado(PlayerTurn);
 
             if (PlayerTurn.Equals(ControlPlayer.control.Turno))
             {
-                if (PlayerTurn > 1)
-                {
-                }
                 ControlPlayer.control.Turno = +1;
             }
 

@@ -8,10 +8,7 @@ public class ControlPlayer : MonoBehaviour
     public int Turno = 0;
     public int LImitedeTurno = 2;
     public static ControlPlayer control;
-    public SimpleCameraController.CameraState camara;
 
-    
-   public BluePlayer Blue;
 
     void Start()
     {

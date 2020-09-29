@@ -12,11 +12,12 @@ public class Player : MonoBehaviour
     protected int rpposiicion;
     public int punto;
     public static bool movimie;
-    public int resto;
+     
     public Camera AnotherCam;
 
     public bool AnotherMove;
 
+    public static bool Cards;
 
     [HideInInspector]
     public Quaternion Abajo = new Quaternion(0.0f, 0.0f, 0.0f, 1.0f);
@@ -57,7 +58,8 @@ public class Player : MonoBehaviour
 
     public void LanzarDado(int PlayerTurn)
     {
-        punto = Random.Range(2, 13);
+        int resto;
+        punto = Random.Range(2, 2);
         Debug.Log("Resul" + punto);
         total = punto;
         Resultado.text = " " + total;
@@ -71,6 +73,11 @@ public class Player : MonoBehaviour
             resto = (rpposiicion + punto) - 40;
             punto = 40 - rpposiicion;
             StartCoroutine(Move(resto, PlayerTurn));
+        }
+
+        if(rpposiicion == 2)
+        {
+            Cards = true;
         }
 
     }
@@ -163,7 +170,7 @@ public class Player : MonoBehaviour
 
         }
         movimie = true;
-        if (PlayerTurn.Equals(ControlPlayer.control.Turno))
+        if (PlayerTurn.Equals(ControlPlayer.control.Turno)) 
 
             while (punto > 0)
             {
@@ -191,6 +198,5 @@ public class Player : MonoBehaviour
         }
         FinishTurn();
     }
-
 }
 
