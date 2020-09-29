@@ -9,7 +9,8 @@ public class CardsController : MonoBehaviour
 {
 
     public Image CardImage;
-    public Sprite[] Cards;
+    public Sprite[] ChanceCards;
+    public Sprite[] ComArcsCards;
     public int CardsNum;
     public int elegida;
     public static int turno;
@@ -18,8 +19,12 @@ public class CardsController : MonoBehaviour
     void Start()
     {
         CardImage = GameObject.Find("Image").GetComponent<Image>();      
-        Cards = Resources.LoadAll<Sprite>("Tarjetas");
-        CardsNum = Cards.Length;
+        ChanceCards = Resources.LoadAll<Sprite>("Chances");
+        CardsNum = ChanceCards.Length;
+
+        ComArcsCards = Resources.LoadAll<Sprite>("ComArcs");
+        CardsNum = ComArcsCards.Length;
+
         CardImage.enabled = false;
     }
 
@@ -34,9 +39,23 @@ public class CardsController : MonoBehaviour
     }
     public  void ShowCard()
     {
+        Sprite[] Cards = {};
+
         if (!CardImage.enabled) {
+
+            if (Player.Chances)
+            {
+                Cards = ChanceCards;
+                Player.Chances = false;
+            }
+            if (Player.ComARrcs)
+            {
+                Cards = ComArcsCards;
+                Player.ComARrcs = false;
+            }
+
             CardImage.enabled = true;
-            elegida = Random.Range(0, 4);
+            elegida = Random.Range(0, Cards.Length);
             CardImage.sprite = Cards[elegida];
             Debug.Log("card " + elegida);       
         }

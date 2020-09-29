@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
     public int PlayerTurn;
 
     public static bool Cards;
+    public static bool Chances;
+    public static bool ComARrcs;
 
     [HideInInspector]
     public Quaternion Abajo = new Quaternion(0.0f, 0.0f, 0.0f, 1.0f);
@@ -152,17 +154,29 @@ public class Player : MonoBehaviour
                 rpposiicion++;
                 MoveCamera();
 
-                if (rpposiicion == 2)
-                {
-                    Cards = true;
-                    CardsController.turno = PlayerTurn;
-                }
+                ComprobateCards();
+
+            
             }
         FinishTurn();
     }
 
+    public void ComprobateCards()
+    {
+        if ((rpposiicion == 2 || rpposiicion == 17 || rpposiicion == 33)  &&punto == 0)
+        {
+            ComARrcs = true;
+            Cards = true;           
+            CardsController.turno = PlayerTurn;
+        }
 
-
+        if ((rpposiicion == 7 || rpposiicion == 22 || rpposiicion == 36) && punto == 0)
+        {
+            Chances = true;
+            Cards = true;         
+            CardsController.turno = PlayerTurn;
+        }
+    }
 
 
     //Método para completar una vuelta
@@ -200,6 +214,8 @@ public class Player : MonoBehaviour
             punto--;
             rpposiicion++;
             MoveCamera();
+
+            ComprobateCards();
         }
         FinishTurn();
     }
