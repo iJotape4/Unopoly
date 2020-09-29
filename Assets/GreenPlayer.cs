@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class GreenPlayer : Player
 {
-    public int PlayerTurn = 1;
+     
 
     
 
@@ -12,13 +12,14 @@ public class GreenPlayer : Player
     void Start()
     {
         AnotherCam.enabled = false;
+        PlayerTurn = 1;
     }
 
     // Update is called once per frame
     void Update()
     {                   
         AnotherMove = BluePlayer.movimie;
-        if (Input.GetKeyDown(KeyCode.X) && !movimie && !AnotherMove )
+        if (Input.GetKeyDown(KeyCode.X) && !movimie && !AnotherMove && !Cards )
         {
             if (PlayerTurn != ControlPlayer.control.Turno)
             {

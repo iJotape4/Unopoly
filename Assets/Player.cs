@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     public Camera AnotherCam;
 
     public bool AnotherMove;
+    public int PlayerTurn;
 
     public static bool Cards;
 
@@ -75,10 +76,7 @@ public class Player : MonoBehaviour
             StartCoroutine(Move(resto, PlayerTurn));
         }
 
-        if(rpposiicion == 2)
-        {
-            Cards = true;
-        }
+        
 
     }
 
@@ -154,9 +152,16 @@ public class Player : MonoBehaviour
                 rpposiicion++;
                 MoveCamera();
 
+                if (rpposiicion == 2)
+                {
+                    Cards = true;
+                    CardsController.turno = PlayerTurn;
+                }
             }
         FinishTurn();
     }
+
+
 
 
 
