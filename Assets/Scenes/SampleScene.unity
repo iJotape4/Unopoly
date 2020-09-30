@@ -210,6 +210,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1122983935}
   - {fileID: 755193017}
   m_Father: {fileID: 574288390}
   m_RootOrder: 2
@@ -1090,7 +1091,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 169070962}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1146,9 +1147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CardImage: {fileID: 755193018}
-  Cards:
-  - {fileID: 0}
-  - {fileID: 0}
+  ChanceCards: []
+  ComArcsCards: []
   CardsNum: 0
   elegida: 0
 --- !u!1 &795828492
@@ -1241,6 +1241,83 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1122983934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1122983935}
+  - component: {fileID: 1122983937}
+  - component: {fileID: 1122983936}
+  m_Layer: 5
+  m_Name: PlayerText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1122983935
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122983934}
+  m_LocalRotation: {x: 0, y: 0.004363274, z: 0, w: 0.9999905}
+  m_LocalPosition: {x: 0, y: 0, z: 632}
+  m_LocalScale: {x: 7.1, y: 5.8, z: 3.52}
+  m_Children: []
+  m_Father: {fileID: 169070962}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0.5, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -13, y: -104}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &1122983936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122983934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8773585, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 17
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 209
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Player 1 turn
+--- !u!222 &1122983937
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122983934}
+  m_CullTransparentMesh: 0
 --- !u!1 &1174249416
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,7 +1484,9 @@ MonoBehaviour:
   Rott: {fileID: 1550032409}
   punto: 0
   AnotherCam: {fileID: 2058606964}
+  PlayerText: {fileID: 1122983936}
   AnotherMove: 0
+  PlayerTurn: 1
   Abajo: {x: 0, y: 0, z: 0, w: 1}
   Izquierda: {x: 0, y: 0.7, z: 0, w: 0.7}
   Arriba: {x: 0, y: 1, z: 0, w: 0}
@@ -1416,7 +1495,6 @@ MonoBehaviour:
   PosIzq: {x: -0.02294, y: -0.0027, z: 0.0063}
   PosArr: {x: 0.0009, y: -0.0226, z: 0.0063}
   PosDer: {x: 0.0224, y: -0.003, z: 0.0063}
-  PlayerTurn: 1
 --- !u!1 &1444346812
 GameObject:
   m_ObjectHideFlags: 0
@@ -2722,7 +2800,9 @@ MonoBehaviour:
   Rott: {fileID: 1550032409}
   punto: 0
   AnotherCam: {fileID: 1444346815}
+  PlayerText: {fileID: 1122983936}
   AnotherMove: 1
+  PlayerTurn: 2
   Abajo: {x: 0, y: 0, z: 0, w: 1}
   Izquierda: {x: 0, y: 0.7, z: 0, w: 0.7}
   Arriba: {x: 0, y: 1, z: 0, w: 0}
@@ -2731,7 +2811,6 @@ MonoBehaviour:
   PosIzq: {x: -0.02294, y: -0.0027, z: 0.0063}
   PosArr: {x: 0.0009, y: -0.0205, z: 0.00441}
   PosDer: {x: 0.0224, y: -0.0226, z: 0.0063}
-  PlayerTurn: 2
 --- !u!4 &828228034627669944
 Transform:
   m_ObjectHideFlags: 0

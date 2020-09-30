@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public static bool movimie;
      
     public Camera AnotherCam;
+    public Text PlayerText;
 
     public bool AnotherMove;
     public int PlayerTurn;
@@ -49,7 +50,9 @@ public class Player : MonoBehaviour
     {
         total = 0;
         Resultado.text = "";
-        
+        PlayerText = GameObject.Find("PlayerText").GetComponent<Text>();
+        PlayerText.enabled = false;
+
     }
 
     // Update is called once per frame
@@ -76,9 +79,7 @@ public class Player : MonoBehaviour
             resto = (rpposiicion + punto) - 40;
             punto = 40 - rpposiicion;
             StartCoroutine(Move(resto, PlayerTurn));
-        }
-
-        
+        }       
 
     }
 
@@ -120,6 +121,22 @@ public class Player : MonoBehaviour
         movimie = false;
         camara.enabled = false;
         AnotherCam.enabled = true;
+        StartCoroutine(PlayerFontText());
+    }
+
+    public IEnumerator PlayerFontText()
+    {
+        PlayerText.enabled = true;
+
+        while(PlayerText.fontSize > 0) {
+            PlayerText.enabled = true;
+           PlayerText.fontSize--;
+
+            yield return new WaitForSeconds(0.1f);
+        }
+        PlayerText.enabled = false;
+        PlayerText.fontSize = 20;
+
     }
 
     public IEnumerator Step()
@@ -155,7 +172,6 @@ public class Player : MonoBehaviour
                 MoveCamera();
 
                 ComprobateCards();
-
             
             }
         FinishTurn();
