@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class GreenPlayerB : MonoBehaviour
 {
-    public Text Resultado;
+  /*  public Text Resultado;
     private int total;
     public GO Rott;
     int rpposiicion;
@@ -170,5 +170,5 @@ public class GreenPlayerB : MonoBehaviour
             camara.transform.rotation = Izquierda;
         }
     }
-     
+     */
     }

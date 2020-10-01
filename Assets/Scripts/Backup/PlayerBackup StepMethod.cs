@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerBackupStep : MonoBehaviour
 {
-
+/*
     public Text Resultado;
     protected int total;
     public GO Rott;
@@ -186,6 +186,6 @@ public class PlayerBackupStep : MonoBehaviour
             MoveCamera();
         }
         FinishTurn();
-    }
+    }*/
 }
 

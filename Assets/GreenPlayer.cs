@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class GreenPlayer : Player
 {
      
-
+    
     
 
     // Start is called before the first frame update

@@ -41,8 +41,8 @@ public class Player : MonoBehaviour
     [HideInInspector]
     public Vector3 PosArr = new Vector3(0.0009f, -0.0205f, 0.00441f);
     [HideInInspector]
-    public Vector3 PosDer = new Vector3(0.0224f, -0.0226f, 0.0063f);
-    [HideInInspector]
+    public Vector3 PosDer = new Vector3(0.0224f, 0f, 0.0063f);
+    
 
 
 
@@ -66,22 +66,11 @@ public class Player : MonoBehaviour
     public void LanzarDado(int PlayerTurn)
     {
         RestoreText();
-        int resto;
-        punto = Random.Range(7, 7);
+        punto = Random.Range(25, 25);
         Debug.Log("Resul" + punto);
         total = punto;
         Resultado.text = " " + total;
-        if (rpposiicion + punto < Rott.Puesto.Count)
-        {
-            StartCoroutine(Move(PlayerTurn));
-        }
-        else
-        {
-            //Cuando llega a GO y hay que reiniciar la Lista
-            resto = (rpposiicion + punto) - 40;
-            punto = 40 - rpposiicion;
-            StartCoroutine(Move(resto, PlayerTurn));
-        }       
+        StartCoroutine(Move(PlayerTurn));      
 
     }
 
@@ -138,7 +127,7 @@ public class Player : MonoBehaviour
         while (PlayerText.fontSize > 1) {
             
            PlayerText.fontSize--;
-            yield return new WaitForSeconds(0.15f);
+            yield return new WaitForSeconds(0.1f);
             
         }
         RestoreText();
@@ -149,20 +138,6 @@ public class Player : MonoBehaviour
         PlayerText.enabled = false;
         PlayerText.fontSize = 20;
         
-    }
-
-    public IEnumerator Step()
-    {
-        while (punto > 0)
-        {
-            Vector3 nextPos = Rott.Puesto[rpposiicion + 0].position;
-            while (MoveToNexNode(nextPos)) { yield return null; }
-
-            yield return new WaitForSeconds(0.1f);
-            punto--;
-            rpposiicion++;
-            MoveCamera();
-        }
     }
 
     public IEnumerator Move(int PlayerTurn)
@@ -176,7 +151,7 @@ public class Player : MonoBehaviour
         if (PlayerTurn.Equals(ControlPlayer.control.Turno))
             while (punto > 0)
             {
-                Vector3 nextPos = Rott.Puesto[rpposiicion + 0].position;
+                Vector3 nextPos = GO.tablero.Seleccionar(rpposiicion+0).position;
                 while (MoveToNexNode(nextPos)) { yield return null; }
                 yield return new WaitForSeconds(0.1f);
                 punto--;
@@ -207,51 +182,6 @@ public class Player : MonoBehaviour
             Chances = true;
             Cards = true;         
             CardsController.turno = PlayerTurn;
-        }
-    }
-
-
-    //Método para completar una vuelta
-    public IEnumerator Move(int resto, int PlayerTurn)
-    {
-        Camera camara = GetComponentInChildren<Camera>();
-        if (movimie)
-        {
-            yield break;
-
-        }
-        movimie = true;
-        if (PlayerTurn.Equals(ControlPlayer.control.Turno)) 
-
-            while (punto > 0)
-            {
-                Vector3 nextPos = Rott.Puesto[rpposiicion + 0].position;
-                while (MoveToNexNode(nextPos)) { yield return null; }
-
-                yield return new WaitForSeconds(0.1f);
-                punto--;
-                rpposiicion++;
-                MoveCamera();
-            }
-
-        punto = resto;
-        rpposiicion = 0;
-
-        while (punto > 0)
-        {
-            Vector3 nextPos = Rott.Puesto[rpposiicion + 0].position;
-            while (MoveToNexNode(nextPos)) { yield return null; }
-
-            yield return new WaitForSeconds(0.1f);
-            punto--;
-            rpposiicion++;
-            MoveCamera();
-
-            ComprobateCards();
-        }
-        if (!Cards)
-        {
-            FinishTurn();
         }
     }
 }
