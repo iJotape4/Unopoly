@@ -4,32 +4,74 @@ using UnityEngine;
 using UnityTemplateProjects;
 
 public class ControlPlayer : MonoBehaviour
-{
+{   
+    //Variables
     public int Turno = 0;
     public static int LImitedeTurno = 2;
     public static ControlPlayer control;
 
-    public static int[] TurnsList = new int[LImitedeTurno];
-
     void Start()
     {
+        //Construye la lista circular con el número de turnos que se definió
+        //en la variable LimitedeTurno
+        ControlPlayer lc = new ControlPlayer();
         control = this.GetComponent<ControlPlayer>();
         for (int i=1; i<=LImitedeTurno; i++ )
         {
-            TurnsList[i - 1] = i;
+            lc.InsertarUltimo(i);
         }
+        
+        //En el Start define como primer turno al Nodo Raíz (Turno 1)
+        NodoTurno = lc.raiz;
+        Turno = NodoTurno.info;
     }
     void Update()
     {
-       /* if (Turno > 1)
-        {
-            Turno = 2;
-        }*/
 
     }
 
+    //Éste método maneja el cambio de turnos
     public void NextTurno()
     {
-        Turno = TurnsList[1];
+        NodoTurno = NodoTurno.sig;
+        Turno = NodoTurno.info;
     }
+
+
+    //Constructor de Listas Circulares
+    //Ésta lista circular está compuesta por los turnos de los players.
+    class Nodo
+    {
+        public int info;
+        public Nodo ant, sig;
+    }
+
+    private Nodo raiz;
+    private Nodo NodoTurno;
+
+    public ControlPlayer()
+    {
+        raiz = null;
+    }
+
+    public void InsertarUltimo(int x)
+    {
+        Nodo nuevo = new Nodo();
+        nuevo.info = x;
+        if (raiz == null)
+        {
+            nuevo.sig = nuevo;
+            nuevo.ant = nuevo;
+            raiz = nuevo;
+        }
+        else
+        {
+            Nodo ultimo = raiz.ant;
+            nuevo.sig = raiz;
+            nuevo.ant = ultimo;
+            raiz.ant = nuevo;
+            ultimo.sig = nuevo;
+        }
+    }
+
 }

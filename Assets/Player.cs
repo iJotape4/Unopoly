@@ -132,16 +132,16 @@ public class Player : MonoBehaviour
         camara.enabled = false;
         AnotherCam.enabled = true;
 
-        StartCoroutine(PlayerFontText());
-
+        
         ControlPlayer.control.NextTurno();
+        StartCoroutine(PlayerFontText());
     }
 
     public IEnumerator PlayerFontText()
     {
         PlayerText.enabled = true;
         PlayerText.fontSize = 20;
-        PlayerText.text = ("Player " + PlayerTurn + " Turn!");
+        PlayerText.text = ("Player " + ControlPlayer.control.Turno + " Turn!");
 
         while (PlayerText.fontSize > 1) {
             
