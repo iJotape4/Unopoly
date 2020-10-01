@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
     public bool AnotherMove;
     public int PlayerTurn;
 
+    public bool TextInterrupt;
+
     public static bool Cards;
     public static bool Chances;
     public static bool ComARrcs;
@@ -52,8 +54,8 @@ public class Player : MonoBehaviour
         Resultado.text = "";
         PlayerText = GameObject.Find("PlayerText").GetComponent<Text>();
         PlayerText.enabled = false;
-
-    }
+        TextInterrupt = false ;
+}
 
     // Update is called once per frame
     void Update()
@@ -64,8 +66,9 @@ public class Player : MonoBehaviour
 
     public void LanzarDado(int PlayerTurn)
     {
+        RestoreText();
         int resto;
-        punto = Random.Range(2, 2);
+        punto = Random.Range(17, 17);
         Debug.Log("Resul" + punto);
         total = punto;
         Resultado.text = " " + total;
@@ -121,22 +124,29 @@ public class Player : MonoBehaviour
         movimie = false;
         camara.enabled = false;
         AnotherCam.enabled = true;
+
         StartCoroutine(PlayerFontText());
     }
 
     public IEnumerator PlayerFontText()
     {
         PlayerText.enabled = true;
-
-        while(PlayerText.fontSize > 0) {
-            PlayerText.enabled = true;
-           PlayerText.fontSize--;
-
-            yield return new WaitForSeconds(0.1f);
-        }
-        PlayerText.enabled = false;
         PlayerText.fontSize = 20;
 
+        while (PlayerText.fontSize > 1) {
+            
+           PlayerText.fontSize--;
+            yield return new WaitForSeconds(0.15f);
+            
+        }
+        RestoreText();
+    }
+
+    public void RestoreText()
+    {
+        PlayerText.enabled = false;
+        PlayerText.fontSize = 20;
+        TextInterrupt = false;
     }
 
     public IEnumerator Step()
@@ -174,6 +184,7 @@ public class Player : MonoBehaviour
                 ComprobateCards();
             
             }
+
         FinishTurn();
     }
 
