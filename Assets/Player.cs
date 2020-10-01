@@ -60,14 +60,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        //Para remostrar el texto cuando se activó una carta
-        if (EventTurn)
-        {
-            RestoreText();
-            StartCoroutine(PlayerFontText());
-            EventTurn=false;
-        }
     }
 
 
@@ -75,7 +67,7 @@ public class Player : MonoBehaviour
     {
         RestoreText();
         int resto;
-        punto = Random.Range(2, 7);
+        punto = Random.Range(7, 7);
         Debug.Log("Resul" + punto);
         total = punto;
         Resultado.text = " " + total;
@@ -194,8 +186,11 @@ public class Player : MonoBehaviour
                 ComprobateCards();
             
             }
-
-        FinishTurn();
+        if (!Cards)
+        {
+            FinishTurn();
+        }
+        
     }
 
     public void ComprobateCards()
@@ -254,7 +249,10 @@ public class Player : MonoBehaviour
 
             ComprobateCards();
         }
-        FinishTurn();
+        if (!Cards)
+        {
+            FinishTurn();
+        }
     }
 }
 

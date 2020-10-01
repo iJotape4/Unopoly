@@ -15,6 +15,10 @@ public class CardsController : MonoBehaviour
     public int elegida;
     public static int turno;
 
+    public string Tag ;
+
+    Player PlayerActual;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +30,8 @@ public class CardsController : MonoBehaviour
         CardsNum = ComArcsCards.Length;
 
         CardImage.enabled = false;
+
+       
     }
 
     // Update is called once per frame
@@ -35,7 +41,8 @@ public class CardsController : MonoBehaviour
         {
             ShowCard();
         }
-
+        Tag = ("Player" + ControlPlayer.control.Turno);
+        PlayerActual = GameObject.FindGameObjectWithTag(Tag).GetComponent<Player>();
     }
     public  void ShowCard()
     {
@@ -82,7 +89,7 @@ public class CardsController : MonoBehaviour
         CardImage.enabled = false;
         Player.Cards = false;
         CallCardMethod(elegida);
-        Player.EventTurn = true;
+        PlayerActual.FinishTurn();
     }
 
     public  void CallCardMethod(int elegida)

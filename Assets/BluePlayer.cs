@@ -31,12 +31,6 @@ public class BluePlayer : Player
             ;
             LanzarDado(PlayerTurn);
 
-           /* if (PlayerTurn.Equals(ControlPlayer.control.Turno))
-            {
-                ControlPlayer.control.Turno = +1;
-            }
-
-            */
 
         }
     }

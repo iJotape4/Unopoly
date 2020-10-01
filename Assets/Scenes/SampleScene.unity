@@ -393,7 +393,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Turno: 1
-  LImitedeTurno: 2
 --- !u!4 &254436842
 Transform:
   m_ObjectHideFlags: 0
@@ -2779,7 +2778,7 @@ GameObject:
   - component: {fileID: 753326984499693492}
   m_Layer: 0
   m_Name: Player Blue
-  m_TagString: Untagged
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3062,7 +3061,7 @@ GameObject:
   - component: {fileID: 1408517259}
   m_Layer: 0
   m_Name: Player Green
-  m_TagString: Untagged
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
