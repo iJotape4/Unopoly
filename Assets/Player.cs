@@ -133,6 +133,8 @@ public class Player : MonoBehaviour
         AnotherCam.enabled = true;
 
         StartCoroutine(PlayerFontText());
+
+        ControlPlayer.control.NextTurno();
     }
 
     public IEnumerator PlayerFontText()

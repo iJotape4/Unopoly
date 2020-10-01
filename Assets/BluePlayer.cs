@@ -10,12 +10,17 @@ public class BluePlayer : Player
     // Start is called before the first frame update
      void Start()
     {
+
         PlayerTurn = 2;
+        StartCoroutine(PlayerFontText());
     }
 
     // Update is called once per frame
     void Update()
     {
+
+
+
         AnotherMove = GreenPlayer.movimie;
         if (Input.GetKeyDown(KeyCode.Z) && !movimie && !AnotherMove && !Cards)
         {
@@ -23,14 +28,15 @@ public class BluePlayer : Player
             {
                 return;
             }
-
+            ;
             LanzarDado(PlayerTurn);
 
-            if (PlayerTurn.Equals(ControlPlayer.control.Turno))
+           /* if (PlayerTurn.Equals(ControlPlayer.control.Turno))
             {
                 ControlPlayer.control.Turno = +1;
             }
 
+            */
 
         }
     }

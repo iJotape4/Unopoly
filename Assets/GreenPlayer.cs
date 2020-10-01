@@ -13,11 +13,15 @@ public class GreenPlayer : Player
     {
         AnotherCam.enabled = false;
         PlayerTurn = 1;
+        StartCoroutine(PlayerFontText());
     }
 
     // Update is called once per frame
     void Update()
-    {                   
+    {             
+        
+
+
         AnotherMove = BluePlayer.movimie;
         if (Input.GetKeyDown(KeyCode.X) && !movimie && !AnotherMove && !Cards )
         {
@@ -25,12 +29,14 @@ public class GreenPlayer : Player
             {
                 return;
             }
+            
             LanzarDado(PlayerTurn);
 
-            if (PlayerTurn.Equals(ControlPlayer.control.Turno))
+          /*  if (PlayerTurn.Equals(ControlPlayer.control.Turno))
             {
+                
                 ControlPlayer.control.Turno = +2;
-            }
+            */
         }
     } 
     }
