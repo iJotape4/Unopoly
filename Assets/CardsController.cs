@@ -82,6 +82,7 @@ public class CardsController : MonoBehaviour
         CardImage.enabled = false;
         Player.Cards = false;
         CallCardMethod(elegida);
+        Player.EventTurn = true;
     }
 
     public  void CallCardMethod(int elegida)

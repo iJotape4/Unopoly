@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     public bool AnotherMove;
     public int PlayerTurn;
 
-    public bool TextInterrupt;
+    public static bool EventTurn;
 
     public static bool Cards;
     public static bool Chances;
@@ -54,13 +54,20 @@ public class Player : MonoBehaviour
         Resultado.text = "";
         PlayerText = GameObject.Find("PlayerText").GetComponent<Text>();
         PlayerText.enabled = false;
-        TextInterrupt = false ;
+        
 }
 
     // Update is called once per frame
     void Update()
     {
 
+        //Para remostrar el texto cuando se activó una carta
+        if (EventTurn)
+        {
+            RestoreText();
+            StartCoroutine(PlayerFontText());
+            EventTurn=false;
+        }
     }
 
 
@@ -68,7 +75,7 @@ public class Player : MonoBehaviour
     {
         RestoreText();
         int resto;
-        punto = Random.Range(17, 17);
+        punto = Random.Range(2, 7);
         Debug.Log("Resul" + punto);
         total = punto;
         Resultado.text = " " + total;
@@ -132,6 +139,7 @@ public class Player : MonoBehaviour
     {
         PlayerText.enabled = true;
         PlayerText.fontSize = 20;
+        PlayerText.text = ("Player " + PlayerTurn + " Turn!");
 
         while (PlayerText.fontSize > 1) {
             
@@ -146,7 +154,7 @@ public class Player : MonoBehaviour
     {
         PlayerText.enabled = false;
         PlayerText.fontSize = 20;
-        TextInterrupt = false;
+        
     }
 
     public IEnumerator Step()
