@@ -12,6 +12,11 @@ public class BluePlayer : Player
     {
 
         PlayerTurn = 2;
+        dinero = dineroInicial;
+
+        PlayerDinero.text = "$" + dinero.ToString();
+        PlayerDinero.enabled = true;
+
         StartCoroutine(PlayerFontText());
     }
 

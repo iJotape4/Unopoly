@@ -9,9 +9,14 @@ public class Player : MonoBehaviour
     public Text Resultado;
     protected int total;
     public GO Rott;
-    protected int rpposiicion;
+    public int rpposiicion;
     public int punto;
     public static bool movimie;
+
+    [HideInInspector]
+    public int dineroInicial=2000;
+    public int dinero;
+    public Text PlayerDinero;
      
     public Camera AnotherCam;
     public Text PlayerText;
@@ -43,10 +48,6 @@ public class Player : MonoBehaviour
     [HideInInspector]
     public Vector3 PosDer = new Vector3(0.0224f, 0f, 0.0063f);
     
-
-
-
-
     // Start is called before the first frame update
     public void Start()
     {
@@ -54,8 +55,13 @@ public class Player : MonoBehaviour
         Resultado.text = "";
         PlayerText = GameObject.Find("PlayerText").GetComponent<Text>();
         PlayerText.enabled = false;
+
         
-}
+        PlayerDinero.text = dinero.ToString();
+        PlayerDinero.enabled = true;
+
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -66,10 +72,12 @@ public class Player : MonoBehaviour
     public void LanzarDado(int PlayerTurn)
     {
         RestoreText();
-        punto = Random.Range(25, 25);
+        punto = Random.Range(27, 27);
         Debug.Log("Resul" + punto);
         total = punto;
         Resultado.text = " " + total;
+        dinero = dinero - 100;
+        PlayerDinero.text = dinero.ToString();
         StartCoroutine(Move(PlayerTurn));      
 
     }
@@ -166,6 +174,21 @@ public class Player : MonoBehaviour
             FinishTurn();
         }
         
+    }
+
+
+    public void MoveTowards(int pos)
+    {
+        Debug.Log("se mueve hasta"+pos);
+        if (pos > rpposiicion)
+        {
+            punto = pos;
+        }
+        else
+        {
+            punto = 40 - rpposiicion + pos;
+        }
+        StartCoroutine(Move(PlayerTurn));
     }
 
     public void ComprobateCards()

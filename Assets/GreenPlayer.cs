@@ -11,8 +11,12 @@ public class GreenPlayer : Player
     // Start is called before the first frame update
     void Start()
     {
+        dinero = dineroInicial;
         AnotherCam.enabled = false;
         PlayerTurn = 1;
+
+        PlayerDinero.text = "$"+dinero.ToString();
+        PlayerDinero.enabled = true;
         StartCoroutine(PlayerFontText());
     }
 

@@ -45,6 +45,8 @@ public class GO : MonoBehaviour
         return reco.info;                                           
     }
 
+
+
     // Update is called once per frame
     void Update()
     {

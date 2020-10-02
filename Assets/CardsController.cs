@@ -15,6 +15,9 @@ public class CardsController : MonoBehaviour
     public int elegida;
     public static int turno;
 
+    public int[] cafeterias = new int[4] { 5, 12, 25, 38 };
+    public int[] laboratorios = new int[3] { 35,  37, 39 };
+
     public string Tag ;
 
     Player PlayerActual;
@@ -28,9 +31,7 @@ public class CardsController : MonoBehaviour
 
         ComArcsCards = Resources.LoadAll<Sprite>("ComArcs");
         CardsNum = ComArcsCards.Length;
-
         CardImage.enabled = false;
-
        
     }
 
@@ -63,8 +64,7 @@ public class CardsController : MonoBehaviour
 
             CardImage.enabled = true;
             elegida = Random.Range(0, Cards.Length);
-            CardImage.sprite = Cards[elegida];
-            Debug.Log("card " + elegida);       
+            CardImage.sprite = Cards[elegida];                 
         }
         else
         {
@@ -89,7 +89,7 @@ public class CardsController : MonoBehaviour
         CardImage.enabled = false;
         Player.Cards = false;
         CallCardMethod(elegida);
-        PlayerActual.FinishTurn();
+        Debug.Log("carta " + elegida);
     }
 
     public  void CallCardMethod(int elegida)
@@ -97,19 +97,25 @@ public class CardsController : MonoBehaviour
         if (elegida == 0)
         {
 
+           
+           
         }
         else if (elegida == 1)
         {
-            PlacheHolderCardMethod1();
+         
+
+           
         }else if (elegida == 2)
         {
 
+          
 
         }
         else if (elegida == 3)
         {
 
-
+    
+         
         }
         else if (elegida == 4)
         {
@@ -128,9 +134,72 @@ public class CardsController : MonoBehaviour
         }
     }
 
-    public void PlacheHolderCardMethod1()
+    //Tienes Tu carro en el parqueadero, avanza hasta ahí para recogerlo
+    public void GoParkway()
+    {
+        CardMethodGoTo(30);
+    }
+
+    //Te dio hambre, ve a la cafetería más cercana, si pasas por la salida, cobra.
+    public void Cafetería()
+    {
+        int CafElegida = 0;
+        foreach (int Cafetería in cafeterias)
+        {
+            if (Cafetería > PlayerActual.rpposiicion)
+            {
+                CafElegida = Cafetería;
+                break;
+            }
+            else
+            {
+                CafElegida = cafeterias[0];
+            }
+        }
+        CardMethodGoTo(CafElegida);
+
+    }
+    //Te vieron fumando en Banu, tienes que ir a bienestar.
+    public void GoBienestar()
     {
 
+        //Hay que corregirlo y hacer un teletransporte animado como el de monopoly 64 https://www.youtube.com/watch?v=CyDnh7eVCl8 19:40
+        CardMethodGoTo(10);
+    }
+
+    //Avanza hasta la salida, cobra 200
+    public void GoToGo()
+    {
+        CardMethodGoTo(40);
+    }
+
+
+    //Avanza hasta el laboratorio más cercano
+    public void GoToLaboratory()
+    {
+        int LaboElegido = 0;
+        foreach (int Laboratorio in laboratorios)
+        {
+            if (Laboratorio > PlayerActual.rpposiicion)
+            {
+                LaboElegido = Laboratorio;
+                break;
+            }
+            else
+            {
+                LaboElegido = laboratorios[0];
+            }
+        }
+        CardMethodGoTo(LaboElegido);
+    }
+
+
+    //Método General para ir a una posición desde ésta clase
+    public void CardMethodGoTo(int pos)
+    {
+        Player.movimie = false ;
+        PlayerActual.MoveTowards(pos);
+        PlayerActual.FinishTurn();
     }
 
 }
