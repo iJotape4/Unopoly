@@ -54,13 +54,7 @@ public class Player : MonoBehaviour
         total = 0;
         Resultado.text = "";
         PlayerText = GameObject.Find("PlayerText").GetComponent<Text>();
-        PlayerText.enabled = false;
-
-        
-        PlayerDinero.text = dinero.ToString();
-        PlayerDinero.enabled = true;
-
-
+        PlayerText.enabled = false;    
     }
 
     // Update is called once per frame
@@ -72,12 +66,10 @@ public class Player : MonoBehaviour
     public void LanzarDado(int PlayerTurn)
     {
         RestoreText();
-        punto = Random.Range(27, 27);
+        punto = Random.Range(45, 45);
         Debug.Log("Resul" + punto);
         total = punto;
-        Resultado.text = " " + total;
-        dinero = dinero - 100;
-        PlayerDinero.text = dinero.ToString();
+        Resultado.text = " " + total;      
         StartCoroutine(Move(PlayerTurn));      
 
     }
@@ -91,7 +83,7 @@ public class Player : MonoBehaviour
     public void MoveCamera()
     {
         Camera camara = GetComponentInChildren<Camera>();
-        if (rpposiicion < 10)
+        if (rpposiicion < 10 || rpposiicion >40)
         {
             camara.transform.rotation = Abajo;
             camara.transform.localPosition = PosAbj;
@@ -114,14 +106,13 @@ public class Player : MonoBehaviour
 
         }
     }
-    public  void FinishTurn()
+    public void FinishTurn()
     {
         Camera camara = GetComponentInChildren<Camera>();
         movimie = false;
         camara.enabled = false;
         AnotherCam.enabled = true;
 
-        
         ControlPlayer.control.NextTurno();
         StartCoroutine(PlayerFontText());
     }
@@ -167,7 +158,11 @@ public class Player : MonoBehaviour
                 MoveCamera();
 
                 ComprobateCards();
-            
+
+                if (rpposiicion == 40)
+                {
+                    Cobrar(200);
+                }
             }
         if (!Cards)
         {
@@ -206,6 +201,11 @@ public class Player : MonoBehaviour
             Cards = true;         
             CardsController.turno = PlayerTurn;
         }
+    }
+
+    public void Cobrar(int cantidad)
+    {
+        dinero += cantidad;
     }
 }
 

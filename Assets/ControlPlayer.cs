@@ -10,6 +10,11 @@ public class ControlPlayer : MonoBehaviour
     public static int LImitedeTurno = 2;
     public static ControlPlayer control;
 
+
+    public string Tag;
+
+    Player PlayerActual;
+
     void Start()
     {
         //Construye la lista circular con el número de turnos que se definió
@@ -27,7 +32,8 @@ public class ControlPlayer : MonoBehaviour
     }
     void Update()
     {
-
+        Tag = ("Player" + ControlPlayer.control.Turno);
+        PlayerActual = GameObject.FindGameObjectWithTag(Tag).GetComponent<Player>();
     }
 
     //Éste método maneja el cambio de turnos

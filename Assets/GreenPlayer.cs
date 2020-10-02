@@ -18,12 +18,17 @@ public class GreenPlayer : Player
         PlayerDinero.text = "$"+dinero.ToString();
         PlayerDinero.enabled = true;
         StartCoroutine(PlayerFontText());
+      
     }
 
     // Update is called once per frame
     void Update()
-    {             
-        
+    {
+        if (PlayerTurn == ControlPlayer.control.Turno)
+        {
+            PlayerDinero.text = "$" + dinero.ToString();
+            PlayerDinero.color = Color.green;
+        }
 
 
         AnotherMove = BluePlayer.movimie;
@@ -33,7 +38,7 @@ public class GreenPlayer : Player
             {
                 return;
             }
-            
+           
             LanzarDado(PlayerTurn);
 
           /*  if (PlayerTurn.Equals(ControlPlayer.control.Turno))

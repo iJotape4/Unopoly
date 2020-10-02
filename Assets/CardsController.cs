@@ -154,6 +154,7 @@ public class CardsController : MonoBehaviour
             else
             {
                 CafElegida = cafeterias[0];
+
             }
         }
         CardMethodGoTo(CafElegida);
@@ -171,6 +172,7 @@ public class CardsController : MonoBehaviour
     public void GoToGo()
     {
         CardMethodGoTo(40);
+        
     }
 
 
@@ -188,11 +190,18 @@ public class CardsController : MonoBehaviour
             else
             {
                 LaboElegido = laboratorios[0];
+                
             }
         }
         CardMethodGoTo(LaboElegido);
     }
 
+
+    //Método General para pagar desde ésta clase
+    public void Pagar(int cantidad)
+    {
+        PlayerActual.dinero -= cantidad;
+    }
 
     //Método General para ir a una posición desde ésta clase
     public void CardMethodGoTo(int pos)
