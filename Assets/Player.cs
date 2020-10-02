@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,6 +24,8 @@ public class Player : MonoBehaviour
 
     public bool AnotherMove;
     public int PlayerTurn;
+
+    public bool InBienestar=false;
 
     public static bool EventTurn;
 
@@ -66,7 +69,7 @@ public class Player : MonoBehaviour
     public void LanzarDado(int PlayerTurn)
     {
         RestoreText();
-        punto = Random.Range(45, 45);
+        punto = Random.Range(30, 30);
         Debug.Log("Resul" + punto);
         total = punto;
         Resultado.text = " " + total;      
@@ -139,6 +142,8 @@ public class Player : MonoBehaviour
         
     }
 
+
+    ///AQUI ESTÁ MOVE
     public IEnumerator Move(int PlayerTurn)
     {
         Camera camara = GetComponentInChildren<Camera>();
@@ -164,6 +169,11 @@ public class Player : MonoBehaviour
                     Cobrar(200);
                 }
             }
+
+        if (rpposiicion == 30)
+        {
+            GoBienestar();
+        }
         if (!Cards)
         {
             FinishTurn();
@@ -206,6 +216,16 @@ public class Player : MonoBehaviour
     public void Cobrar(int cantidad)
     {
         dinero += cantidad;
+    }
+
+    public void GoBienestar()
+    {
+        //Hay que corregirlo y hacer un teletransporte animado como el de monopoly 64 https://www.youtube.com/watch?v=CyDnh7eVCl8 19:40
+        Vector3 bienestar = new Vector3(-2.6f,-0.6f,-5.3f);
+        rpposiicion = 10;
+        transform.position = (bienestar);
+        InBienestar = true;
+        
     }
 }
 

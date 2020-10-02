@@ -165,7 +165,7 @@ public class CardsController : MonoBehaviour
     {
 
         //Hay que corregirlo y hacer un teletransporte animado como el de monopoly 64 https://www.youtube.com/watch?v=CyDnh7eVCl8 19:40
-        CardMethodGoTo(10);
+        PlayerActual.GoBienestar();
     }
 
     //Avanza hasta la salida, cobra 200
