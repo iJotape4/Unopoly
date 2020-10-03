@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class Propiedad : MonoBehaviour
 {
-
-    public int numcasilla;
     public int precio;
 
     public Image PropertyIMage;
@@ -15,14 +13,13 @@ public class Propiedad : MonoBehaviour
     public Player propietario;
 
     public int casas;
-    public int Posicion;
-    public static int tocando;
+    public int Renta;
 
     public string Tag;
 
     Player PlayerActual;
 
-
+    public Propiedad Tarjeta;
 
     // Start is called before the first frame update
     void Start()
@@ -32,24 +29,29 @@ public class Propiedad : MonoBehaviour
         PropertyCards = Resources.LoadAll<Sprite>("Properties");
 
         PropertyIMage.enabled = false;
+        Tarjeta = this.GetComponent<Propiedad>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Tag = ("Player" + ControlPlayer.control.Turno);
+        PlayerActual = GameObject.FindGameObjectWithTag(Tag).GetComponent<Player>();
         if (Player.Properties)
         {
-
-            if(propietario == null)
+            
+            if (Tarjeta.propietario == null)
             {
                 ShowPropertie();
             }
+            else
+            {
+              PlayerActual.Pagar(Renta);
+              Tarjeta.propietario.Cobrar(Renta);
+              PlayerActual.StartCoroutine(Waiter());
+            }
             
-        }
-        Tag = ("Player" + ControlPlayer.control.Turno);
-        PlayerActual = GameObject.FindGameObjectWithTag(Tag).GetComponent<Player>();
-        
-        
+        }            
     }
 
     public void ShowPropertie()
@@ -58,11 +60,13 @@ public class Propiedad : MonoBehaviour
         {
             if(int.Parse(PropertyCards[i].name) == PlayerActual.rpposiicion)
             {
-                PropertyIMage.sprite = PropertyCards[i];
+                PropertyIMage.sprite = PropertyCards[i];               
+                Tarjeta = GameObject.Find("POST ("+PropertyCards[i].name+")").GetComponent<Propiedad>();
                 break;
             }
         }
         PropertyIMage.enabled = true;
+        Debug.Log("Propiedad=" + Tarjeta);
 
         if (Input.GetKey("x"))
         {
@@ -83,13 +87,14 @@ public class Propiedad : MonoBehaviour
     public IEnumerator Comprar()
     {
         PlayerActual.dinero -= precio ;
-        propietario = PlayerActual;
+        Tarjeta.propietario = PlayerActual;
         QuitCard();
         yield return null;
     }
 
     public IEnumerator Waiter()
     {
+        Player.Properties = false;
         yield return new WaitForSeconds(0.5f);
         PlayerActual.FinishTurn();
     }

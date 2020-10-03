@@ -244,6 +244,11 @@ public class Player : MonoBehaviour
         dinero += cantidad;
     }
 
+    public void Pagar(int cantidad)
+    {
+        dinero -= cantidad;
+    }
+
     public void GoBienestar()
     {
         //Hay que corregirlo y hacer un teletransporte animado como el de monopoly 64 https://www.youtube.com/watch?v=CyDnh7eVCl8 19:40

@@ -35,7 +35,7 @@ public class GreenPlayer : Player
 
 
         AnotherMove = BluePlayer.movimie;
-        if (Input.GetKeyDown(KeyCode.X) && !movimie && !AnotherMove && !Cards )
+        if (Input.GetKeyDown(KeyCode.X) && !movimie && !AnotherMove && !Cards && !Properties)
         {
             if (PlayerTurn != ControlPlayer.control.Turno)
             {

@@ -15,7 +15,7 @@ public class BluePlayer : Player
         dinero = 3000;
         StartCoroutine(PlayerFontText());
         OwnCamera.enabled = false;
-    }  
+    }
 
     // Update is called once per frame
     void Update()
@@ -28,7 +28,7 @@ public class BluePlayer : Player
         }
 
         AnotherMove = GreenPlayer.movimie;
-        if (Input.GetKeyDown(KeyCode.X) && !movimie && !AnotherMove && !Cards)
+        if (Input.GetKeyDown(KeyCode.X) && !movimie && !AnotherMove && !Cards && !Properties)
         {
             if (PlayerTurn != ControlPlayer.control.Turno)
             {
