@@ -7,18 +7,27 @@ public class Propiedad : MonoBehaviour
 {
     public int precio;
 
+    [HideInInspector]
     public Image PropertyIMage;
+    [HideInInspector]
     public Sprite[] PropertyCards;
+
+    [HideInInspector]
+    public Text TextoComprar;
+    [HideInInspector]
+    public Text TextoPasar;
     
     public Player propietario;
 
     public int casas;
     public int Renta;
 
+    [HideInInspector]
     public string Tag;
 
     Player PlayerActual;
 
+    [HideInInspector]
     public Propiedad Tarjeta;
 
     // Start is called before the first frame update
@@ -27,6 +36,12 @@ public class Propiedad : MonoBehaviour
         PropertyIMage = GameObject.Find("Image").GetComponent<Image>();
 
         PropertyCards = Resources.LoadAll<Sprite>("Properties");
+
+        TextoComprar = GameObject.Find("TextoComprar").GetComponent<Text>();
+        TextoPasar = GameObject.Find("TextoPasar").GetComponent<Text>();
+
+        TextoComprar.enabled = false;
+        TextoPasar.enabled = false;
 
         PropertyIMage.enabled = false;
         Tarjeta = this.GetComponent<Propiedad>();
@@ -46,8 +61,8 @@ public class Propiedad : MonoBehaviour
             }
             else
             {
-              PlayerActual.Pagar(Renta);
-              Tarjeta.propietario.Cobrar(Renta);
+                StartCoroutine(PlayerActual.Pagar(Renta));
+              StartCoroutine(Tarjeta.propietario.Cobrar(Renta));
               PlayerActual.StartCoroutine(Waiter());
             }
             
@@ -66,7 +81,10 @@ public class Propiedad : MonoBehaviour
             }
         }
         PropertyIMage.enabled = true;
-        Debug.Log("Propiedad=" + Tarjeta);
+
+        TextoComprar.text = ("X) Comprar $" + Tarjeta.precio);
+        TextoComprar.enabled = true;
+        TextoPasar.enabled = true;
 
         if (Input.GetKey("x"))
         {
@@ -79,14 +97,18 @@ public class Propiedad : MonoBehaviour
     }
     public void QuitCard()
     {
+        TextoComprar.enabled = false;
+        TextoPasar.enabled = false;
+
         PropertyIMage.enabled = false;
-        Player.Properties = false;
+        
         StartCoroutine(Waiter());
     }
 
     public IEnumerator Comprar()
     {
-        PlayerActual.dinero -= precio ;
+
+        StartCoroutine(PlayerActual.Pagar(Tarjeta. precio)) ;
         Tarjeta.propietario = PlayerActual;
         QuitCard();
         yield return null;

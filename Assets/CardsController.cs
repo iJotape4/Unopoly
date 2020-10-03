@@ -209,11 +209,11 @@ public class CardsController : MonoBehaviour
 
 
     //Método General para pagar desde ésta clase
-    public void Pagar(int cantidad)
+ /*   public void Pagar(int cantidad)
     {
         PlayerActual.dinero -= cantidad;
     }
-
+    */
     //Método General para ir a una posición desde ésta clase
     public void CardMethodGoTo(int pos)
     {

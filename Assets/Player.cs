@@ -233,20 +233,43 @@ public class Player : MonoBehaviour
                 //Debug.Log("Properties = true" + rpposiicion);
                 break;
             }
+        }                   
+    }
+
+    public IEnumerator Cobrar(int cantidad)
+    {
+        int Goal = dinero + cantidad;
+        while (dinero != Goal)
+        {
+            if (dinero - Goal > 10)
+            {
+                dinero += 10;
+            }
+            else
+            {
+                dinero++;
+            }
+
+            yield return new WaitForSeconds(0.015f);
         }
+    }
+
+    public IEnumerator Pagar(int cantidad)
+    {
+        int Goal = dinero - cantidad;
+        while (dinero != Goal)
+        {
+            if (dinero - Goal > 10)
+            {
+                dinero -= 10;
+            }
+            else
+            {
+                dinero--;
+            } 
            
-          
-        
-    }
-
-    public void Cobrar(int cantidad)
-    {
-        dinero += cantidad;
-    }
-
-    public void Pagar(int cantidad)
-    {
-        dinero -= cantidad;
+            yield return new WaitForSeconds(0.015f);
+        }            
     }
 
     public void GoBienestar()

@@ -197,6 +197,8 @@ MonoBehaviour:
   precio: 65
   PropertyIMage: {fileID: 0}
   PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 15
@@ -234,6 +236,7 @@ RectTransform:
   - {fileID: 1122983935}
   - {fileID: 755193017}
   - {fileID: 1116125495}
+  - {fileID: 1535046160}
   m_Father: {fileID: 574288390}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -324,6 +327,8 @@ MonoBehaviour:
   precio: 100
   PropertyIMage: {fileID: 0}
   PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 20
@@ -645,6 +650,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 327999532}
+  - component: {fileID: 327999533}
   m_Layer: 0
   m_Name: POST (19)
   m_TagString: Untagged
@@ -666,6 +672,28 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &327999533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327999531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precio: 0
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
+  propietario: {fileID: 0}
+  casas: 0
+  Renta: 0
+  Tag: 
+  Tarjeta: {fileID: 0}
 --- !u!1 &368013944
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,6 +797,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 385927701}
+  - component: {fileID: 385927702}
   m_Layer: 0
   m_Name: POST (15)
   m_TagString: Untagged
@@ -790,6 +819,28 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &385927702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385927700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precio: 0
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
+  propietario: {fileID: 0}
+  casas: 0
+  Renta: 0
+  Tag: 
+  Tarjeta: {fileID: 0}
 --- !u!1 &462956071
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,6 +887,8 @@ MonoBehaviour:
   precio: 90
   PropertyIMage: {fileID: 0}
   PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 50
@@ -850,6 +903,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 526322764}
+  - component: {fileID: 526322765}
   m_Layer: 0
   m_Name: POST (14)
   m_TagString: Untagged
@@ -871,6 +925,28 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &526322765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526322763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precio: 0
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
+  propietario: {fileID: 0}
+  casas: 0
+  Renta: 0
+  Tag: 
+  Tarjeta: {fileID: 0}
 --- !u!1 &550263567
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,6 +956,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 550263568}
+  - component: {fileID: 550263569}
   m_Layer: 0
   m_Name: POST (27)
   m_TagString: Untagged
@@ -901,6 +978,28 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &550263569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550263567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precio: 0
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
+  propietario: {fileID: 0}
+  casas: 0
+  Renta: 0
+  Tag: 
+  Tarjeta: {fileID: 0}
 --- !u!1 &560942895
 GameObject:
   m_ObjectHideFlags: 0
@@ -910,6 +1009,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 560942896}
+  - component: {fileID: 560942897}
   m_Layer: 0
   m_Name: POST (35)
   m_TagString: Untagged
@@ -931,6 +1031,28 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 180.20499, z: 0}
+--- !u!114 &560942897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560942895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precio: 0
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
+  propietario: {fileID: 0}
+  casas: 0
+  Renta: 0
+  Tag: 
+  Tarjeta: {fileID: 0}
 --- !u!1 &574288386
 GameObject:
   m_ObjectHideFlags: 0
@@ -1173,6 +1295,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 663355954}
+  - component: {fileID: 663355955}
   m_Layer: 0
   m_Name: POST (9)
   m_TagString: Untagged
@@ -1194,6 +1317,28 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &663355955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663355953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precio: 0
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
+  propietario: {fileID: 0}
+  casas: 0
+  Renta: 0
+  Tag: 
+  Tarjeta: {fileID: 0}
 --- !u!1 &675905904
 GameObject:
   m_ObjectHideFlags: 0
@@ -1203,6 +1348,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 675905905}
+  - component: {fileID: 675905906}
   m_Layer: 0
   m_Name: POST (39)
   m_TagString: Untagged
@@ -1224,6 +1370,28 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 180.20499, z: 0}
+--- !u!114 &675905906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675905904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precio: 0
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
+  propietario: {fileID: 0}
+  casas: 0
+  Renta: 0
+  Tag: 
+  Tarjeta: {fileID: 0}
 --- !u!1 &708091158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1233,6 +1401,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 708091159}
+  - component: {fileID: 708091160}
   m_Layer: 0
   m_Name: POST (23)
   m_TagString: Untagged
@@ -1254,6 +1423,28 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &708091160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708091158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precio: 0
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
+  propietario: {fileID: 0}
+  casas: 0
+  Renta: 0
+  Tag: 
+  Tarjeta: {fileID: 0}
 --- !u!1 &750199539
 GameObject:
   m_ObjectHideFlags: 0
@@ -1434,6 +1625,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 795828493}
+  - component: {fileID: 795828494}
   m_Layer: 0
   m_Name: POST (37)
   m_TagString: Untagged
@@ -1455,6 +1647,28 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 180.20499, z: 0}
+--- !u!114 &795828494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795828492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precio: 0
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
+  propietario: {fileID: 0}
+  casas: 0
+  Renta: 0
+  Tag: 
+  Tarjeta: {fileID: 0}
 --- !u!1 &808538426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,6 +1678,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 808538427}
+  - component: {fileID: 808538428}
   m_Layer: 0
   m_Name: POST (28)
   m_TagString: Untagged
@@ -1485,6 +1700,28 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &808538428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808538426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precio: 0
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
+  propietario: {fileID: 0}
+  casas: 0
+  Renta: 0
+  Tag: 
+  Tarjeta: {fileID: 0}
 --- !u!1 &874824313
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,7 +1786,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -250, y: -141}
+  m_AnchoredPosition: {x: -250, y: -110.9}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1116125496
@@ -1565,7 +1802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.18813777, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1583,7 +1820,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: '
+
+'
 --- !u!222 &1116125497
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1775,6 +2014,8 @@ MonoBehaviour:
   precio: 95
   PropertyIMage: {fileID: 0}
   PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 35
@@ -1871,6 +2112,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1325646649}
+  - component: {fileID: 1325646650}
   m_Layer: 0
   m_Name: POST (34)
   m_TagString: Untagged
@@ -1892,6 +2134,28 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 180.20499, z: 0}
+--- !u!114 &1325646650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325646648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precio: 0
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
+  propietario: {fileID: 0}
+  casas: 0
+  Renta: 0
+  Tag: 
+  Tarjeta: {fileID: 0}
 --- !u!1 &1340086561
 GameObject:
   m_ObjectHideFlags: 0
@@ -2123,6 +2387,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1503949433}
+  - component: {fileID: 1503949434}
   m_Layer: 0
   m_Name: POST (26)
   m_TagString: Untagged
@@ -2144,6 +2409,28 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1503949434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503949432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precio: 0
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
+  propietario: {fileID: 0}
+  casas: 0
+  Renta: 0
+  Tag: 
+  Tarjeta: {fileID: 0}
 --- !u!1 &1526980365
 GameObject:
   m_ObjectHideFlags: 0
@@ -2236,6 +2523,85 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 45, y: 130, z: 90}
+--- !u!1 &1535046159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1535046160}
+  - component: {fileID: 1535046162}
+  - component: {fileID: 1535046161}
+  m_Layer: 5
+  m_Name: TextoPasar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1535046160
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535046159}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 169070962}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -250, y: -141}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1535046161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535046159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.7074198, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Z) Pasar
+
+'
+--- !u!222 &1535046162
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535046159}
+  m_CullTransparentMesh: 0
 --- !u!1 &1537512227
 GameObject:
   m_ObjectHideFlags: 0
@@ -2282,6 +2648,8 @@ MonoBehaviour:
   precio: 65
   PropertyIMage: {fileID: 0}
   PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 15
@@ -2442,6 +2810,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1587988311}
+  - component: {fileID: 1587988312}
   m_Layer: 0
   m_Name: POST (32)
   m_TagString: Untagged
@@ -2463,6 +2832,28 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 180.20499, z: 0}
+--- !u!114 &1587988312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587988310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precio: 0
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
+  propietario: {fileID: 0}
+  casas: 0
+  Renta: 0
+  Tag: 
+  Tarjeta: {fileID: 0}
 --- !u!1 &1619420485
 GameObject:
   m_ObjectHideFlags: 0
@@ -2472,6 +2863,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1619420486}
+  - component: {fileID: 1619420487}
   m_Layer: 0
   m_Name: POST (21)
   m_TagString: Untagged
@@ -2493,6 +2885,28 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1619420487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619420485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precio: 0
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
+  propietario: {fileID: 0}
+  casas: 0
+  Renta: 0
+  Tag: 
+  Tarjeta: {fileID: 0}
 --- !u!1 &1692485288
 GameObject:
   m_ObjectHideFlags: 0
@@ -2502,6 +2916,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1692485289}
+  - component: {fileID: 1692485290}
   m_Layer: 0
   m_Name: POST (16)
   m_TagString: Untagged
@@ -2523,6 +2938,28 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1692485290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692485288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precio: 0
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
+  propietario: {fileID: 0}
+  casas: 0
+  Renta: 0
+  Tag: 
+  Tarjeta: {fileID: 0}
 --- !u!1 &1695446749
 GameObject:
   m_ObjectHideFlags: 0
@@ -2622,6 +3059,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1746599580}
+  - component: {fileID: 1746599581}
   m_Layer: 0
   m_Name: POST (29)
   m_TagString: Untagged
@@ -2643,6 +3081,28 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1746599581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746599579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precio: 0
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
+  propietario: {fileID: 0}
+  casas: 0
+  Renta: 0
+  Tag: 
+  Tarjeta: {fileID: 0}
 --- !u!1 &1821040541
 GameObject:
   m_ObjectHideFlags: 0
@@ -2652,6 +3112,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1821040542}
+  - component: {fileID: 1821040543}
   m_Layer: 0
   m_Name: POST (31)
   m_TagString: Untagged
@@ -2673,6 +3134,28 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 180.20499, z: 0}
+--- !u!114 &1821040543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821040541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precio: 0
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
+  propietario: {fileID: 0}
+  casas: 0
+  Renta: 0
+  Tag: 
+  Tarjeta: {fileID: 0}
 --- !u!1 &1831639984
 GameObject:
   m_ObjectHideFlags: 0
@@ -2762,6 +3245,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1847155571}
+  - component: {fileID: 1847155572}
   m_Layer: 0
   m_Name: POST (13)
   m_TagString: Untagged
@@ -2783,6 +3267,28 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1847155572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847155570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precio: 0
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
+  propietario: {fileID: 0}
+  casas: 0
+  Renta: 0
+  Tag: 
+  Tarjeta: {fileID: 0}
 --- !u!1 &1848338723
 GameObject:
   m_ObjectHideFlags: 0
@@ -2792,6 +3298,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1848338724}
+  - component: {fileID: 1848338725}
   m_Layer: 0
   m_Name: POST (11)
   m_TagString: Untagged
@@ -2813,6 +3320,28 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1848338725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848338723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precio: 0
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
+  propietario: {fileID: 0}
+  casas: 0
+  Renta: 0
+  Tag: 
+  Tarjeta: {fileID: 0}
 --- !u!1 &1890216938
 GameObject:
   m_ObjectHideFlags: 0
@@ -2934,6 +3463,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1918180132}
+  - component: {fileID: 1918180133}
   m_Layer: 0
   m_Name: POST (38)
   m_TagString: Untagged
@@ -2955,6 +3485,28 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 180.20499, z: 0}
+--- !u!114 &1918180133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918180131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precio: 0
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
+  propietario: {fileID: 0}
+  casas: 0
+  Renta: 0
+  Tag: 
+  Tarjeta: {fileID: 0}
 --- !u!1 &1934804059
 GameObject:
   m_ObjectHideFlags: 0
@@ -3001,6 +3553,8 @@ MonoBehaviour:
   precio: 60
   PropertyIMage: {fileID: 0}
   PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 10
@@ -3049,6 +3603,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1979798534}
+  - component: {fileID: 1979798535}
   m_Layer: 0
   m_Name: POST (18)
   m_TagString: Untagged
@@ -3070,6 +3625,28 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1979798535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979798533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precio: 0
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
+  propietario: {fileID: 0}
+  casas: 0
+  Renta: 0
+  Tag: 
+  Tarjeta: {fileID: 0}
 --- !u!1 &1992819638
 GameObject:
   m_ObjectHideFlags: 0
@@ -3079,6 +3656,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1992819639}
+  - component: {fileID: 1992819640}
   m_Layer: 0
   m_Name: POST (24)
   m_TagString: Untagged
@@ -3100,6 +3678,28 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1992819640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992819638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precio: 0
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
+  propietario: {fileID: 0}
+  casas: 0
+  Renta: 0
+  Tag: 
+  Tarjeta: {fileID: 0}
 --- !u!1 &1994264121
 GameObject:
   m_ObjectHideFlags: 0
@@ -3109,6 +3709,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1994264122}
+  - component: {fileID: 1994264123}
   m_Layer: 0
   m_Name: POST (12)
   m_TagString: Untagged
@@ -3130,6 +3731,28 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1994264123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994264121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precio: 0
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
+  propietario: {fileID: 0}
+  casas: 0
+  Renta: 0
+  Tag: 
+  Tarjeta: {fileID: 0}
 --- !u!1 &1996169379
 GameObject:
   m_ObjectHideFlags: 0
@@ -3139,6 +3762,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1996169380}
+  - component: {fileID: 1996169381}
   m_Layer: 0
   m_Name: POST (25)
   m_TagString: Untagged
@@ -3160,6 +3784,28 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1996169381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996169379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precio: 0
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  TextoComprar: {fileID: 0}
+  TextoPasar: {fileID: 0}
+  propietario: {fileID: 0}
+  casas: 0
+  Renta: 0
+  Tag: 
+  Tarjeta: {fileID: 0}
 --- !u!1 &2001712127
 GameObject:
   m_ObjectHideFlags: 0
