@@ -11,6 +11,7 @@ public class Propiedad : MonoBehaviour
 
     public Image PropertyIMage;
     public Sprite[] PropertyCards;
+    
     public Player propietario;
 
     public int casas;
@@ -38,10 +39,16 @@ public class Propiedad : MonoBehaviour
     {
         if (Player.Properties)
         {
-            ShowPropertie();
+
+            if(propietario == null)
+            {
+                ShowPropertie();
+            }
+            
         }
         Tag = ("Player" + ControlPlayer.control.Turno);
         PlayerActual = GameObject.FindGameObjectWithTag(Tag).GetComponent<Player>();
+        
         
     }
 
@@ -59,7 +66,7 @@ public class Propiedad : MonoBehaviour
 
         if (Input.GetKey("x"))
         {
-            Comprar();
+            StartCoroutine(Comprar());
         }else if (Input.GetKey("z"))
         {
             QuitCard();
@@ -73,11 +80,12 @@ public class Propiedad : MonoBehaviour
         StartCoroutine(Waiter());
     }
 
-    public void Comprar()
+    public IEnumerator Comprar()
     {
         PlayerActual.dinero -= precio ;
         propietario = PlayerActual;
         QuitCard();
+        yield return null;
     }
 
     public IEnumerator Waiter()
@@ -85,5 +93,7 @@ public class Propiedad : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         PlayerActual.FinishTurn();
     }
+
+    
 
 }
