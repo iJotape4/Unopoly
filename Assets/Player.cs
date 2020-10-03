@@ -36,6 +36,7 @@ public class Player : MonoBehaviour
 
     public static bool Properties;
 
+    public Rigidbody rigi;
     
 
     [HideInInspector]
@@ -55,6 +56,7 @@ public class Player : MonoBehaviour
     public Vector3 PosArr = new Vector3(0.0009f, -0.0205f, 0.00441f);
     [HideInInspector]
     public Vector3 PosDer = new Vector3(0.0224f, 0f, 0.0063f);
+
     
     // Start is called before the first frame update
     public void Start()
@@ -63,7 +65,8 @@ public class Player : MonoBehaviour
         total = 0;
         Resultado.text = "";
         PlayerText = GameObject.Find("PlayerText").GetComponent<Text>();
-        PlayerText.enabled = false;    
+        PlayerText.enabled = false;
+      
     }
 
     // Update is called once per frame
@@ -75,7 +78,7 @@ public class Player : MonoBehaviour
     public void LanzarDado(int PlayerTurn)
     {
         RestoreText();
-        punto = Random.Range(30 ,30);
+        punto = Random.Range(10 ,10);
         Debug.Log("Resul" + punto);
         total = punto;
         Resultado.text = " " + total;      
@@ -85,14 +88,15 @@ public class Player : MonoBehaviour
 
     public bool MoveToNexNode(Vector3 goal)
     {
+        Debug.Log("moviendo a" + goal);
         return goal != (transform.position = Vector3.MoveTowards(transform.position, goal, 2f * Time.deltaTime));
-
+        
     }
 
     public void MoveCamera()
     {
         Camera camara = GetComponentInChildren<Camera>();
-        if (rpposiicion < 10 || rpposiicion >40)
+        if (rpposiicion < 10 || rpposiicion > 40)
         {
             camara.transform.rotation = Abajo;
             camara.transform.localPosition = PosAbj;
@@ -103,7 +107,7 @@ public class Player : MonoBehaviour
             camara.transform.localPosition = PosDer;
 
         }
-        else if (rpposiicion >= 20)
+        else if (rpposiicion >= 20 || InBienestar)
         {
             camara.transform.rotation = Arriba;
             camara.transform.localPosition = PosArr;
@@ -114,6 +118,7 @@ public class Player : MonoBehaviour
             camara.transform.rotation = Izquierda;
 
         }
+        
     }
     public void FinishTurn()
     {
@@ -139,18 +144,18 @@ public class Player : MonoBehaviour
         RestoreText();
     }
 
-    public IEnumerator VisitaText()
+    public IEnumerator BienestarText(string Text)
     {
         PlayerText.enabled = true;
         PlayerText.fontSize = 20;
-        PlayerText.text = ("!Sólo visitando!!");
+        PlayerText.text = (Text);
         while (PlayerText.fontSize > 1)
         { 
             PlayerText.fontSize--;
             yield return new WaitForSeconds(0.1f);
         }
         RestoreText();
-        FinishTurn();
+        
     }
 
     public void RestoreText()
@@ -190,15 +195,15 @@ public class Player : MonoBehaviour
         ComprobateProperties();
 
 
-        if (rpposiicion == 30)
-        {
-            GoBienestar();
-        }
-
         if (rpposiicion == 10)
         {
-            StartCoroutine(VisitaText());
-        }else if (!Cards && !Properties)
+            StartCoroutine(GoBienestar());
+        }else if (rpposiicion == 30)
+        {
+            StartCoroutine(BienestarText("!Sólo visitando!!"));
+            FinishTurn();
+        }
+        else if (!Cards && !Properties)
         {
             FinishTurn();
         }
@@ -290,18 +295,32 @@ public class Player : MonoBehaviour
         }            
     }
 
-    public void GoBienestar()
+    public IEnumerator GoBienestar()
     {
-        //Hay que corregirlo y hacer un teletransporte animado como el de monopoly 64 https://www.youtube.com/watch?v=CyDnh7eVCl8 19:40
-        GameObject HuecoV = GameObject.Find("Hueco");
-        HuecoV.active = true;
-        Vector3 hueco = GameObject.Find("HuecoPoint").transform.position;
+        //Hay que corregirlo y hacer un teletransporte animado como el de monopoly 64 https://www.youtube.com/watch?v=CyDnh7eVCl8 19:40      
         Vector3 bienestar = GameObject.Find("Bienestar").transform.position;
-        MoveToNexNode(hueco);
 
+        rigi.isKinematic = false;
+
+        Player parent = OwnCamera.transform.GetComponentInParent<Player>();
+
+        while (transform.position != bienestar)
+        {
+            float x = 0.005f;
+            OwnCamera.transform.SetParent(null);
+            yield return new WaitForSeconds(1f);
+            transform.position = (bienestar);
+            OwnCamera.transform.SetParent(parent.transform);
+        }        
+        rigi.isKinematic = true;
         rpposiicion = 10;
-        transform.position = (bienestar);
         InBienestar = true;
+        MoveCamera();
+        StartCoroutine(BienestarText("!!En bienestar!!"));
+        yield return new WaitForSeconds(1f);
+        
+
+        FinishTurn();
         
     }
 }
