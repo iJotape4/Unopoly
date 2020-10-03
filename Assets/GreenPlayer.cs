@@ -11,14 +11,16 @@ public class GreenPlayer : Player
     // Start is called before the first frame update
     void Start()
     {
+        OwnCamera = GetComponentInChildren<Camera>();
+
         dinero = dineroInicial;
-        AnotherCam.enabled = false;
         PlayerTurn = 1;
 
         PlayerDinero.text = "$"+dinero.ToString();
         PlayerDinero.enabled = true;
         StartCoroutine(PlayerFontText());
-      
+        OwnCamera.enabled = false;
+
     }
 
     // Update is called once per frame
@@ -28,6 +30,7 @@ public class GreenPlayer : Player
         {
             PlayerDinero.text = "$" + dinero.ToString();
             PlayerDinero.color = Color.green;
+            OwnCamera.enabled = true;
         }
 
 

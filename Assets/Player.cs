@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     public int dinero;
     public Text PlayerDinero;
      
-    public Camera AnotherCam;
+    public Camera OwnCamera;
     public Text PlayerText;
 
     public bool AnotherMove;
@@ -54,6 +54,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
+        
         total = 0;
         Resultado.text = "";
         PlayerText = GameObject.Find("PlayerText").GetComponent<Text>();
@@ -69,7 +70,7 @@ public class Player : MonoBehaviour
     public void LanzarDado(int PlayerTurn)
     {
         RestoreText();
-        punto = Random.Range(30, 30);
+        punto = Random.Range(2 ,2);
         Debug.Log("Resul" + punto);
         total = punto;
         Resultado.text = " " + total;      
@@ -111,10 +112,8 @@ public class Player : MonoBehaviour
     }
     public void FinishTurn()
     {
-        Camera camara = GetComponentInChildren<Camera>();
         movimie = false;
-        camara.enabled = false;
-        AnotherCam.enabled = true;
+        OwnCamera.enabled = false;
 
         ControlPlayer.control.NextTurno();
         StartCoroutine(PlayerFontText());

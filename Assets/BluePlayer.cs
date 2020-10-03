@@ -10,30 +10,31 @@ public class BluePlayer : Player
     // Start is called before the first frame update
      void Start()
     {
-
+        OwnCamera = GetComponentInChildren<Camera>();
         PlayerTurn = 2;
-        dinero = dineroInicial;
-
-        PlayerDinero.text = "$" + dinero.ToString();
-        PlayerDinero.enabled = true;
-
+        dinero = 3000;
         StartCoroutine(PlayerFontText());
-    }
+        OwnCamera.enabled = false;
+    }  
 
     // Update is called once per frame
     void Update()
     {
-
-
+        if (PlayerTurn == ControlPlayer.control.Turno)
+        {
+            PlayerDinero.color = Color.blue;
+            PlayerDinero.text = "$" + dinero.ToString();
+            OwnCamera.enabled = true;
+        }
 
         AnotherMove = GreenPlayer.movimie;
-        if (Input.GetKeyDown(KeyCode.Z) && !movimie && !AnotherMove && !Cards)
+        if (Input.GetKeyDown(KeyCode.X) && !movimie && !AnotherMove && !Cards)
         {
             if (PlayerTurn != ControlPlayer.control.Turno)
             {
                 return;
             }
-            ;
+            
             LanzarDado(PlayerTurn);
 
 

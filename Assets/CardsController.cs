@@ -32,6 +32,7 @@ public class CardsController : MonoBehaviour
         ComArcsCards = Resources.LoadAll<Sprite>("ComArcs");
         CardsNum = ComArcsCards.Length;
         CardImage.enabled = false;
+        
        
     }
 
@@ -66,14 +67,17 @@ public class CardsController : MonoBehaviour
             elegida = Random.Range(0, Cards.Length);
             CardImage.sprite = Cards[elegida];                 
         }
-        else
+
+        if (Input.GetKey("x"))
+        {
+            QuitCard();
+        }
+
+        /*else
         {
             if (turno==1)
             {
-                if (Input.GetKey("x"))
-                {
-                    QuitCard();
-                }
+               
             }else if (turno == 2)
             {
                 if (Input.GetKey("z"))
@@ -81,7 +85,7 @@ public class CardsController : MonoBehaviour
                     QuitCard();
                 }
             }            
-        }                           
+        } */                           
     }
 
     public void QuitCard()
@@ -132,8 +136,15 @@ public class CardsController : MonoBehaviour
 
 
         }
-    }
+        StartCoroutine(Waiter());
+    }   
 
+
+    public IEnumerator Waiter()
+    {
+        yield return new WaitForSeconds(0.1f);
+        PlayerActual.FinishTurn();
+    }
     //Tienes Tu carro en el parqueadero, avanza hasta ahí para recogerlo
     public void GoParkway()
     {
