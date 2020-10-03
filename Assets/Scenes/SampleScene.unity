@@ -160,6 +160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 149744277}
+  - component: {fileID: 149744278}
   m_Layer: 0
   m_Name: POST (3)
   m_TagString: Untagged
@@ -181,6 +182,26 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &149744278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149744276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numcasilla: 0
+  precio: 65
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  propietario: {fileID: 0}
+  casas: 0
+  Posicion: 0
+  Tag: 
 --- !u!1 &169070961
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,6 +233,7 @@ RectTransform:
   m_Children:
   - {fileID: 1122983935}
   - {fileID: 755193017}
+  - {fileID: 1116125495}
   m_Father: {fileID: 574288390}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -265,6 +287,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 206762003}
+  - component: {fileID: 206762004}
   m_Layer: 0
   m_Name: POST (5)
   m_TagString: Untagged
@@ -286,6 +309,26 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &206762004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206762002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numcasilla: 0
+  precio: 100
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  propietario: {fileID: 0}
+  casas: 0
+  Posicion: 0
+  Tag: 
 --- !u!1 &232063761
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,6 +799,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 462956072}
+  - component: {fileID: 462956073}
   m_Layer: 0
   m_Name: POST (6)
   m_TagString: Untagged
@@ -777,6 +821,26 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &462956073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462956071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numcasilla: 0
+  precio: 90
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  propietario: {fileID: 0}
+  casas: 0
+  Posicion: 0
+  Tag: 
 --- !u!1 &526322763
 GameObject:
   m_ObjectHideFlags: 0
@@ -1451,6 +1515,83 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1116125494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1116125495}
+  - component: {fileID: 1116125497}
+  - component: {fileID: 1116125496}
+  m_Layer: 5
+  m_Name: TextoComprar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1116125495
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116125494}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 169070962}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -250, y: -141}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1116125496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116125494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &1116125497
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116125494}
+  m_CullTransparentMesh: 0
 --- !u!1 &1122983934
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,6 +1738,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1273810882}
+  - component: {fileID: 1273810883}
   m_Layer: 0
   m_Name: POST (8)
   m_TagString: Untagged
@@ -1618,6 +1760,26 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1273810883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273810881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numcasilla: 0
+  precio: 95
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  propietario: {fileID: 0}
+  casas: 0
+  Posicion: 0
+  Tag: 
 --- !u!1 &1279313794
 GameObject:
   m_ObjectHideFlags: 0
@@ -1875,36 +2037,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!1 &1473347927
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1473347928}
-  m_Layer: 0
-  m_Name: Bienestar (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1473347928
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1473347927}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.02234, y: -0.700002, z: 0.2128506}
-  m_LocalScale: {x: 1.5059835, y: 1.5059835, z: 1.5059835}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1478476301
 GameObject:
   m_ObjectHideFlags: 0
@@ -2113,6 +2245,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1537512228}
+  - component: {fileID: 1537512229}
   m_Layer: 0
   m_Name: POST (4)
   m_TagString: Untagged
@@ -2134,6 +2267,26 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1537512229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537512227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numcasilla: 0
+  precio: 65
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  propietario: {fileID: 0}
+  casas: 0
+  Posicion: 0
+  Tag: 
 --- !u!1 &1550032408
 GameObject:
   m_ObjectHideFlags: 0
@@ -2811,6 +2964,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1934804060}
+  - component: {fileID: 1934804061}
   m_Layer: 0
   m_Name: POST (1)
   m_TagString: Untagged
@@ -2832,6 +2986,26 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1934804061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934804059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numcasilla: 0
+  precio: 60
+  PropertyIMage: {fileID: 0}
+  PropertyCards: []
+  propietario: {fileID: 0}
+  casas: 0
+  Posicion: 0
+  Tag: 
 --- !u!1 &1947964429
 GameObject:
   m_ObjectHideFlags: 0
@@ -12412,7 +12586,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3963686643492627529}
   m_LocalRotation: {x: 0.07233371, y: -0.022154808, z: -0.012273431, w: 0.99705887}
-  m_LocalPosition: {x: -0.34756, y: 0.22644, z: -0.1558}
+  m_LocalPosition: {x: -0.365, y: 0.081, z: -0.155}
   m_LocalScale: {x: 1.2524765, y: 1.0128474, z: 1.4624605}
   m_Children: []
   m_Father: {fileID: 576420091}

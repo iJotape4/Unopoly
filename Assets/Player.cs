@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -32,6 +33,10 @@ public class Player : MonoBehaviour
     public static bool Cards;
     public static bool Chances;
     public static bool ComARrcs;
+
+    public static bool Properties;
+
+    
 
     [HideInInspector]
     public Quaternion Abajo = new Quaternion(0.0f, 0.0f, 0.0f, 1.0f);
@@ -160,20 +165,22 @@ public class Player : MonoBehaviour
                 punto--;
                 rpposiicion++;
                 MoveCamera();
-
-                ComprobateCards();
-
+              
                 if (rpposiicion == 40)
                 {
                     Cobrar(200);
                 }
             }
 
+        ComprobateCards();
+        ComprobateProperties();
+
+
         if (rpposiicion == 30)
         {
             GoBienestar();
         }
-        if (!Cards)
+        if (!Cards && !Properties)
         {
             FinishTurn();
         }
@@ -210,6 +217,26 @@ public class Player : MonoBehaviour
             Cards = true;         
             CardsController.turno = PlayerTurn;
         }
+    }
+
+    public void ComprobateProperties()
+    {
+        int[] properties = new int[30] { 1, 3, 4, 5, 6, 8, 9, 11, 12, 13, 14, 15, 16, 18, 19, 21, 23, 24, 25, 26, 27, 28, 29, 31, 32, 34, 35, 37, 38, 39 };
+
+        foreach (int element in properties)
+        {
+           // Debug.Log("revisando + " + element);
+            if (element == rpposiicion)
+            {
+                
+                Properties = true;
+                //Debug.Log("Properties = true" + rpposiicion);
+                break;
+            }
+        }
+           
+          
+        
     }
 
     public void Cobrar(int cantidad)
