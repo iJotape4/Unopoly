@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
     public static bool ComARrcs;
 
     public static bool Properties;
+    public static bool HuecoVisible = false;
 
     public Rigidbody rigi;
     
@@ -66,6 +67,8 @@ public class Player : MonoBehaviour
         Resultado.text = "";
         PlayerText = GameObject.Find("PlayerText").GetComponent<Text>();
         PlayerText.enabled = false;
+
+        
       
     }
 
@@ -88,7 +91,6 @@ public class Player : MonoBehaviour
 
     public bool MoveToNexNode(Vector3 goal)
     {
-        Debug.Log("moviendo a" + goal);
         return goal != (transform.position = Vector3.MoveTowards(transform.position, goal, 2f * Time.deltaTime));
         
     }
@@ -169,6 +171,7 @@ public class Player : MonoBehaviour
     ///AQUI ESTÁ MOVE
     public IEnumerator Move(int PlayerTurn)
     {
+      
         Camera camara = GetComponentInChildren<Camera>();
         if (movimie)
         {
@@ -299,7 +302,7 @@ public class Player : MonoBehaviour
     {
         //Hay que corregirlo y hacer un teletransporte animado como el de monopoly 64 https://www.youtube.com/watch?v=CyDnh7eVCl8 19:40      
         Vector3 bienestar = GameObject.Find("Bienestar").transform.position;
-
+        HuecoVisible = true;
         rigi.isKinematic = false;
 
         Player parent = OwnCamera.transform.GetComponentInParent<Player>();
@@ -312,13 +315,16 @@ public class Player : MonoBehaviour
             transform.position = (bienestar);
             OwnCamera.transform.SetParent(parent.transform);
         }        
+        //Esto es para que caiga
         rigi.isKinematic = true;
         rpposiicion = 10;
-        InBienestar = true;
+       
         MoveCamera();
+        InBienestar = true;
+       
         StartCoroutine(BienestarText("!!En bienestar!!"));
         yield return new WaitForSeconds(1f);
-        
+        HuecoVisible = false;
 
         FinishTurn();
         
