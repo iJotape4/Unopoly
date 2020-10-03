@@ -81,7 +81,7 @@ public class Player : MonoBehaviour
     public void LanzarDado(int PlayerTurn)
     {
         RestoreText();
-        punto = Random.Range(10 ,10);
+        punto = Random.Range(40 ,40);
         Debug.Log("Resul" + punto);
         total = punto;
         Resultado.text = " " + total;      
@@ -198,12 +198,13 @@ public class Player : MonoBehaviour
         ComprobateProperties();
 
 
-        if (rpposiicion == 10)
+        if (rpposiicion == 30)
         {
             StartCoroutine(GoBienestar());
-        }else if (rpposiicion == 30)
+        }else if (rpposiicion == 10)
         {
             StartCoroutine(BienestarText("!Sólo visitando!!"));
+            yield return new WaitForSeconds(1f);
             FinishTurn();
         }
         else if (!Cards && !Properties)
