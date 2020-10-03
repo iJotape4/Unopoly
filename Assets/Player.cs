@@ -75,7 +75,7 @@ public class Player : MonoBehaviour
     public void LanzarDado(int PlayerTurn)
     {
         RestoreText();
-        punto = Random.Range(10 ,10);
+        punto = Random.Range(30 ,30);
         Debug.Log("Resul" + punto);
         total = punto;
         Resultado.text = " " + total;      
@@ -293,7 +293,12 @@ public class Player : MonoBehaviour
     public void GoBienestar()
     {
         //Hay que corregirlo y hacer un teletransporte animado como el de monopoly 64 https://www.youtube.com/watch?v=CyDnh7eVCl8 19:40
+        GameObject HuecoV = GameObject.Find("Hueco");
+        HuecoV.active = true;
+        Vector3 hueco = GameObject.Find("HuecoPoint").transform.position;
         Vector3 bienestar = GameObject.Find("Bienestar").transform.position;
+        MoveToNexNode(hueco);
+
         rpposiicion = 10;
         transform.position = (bienestar);
         InBienestar = true;
