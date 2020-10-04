@@ -147,8 +147,8 @@ public class CardsController : MonoBehaviour
         //5.Puedes salir de bienestar gratis
         else if (elegida == 5)
         {
-           
-            //PROGRAMAS SALIDAS DE BIENESTAR
+            PlayerActual.ExitCards++;
+            StartCoroutine(Waiter());
         }
         else if (elegida == 6)
         {

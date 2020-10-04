@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System.Linq;
+using System.Security.Policy;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityScript.Steps;
@@ -25,6 +26,10 @@ public class Player : MonoBehaviour
     public Camera OwnCamera;
     public Text PlayerText;
     public Text TextoTirar;
+    public Text UseCard;
+    public Text TextoPagar;
+
+    public int ExitCards;
    
     public Color PlayerColor;
 
@@ -83,18 +88,20 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
 
     public IEnumerator LanzarDado()
     {
+
+
         TextoTirar.enabled = false;
         dado1 = GameObject.Find("Dado1").GetComponent<Dado>();
         dado2 = GameObject.Find("Dado2").GetComponent<Dado>();
         RestoreText();
-        //dado1.TirarDado();
-        //dado2.TirarDado();
+        dado1.TirarDado();
+        dado2.TirarDado();
         
         while (dado1.IsMoving() || dado2.IsMoving())
         {           
@@ -105,8 +112,8 @@ public class Player : MonoBehaviour
 
         OwnCamera.enabled = true;
         DadosCamera.enabled = false;
-        //punto = dado1.NumeroActual + dado2.NumeroActual;
-        punto = Random.Range(7 ,7);
+        punto = dado1.NumeroActual + dado2.NumeroActual;
+        //punto = Random.Range(7 ,7);
         Debug.Log("Resul" + punto);
         total = punto;
         Resultado.text = punto.ToString();
@@ -226,10 +233,10 @@ public class Player : MonoBehaviour
         ComprobateProperties();
 
 
-        if (rpposiicion == 30)
+        if (rpposiicion == 10)
         {
             StartCoroutine(GoBienestar());
-        }else if (rpposiicion == 10)
+        }else if (rpposiicion == 30)
         {
             StartCoroutine(BienestarText("!Sólo visitando!!"));
             yield return new WaitForSeconds(1f);
@@ -356,6 +363,74 @@ public class Player : MonoBehaviour
 
         FinishTurn();
         
+    }
+
+    public IEnumerator SalirBienestar()
+    {
+        TextoTirar.enabled = true;
+        TextoPagar.enabled = true;
+
+        if (ExitCards > 0)
+        {
+            UseCard.enabled = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            dado1 = GameObject.Find("Dado1").GetComponent<Dado>();
+            dado2 = GameObject.Find("Dado2").GetComponent<Dado>();
+
+            dado1.TirarDado();
+            dado2.TirarDado();
+
+            while (dado1.IsMoving() || dado2.IsMoving())
+            {
+                DadosCamera.enabled = true;
+                OwnCamera.enabled = false;
+                yield return new WaitForSeconds(0.1f);
+            }
+
+            OwnCamera.enabled = true;
+            DadosCamera.enabled = false;
+
+            if(dado1.NumeroActual == dado2.NumeroActual)
+            {
+                InBienestar = false;
+                punto = dado1.NumeroActual + dado2.NumeroActual;
+                total = punto;
+                Resultado.text = punto.ToString();
+                StartCoroutine(Move());
+            }
+            else
+            {
+                FinishTurn();
+            }
+            ResetBienestarGuide();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            StartCoroutine(Pagar(200));
+            InBienestar = false;
+            ResetBienestarGuide();
+            StartCoroutine(LanzarDado());
+        }
+
+        if (Input.GetKeyDown(KeyCode.C)  && ExitCards > 0)
+        {
+            InBienestar = false;
+            ExitCards--;
+            ResetBienestarGuide();
+            StartCoroutine(LanzarDado());
+        }      
+        yield return new WaitForSeconds(1f);
+    }
+
+    public void ResetBienestarGuide()
+    {
+        TextoTirar.enabled = false;
+        TextoPagar.enabled = false;
+        UseCard.enabled = false;
     }
 }
 

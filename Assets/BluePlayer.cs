@@ -22,6 +22,12 @@ public class BluePlayer : Player
         TextoTirar = GameObject.Find("TextoTirar").GetComponent<Text>();
         TextoTirar.enabled = true;
 
+        UseCard = GameObject.Find("TextoTSalida").GetComponent<Text>();
+        UseCard.enabled = false;
+
+        TextoPagar = GameObject.Find("TextoPagar").GetComponent<Text>();
+        TextoPagar.enabled = false;
+
         PlayerColor = Color.blue;
 
     }
@@ -39,11 +45,16 @@ public class BluePlayer : Player
             {
                 OwnCamera.enabled = true;
             }
-            
+
+            if (InBienestar)
+            {
+                StartCoroutine(SalirBienestar());
+            }
+
         }
 
         AnotherMove = GreenPlayer.movimie;
-        if (Input.GetKeyDown(KeyCode.X) && !movimie && !AnotherMove && !Cards && !Properties)
+        if (Input.GetKeyDown(KeyCode.X) && !movimie && !AnotherMove && !Cards && !Properties &&!InBienestar)
         {
             if (PlayerTurn != ControlPlayer.control.Turno)
             {
