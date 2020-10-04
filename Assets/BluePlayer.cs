@@ -21,6 +21,9 @@ public class BluePlayer : Player
 
         TextoTirar = GameObject.Find("TextoTirar").GetComponent<Text>();
         TextoTirar.enabled = true;
+
+        PlayerColor = Color.blue;
+
     }
 
     // Update is called once per frame

@@ -27,6 +27,8 @@ public class GreenPlayer : Player
         TextoTirar = GameObject.Find("TextoTirar").GetComponent<Text>();
         TextoTirar.enabled = true;
 
+        PlayerColor = Color.green;
+
     }
 
     // Update is called once per frame
@@ -35,7 +37,7 @@ public class GreenPlayer : Player
         if (PlayerTurn == ControlPlayer.control.Turno)
         {
             PlayerDinero.text = "$" + dinero.ToString();
-            PlayerDinero.color = Color.green;
+            PlayerDinero.color = PlayerColor;
 
 
             if (!DadosCamera.enabled)

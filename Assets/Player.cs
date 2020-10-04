@@ -4,6 +4,7 @@ using System.Diagnostics.Contracts;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityScript.Steps;
 
 public class Player : MonoBehaviour
 {
@@ -92,8 +93,8 @@ public class Player : MonoBehaviour
         dado1 = GameObject.Find("Dado1").GetComponent<Dado>();
         dado2 = GameObject.Find("Dado2").GetComponent<Dado>();
         RestoreText();
-        dado1.TirarDado();
-        dado2.TirarDado();
+        //dado1.TirarDado();
+        //dado2.TirarDado();
         
         while (dado1.IsMoving() || dado2.IsMoving())
         {           
@@ -104,11 +105,11 @@ public class Player : MonoBehaviour
 
         OwnCamera.enabled = true;
         DadosCamera.enabled = false;
-        punto = dado1.NumeroActual + dado2.NumeroActual;
-       // punto = Random.Range(40 ,40);
+        //punto = dado1.NumeroActual + dado2.NumeroActual;
+        punto = Random.Range(7 ,7);
         Debug.Log("Resul" + punto);
         total = punto;
-        Resultado.text = " " + total;
+        Resultado.text = punto.ToString();
 
         
         StartCoroutine(Move());
@@ -247,7 +248,7 @@ public class Player : MonoBehaviour
         Debug.Log("se mueve hasta"+pos);
         if (pos > rpposiicion)
         {
-            punto = pos;
+            punto = pos-rpposiicion;
         }
         else
         {
