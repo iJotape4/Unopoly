@@ -47,7 +47,7 @@ public class Hueco : MonoBehaviour
 
         hueco.transform.SetParent(null);
         pos = hueco.transform.TransformPoint(5.099997e-05f, 4e-05f, -0.00449f);
-        hueco.transform.position = new Vector3(pos.x, -1.19f, pos.z);
+        hueco.transform.position = new Vector3(pos.x, -1.023f, pos.z);
 
         yield return new WaitForSeconds(0.3f);
       
