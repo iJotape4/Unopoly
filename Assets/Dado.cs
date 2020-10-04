@@ -10,20 +10,26 @@ public class Dado : MonoBehaviour
     public cara[] caras;
     public int NumeroActual;
     public Vector3 PosInicial;
+
+    Player PlayerActual;
+    public string Tag;
+    public bool moviendo;
+
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(caras);
+        
         NumeroDado();
         caras = GetComponentsInChildren<cara>();
-        StartCoroutine(TirarDado());
+        
         PosInicial = GetComponent<Dado>().transform.position;
+        GetComponent<Rigidbody>().isKinematic = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        texto.text = "# " + NumeroActual;
+        IsMoving();
     }
 
     void NumeroDado()
@@ -39,16 +45,24 @@ public class Dado : MonoBehaviour
 
     }
 
-    public IEnumerator TirarDado()
+    public void TirarDado()
     {
+        Tag = ("Player" + ControlPlayer.control.Turno);
+        PlayerActual = GameObject.FindGameObjectWithTag(Tag).GetComponent<Player>();
+
+        transform.position = PosInicial;
         float FuerzaInicial = Random.Range(-10, 10 );
         float FuerzaInicial2 = Random.Range(10, 10);
         float multplier = Random.Range(10, 15);
         GetComponent<Rigidbody>().isKinematic = false;
         GetComponent<Rigidbody>().AddForce(new Vector3(FuerzaInicial * multplier, 0, FuerzaInicial2* multplier));
         GetComponent<Rigidbody>().rotation = Random.rotation;
-        yield return new WaitForSeconds(2f);
-        transform.position = PosInicial;
-        StartCoroutine(TirarDado());
+     
+        //StartCoroutine(TirarDado());
+    }
+
+    public bool IsMoving()
+    {
+        return  !GetComponent<Rigidbody>().IsSleeping();
     }
 }

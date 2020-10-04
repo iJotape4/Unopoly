@@ -34,8 +34,8 @@ public class BluePlayer : Player
             {
                 return;
             }
-            
-            LanzarDado(PlayerTurn);
+
+            StartCoroutine(LanzarDado());
 
 
         }

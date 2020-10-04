@@ -38,6 +38,9 @@ public class Player : MonoBehaviour
     public static bool Properties;
     public static bool HuecoVisible = false;
 
+    public Dado dado1;
+    public Dado dado2;
+
     public Rigidbody rigi;
     
 
@@ -68,8 +71,9 @@ public class Player : MonoBehaviour
         Resultado.text = "";
         PlayerText = GameObject.Find("PlayerText").GetComponent<Text>();
         PlayerText.enabled = false;
-       
-      
+
+        
+
     }
 
     // Update is called once per frame
@@ -79,15 +83,27 @@ public class Player : MonoBehaviour
     }
 
 
-    public void LanzarDado(int PlayerTurn)
+    public IEnumerator LanzarDado()
     {
+        dado1 = GameObject.Find("Dado1").GetComponent<Dado>();
+        dado2 = GameObject.Find("Dado2").GetComponent<Dado>();
         RestoreText();
-        punto = Random.Range(40 ,40);
+        dado1.TirarDado();
+        dado2.TirarDado();
+        
+        while (dado1.IsMoving() || dado2.IsMoving())
+        {
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        punto = dado1.NumeroActual + dado2.NumeroActual;
+       // punto = Random.Range(40 ,40);
         Debug.Log("Resul" + punto);
         total = punto;
-        Resultado.text = " " + total;      
-        StartCoroutine(Move(PlayerTurn));      
+        Resultado.text = " " + total;
 
+        
+        StartCoroutine(Move());
     }
 
     public bool MoveToNexNode(Vector3 goal)
@@ -170,7 +186,7 @@ public class Player : MonoBehaviour
 
 
     ///AQUI ESTÁ MOVE
-    public IEnumerator Move(int PlayerTurn)
+    public IEnumerator Move()
     {
       
         Camera camara = GetComponentInChildren<Camera>();
@@ -227,7 +243,7 @@ public class Player : MonoBehaviour
         {
             punto = 40 - rpposiicion + pos;
         }
-        StartCoroutine(Move(PlayerTurn));
+        StartCoroutine(Move());
     }
 
     public void ComprobateCards()

@@ -42,13 +42,7 @@ public class GreenPlayer : Player
                 return;
             }
            
-            LanzarDado(PlayerTurn);
-
-          /*  if (PlayerTurn.Equals(ControlPlayer.control.Turno))
-            {
-                
-                ControlPlayer.control.Turno = +2;
-            */
+            StartCoroutine(LanzarDado());
         }
     } 
     }
