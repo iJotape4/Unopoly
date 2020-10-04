@@ -102,8 +102,12 @@ public class Player : MonoBehaviour
         dado1 = GameObject.Find("Dado1").GetComponent<Dado>();
         dado2 = GameObject.Find("Dado2").GetComponent<Dado>();
         RestoreText();
-        //dado1.TirarDado();
-       // dado2.TirarDado();
+
+        if(!dado1.IsMoving() && !dado2.IsMoving())
+        {
+            dado1.TirarDado();
+            dado2.TirarDado();
+        }     
         
         while (dado1.IsMoving() || dado2.IsMoving())
         {           
@@ -114,8 +118,8 @@ public class Player : MonoBehaviour
 
         OwnCamera.enabled = true;
         DadosCamera.enabled = false;
-        //punto = dado1.NumeroActual + dado2.NumeroActual;
-        punto = Random.Range(30 ,30);
+        punto = dado1.NumeroActual + dado2.NumeroActual;
+       // punto = Random.Range(3 ,3);
         //Debug.Log("Resul" + punto);
         total = punto;
         Resultado.text = punto.ToString();
@@ -365,14 +369,15 @@ public class Player : MonoBehaviour
         }        
         //Esto es para que caiga
         rigi.isKinematic = true;
-        rpposiicion = 10;
+        rpposiicion = 10;     
        
-        MoveCamera();
         InBienestar = true;
-       
+        MoveCamera();
+
         StartCoroutine(BienestarText("!!En bienestar!!"));
         yield return new WaitForSeconds(1f);
         HuecoVisible = false;
+       ResetBienestarGuide();
 
         FinishTurn();
         
@@ -393,8 +398,11 @@ public class Player : MonoBehaviour
             dado1 = GameObject.Find("Dado1").GetComponent<Dado>();
             dado2 = GameObject.Find("Dado2").GetComponent<Dado>();
 
-            dado1.TirarDado();
-            dado2.TirarDado();
+            if (!dado1.IsMoving() && !dado2.IsMoving())
+            {
+                dado1.TirarDado();
+                dado2.TirarDado();
+            }
 
             while (dado1.IsMoving() || dado2.IsMoving())
             {
