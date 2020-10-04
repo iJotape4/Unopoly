@@ -44,7 +44,7 @@ public class Propiedad : MonoBehaviour
         TextoPasar.enabled = false;
 
         PropertyIMage.enabled = false;
-        Tarjeta = this.GetComponent<Propiedad>();
+       
     }
 
     // Update is called once per frame
@@ -52,17 +52,28 @@ public class Propiedad : MonoBehaviour
     {
         Tag = ("Player" + ControlPlayer.control.Turno);
         PlayerActual = GameObject.FindGameObjectWithTag(Tag).GetComponent<Player>();
+         //Tarjeta = this.GetComponent<Propiedad>();
         if (Player.Properties)
         {
-            
+            for (int i = 0; i < PropertyCards.Length; i++)
+            {
+                if (int.Parse(PropertyCards[i].name) == PlayerActual.rpposiicion)
+                {
+                    Tarjeta = GameObject.Find("POST (" + PropertyCards[i].name + ")").GetComponent<Propiedad>();
+                    PropertyIMage.sprite = PropertyCards[i];
+                    break;
+                }
+            }
+
             if (Tarjeta.propietario == null)
             {
                 ShowPropertie();
             }
             else
             {
-                StartCoroutine(PlayerActual.Pagar(Renta));
-              StartCoroutine(Tarjeta.propietario.Cobrar(Renta));
+                StartCoroutine(PlayerActual.Pagar(Tarjeta.Renta));           
+              StartCoroutine(Tarjeta.propietario.Cobrar(Tarjeta.Renta));
+                Debug.Log("player" + PlayerActual.PlayerTurn + "paga $" + Tarjeta.Renta + " a Player" + Tarjeta.propietario.PlayerTurn + "Por la propiedad #" + Tarjeta.name) ;
               PlayerActual.StartCoroutine(Waiter());
             }
             
@@ -71,15 +82,7 @@ public class Propiedad : MonoBehaviour
 
     public void ShowPropertie()
     {
-        for (int i=0; i<PropertyCards.Length; i++)
-        {
-            if(int.Parse(PropertyCards[i].name) == PlayerActual.rpposiicion)
-            {
-                PropertyIMage.sprite = PropertyCards[i];               
-                Tarjeta = GameObject.Find("POST ("+PropertyCards[i].name+")").GetComponent<Propiedad>();
-                break;
-            }
-        }
+        
         PropertyIMage.enabled = true;
 
         TextoComprar.text = ("X) Comprar $" + Tarjeta.precio);
@@ -107,8 +110,7 @@ public class Propiedad : MonoBehaviour
 
     public IEnumerator Comprar()
     {
-
-        StartCoroutine(PlayerActual.Pagar(Tarjeta. precio)) ;
+        StartCoroutine(PlayerActual.Pagar(Tarjeta.precio)) ;
         Tarjeta.propietario = PlayerActual;
         QuitCard();
         yield return null;

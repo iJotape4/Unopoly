@@ -2062,14 +2062,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  precio: 0
+  precio: 100
   PropertyIMage: {fileID: 0}
   PropertyCards: []
   TextoComprar: {fileID: 0}
   TextoPasar: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
-  Renta: 0
+  Renta: 30
   Tag: 
   Tarjeta: {fileID: 0}
 --- !u!1 &675905904

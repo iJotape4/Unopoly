@@ -117,31 +117,31 @@ public class CardsController : MonoBehaviour
         if (elegida == 0)
         {
             Cafetería();
-           
+
         }
         //1. Tienes tu carro en el parqueadero, avanza hasta ahí para recogerlo.
         else if (elegida == 1)
         {
             GoParkway();
-           
+
         }
         //2.Te vieron fumando en Banu, tienes que ir a bienestar.  
         else if (elegida == 2)
         {
             GoBienestar();
-            
+
         }
         //3. Perdiste un libro de la biblioteca, paga 200
         else if (elegida == 3)
         {
             StartCoroutine(PlayerActual.Pagar(100));
-            StartCoroutine(Waiter());         
+            StartCoroutine(Waiter());
 
         }
         //4.Avanza hasta la salida, cobra 200
         else if (elegida == 4)
         {
-            GoToGo(); 
+            GoToGo();
         }
 
         //5.Puedes salir de bienestar gratis
@@ -150,12 +150,12 @@ public class CardsController : MonoBehaviour
             PlayerActual.ExitCards++;
             StartCoroutine(Waiter());
         }
+        //6. Ve al laboratorio más cercano
         else if (elegida == 6)
         {
-            
-            //PLACEHOLDER
+
+            GoToLaboratory();
         }
-        //StartCoroutine(Waiter());
         
     }
 

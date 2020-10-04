@@ -100,8 +100,8 @@ public class Player : MonoBehaviour
         dado1 = GameObject.Find("Dado1").GetComponent<Dado>();
         dado2 = GameObject.Find("Dado2").GetComponent<Dado>();
         RestoreText();
-        dado1.TirarDado();
-        dado2.TirarDado();
+        //dado1.TirarDado();
+       // dado2.TirarDado();
         
         while (dado1.IsMoving() || dado2.IsMoving())
         {           
@@ -112,9 +112,9 @@ public class Player : MonoBehaviour
 
         OwnCamera.enabled = true;
         DadosCamera.enabled = false;
-        punto = dado1.NumeroActual + dado2.NumeroActual;
-        //punto = Random.Range(7 ,7);
-        Debug.Log("Resul" + punto);
+        //punto = dado1.NumeroActual + dado2.NumeroActual;
+        punto = Random.Range(3 ,3);
+        //Debug.Log("Resul" + punto);
         total = punto;
         Resultado.text = punto.ToString();
 
@@ -233,10 +233,10 @@ public class Player : MonoBehaviour
         ComprobateProperties();
 
 
-        if (rpposiicion == 10)
+        if (rpposiicion == 30)
         {
             StartCoroutine(GoBienestar());
-        }else if (rpposiicion == 30)
+        }else if (rpposiicion == 10)
         {
             StartCoroutine(BienestarText("!Sólo visitando!!"));
             yield return new WaitForSeconds(1f);
