@@ -15,6 +15,12 @@ public class BluePlayer : Player
         dinero = 3000;
         StartCoroutine(PlayerFontText());
         OwnCamera.enabled = false;
+
+        DadosCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        DadosCamera.enabled = false;
+
+        TextoTirar = GameObject.Find("TextoTirar").GetComponent<Text>();
+        TextoTirar.enabled = true;
     }
 
     // Update is called once per frame
@@ -24,7 +30,13 @@ public class BluePlayer : Player
         {
             PlayerDinero.color = PlayerColor;
             PlayerDinero.text = "$" + dinero.ToString();
-            OwnCamera.enabled = true;
+            
+
+            if (!DadosCamera.enabled)
+            {
+                OwnCamera.enabled = true;
+            }
+            
         }
 
         AnotherMove = GreenPlayer.movimie;
@@ -34,7 +46,7 @@ public class BluePlayer : Player
             {
                 return;
             }
-
+            
             StartCoroutine(LanzarDado());
 
 

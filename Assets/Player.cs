@@ -19,9 +19,12 @@ public class Player : MonoBehaviour
     public int dineroInicial=2000;
     public int dinero;
     public Text PlayerDinero;
-     
+
+    public Camera DadosCamera;
     public Camera OwnCamera;
     public Text PlayerText;
+    public Text TextoTirar;
+   
     public Color PlayerColor;
 
     public bool AnotherMove;
@@ -72,7 +75,7 @@ public class Player : MonoBehaviour
         PlayerText = GameObject.Find("PlayerText").GetComponent<Text>();
         PlayerText.enabled = false;
 
-        
+       
 
     }
 
@@ -85,6 +88,7 @@ public class Player : MonoBehaviour
 
     public IEnumerator LanzarDado()
     {
+        TextoTirar.enabled = false;
         dado1 = GameObject.Find("Dado1").GetComponent<Dado>();
         dado2 = GameObject.Find("Dado2").GetComponent<Dado>();
         RestoreText();
@@ -92,10 +96,14 @@ public class Player : MonoBehaviour
         dado2.TirarDado();
         
         while (dado1.IsMoving() || dado2.IsMoving())
-        {
+        {           
+            DadosCamera.enabled = true;
+            OwnCamera.enabled = false;
             yield return new WaitForSeconds(0.1f);
-        }
+        }      
 
+        OwnCamera.enabled = true;
+        DadosCamera.enabled = false;
         punto = dado1.NumeroActual + dado2.NumeroActual;
        // punto = Random.Range(40 ,40);
         Debug.Log("Resul" + punto);
@@ -146,6 +154,7 @@ public class Player : MonoBehaviour
 
         ControlPlayer.control.NextTurno();
         StartCoroutine(PlayerFontText());
+        TextoTirar.enabled = true;
     }
 
     public IEnumerator PlayerFontText()
@@ -153,13 +162,14 @@ public class Player : MonoBehaviour
         PlayerText.enabled = true;
         PlayerText.fontSize = 20;
         PlayerText.text = ("Player " + ControlPlayer.control.Turno + " Turn!");
-
+        
         while (PlayerText.fontSize > 1) {
             
            PlayerText.fontSize--;
             yield return new WaitForSeconds(0.1f);
             
         }
+        
         RestoreText();
     }
 

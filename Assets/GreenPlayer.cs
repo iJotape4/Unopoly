@@ -21,6 +21,12 @@ public class GreenPlayer : Player
         StartCoroutine(PlayerFontText());
         OwnCamera.enabled = false;
 
+        DadosCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        DadosCamera.enabled = false;
+
+        TextoTirar = GameObject.Find("TextoTirar").GetComponent<Text>();
+        TextoTirar.enabled = true;
+
     }
 
     // Update is called once per frame
@@ -30,7 +36,12 @@ public class GreenPlayer : Player
         {
             PlayerDinero.text = "$" + dinero.ToString();
             PlayerDinero.color = Color.green;
-            OwnCamera.enabled = true;
+
+
+            if (!DadosCamera.enabled)
+            {
+                OwnCamera.enabled = true;
+            }
         }
 
 
@@ -38,10 +49,10 @@ public class GreenPlayer : Player
         if (Input.GetKeyDown(KeyCode.X) && !movimie && !AnotherMove && !Cards && !Properties)
         {
             if (PlayerTurn != ControlPlayer.control.Turno)
-            {
+            {   
                 return;
             }
-           
+            
             StartCoroutine(LanzarDado());
         }
     } 
