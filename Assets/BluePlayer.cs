@@ -22,7 +22,7 @@ public class BluePlayer : Player
     {
         if (PlayerTurn == ControlPlayer.control.Turno)
         {
-            PlayerDinero.color = Color.blue;
+            PlayerDinero.color = PlayerColor;
             PlayerDinero.text = "$" + dinero.ToString();
             OwnCamera.enabled = true;
         }

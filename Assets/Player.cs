@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
      
     public Camera OwnCamera;
     public Text PlayerText;
+    public Color PlayerColor;
 
     public bool AnotherMove;
     public int PlayerTurn;
@@ -67,14 +68,14 @@ public class Player : MonoBehaviour
         Resultado.text = "";
         PlayerText = GameObject.Find("PlayerText").GetComponent<Text>();
         PlayerText.enabled = false;
-
-        
+       
       
     }
 
     // Update is called once per frame
     void Update()
     {
+
     }
 
 
@@ -310,7 +311,6 @@ public class Player : MonoBehaviour
 
         while (transform.position != bienestar)
         {
-            float x = 0.005f;
             OwnCamera.transform.SetParent(null);
             yield return new WaitForSeconds(1f);
             transform.position = (bienestar);
