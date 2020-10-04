@@ -47,6 +47,8 @@ public class Player : MonoBehaviour
     public static bool Properties;
     public static bool HuecoVisible = false;
 
+    public int NumVueltas=0;
+
     public Dado dado1;
     public Dado dado2;
 
@@ -95,7 +97,7 @@ public class Player : MonoBehaviour
     public IEnumerator LanzarDado()
     {
 
-
+        MoveCamera();
         TextoTirar.enabled = false;
         dado1 = GameObject.Find("Dado1").GetComponent<Dado>();
         dado2 = GameObject.Find("Dado2").GetComponent<Dado>();
@@ -113,7 +115,7 @@ public class Player : MonoBehaviour
         OwnCamera.enabled = true;
         DadosCamera.enabled = false;
         //punto = dado1.NumeroActual + dado2.NumeroActual;
-        punto = Random.Range(3 ,3);
+        punto = Random.Range(30 ,30);
         //Debug.Log("Resul" + punto);
         total = punto;
         Resultado.text = punto.ToString();
@@ -130,24 +132,29 @@ public class Player : MonoBehaviour
 
     public void MoveCamera()
     {
+       
         Camera camara = GetComponentInChildren<Camera>();
-        if (rpposiicion < 10 || rpposiicion > 40)
+
+        int Posicion = rpposiicion - (NumVueltas * 40);
+        
+
+        if (Posicion < 10 )
         {
             camara.transform.rotation = Abajo;
             camara.transform.localPosition = PosAbj;
         }
-        else if (rpposiicion >= 30)
+        else if (Posicion >= 30)
         {
             camara.transform.rotation = Derecha;
             camara.transform.localPosition = PosDer;
 
         }
-        else if (rpposiicion >= 20 || InBienestar)
+        else if (Posicion >= 20 || InBienestar)
         {
             camara.transform.rotation = Arriba;
             camara.transform.localPosition = PosArr;
         }
-        else if (rpposiicion >= 10)
+        else if (Posicion >= 10)
         {
             camara.transform.localPosition = PosIzq;
             camara.transform.rotation = Izquierda;
@@ -155,6 +162,8 @@ public class Player : MonoBehaviour
         }
         
     }
+
+
     public void FinishTurn()
     {
         movimie = false;
@@ -221,11 +230,15 @@ public class Player : MonoBehaviour
                 yield return new WaitForSeconds(0.1f);
                 punto--;
                 rpposiicion++;
-                MoveCamera();
-              
-                if (rpposiicion == 40)
+                if (rpposiicion % 10 == 0)
                 {
-                    Cobrar(200);
+                    MoveCamera();
+                }             
+                
+                if (rpposiicion%40 == 0)
+                {
+                    NumVueltas++;
+                    StartCoroutine(Cobrar(200));
                 }
             }
 
@@ -233,10 +246,10 @@ public class Player : MonoBehaviour
         ComprobateProperties();
 
 
-        if (rpposiicion == 30)
-        {
+        if ((rpposiicion-(40*NumVueltas))%30 ==0  && rpposiicion % 40 != 0)
+        {        
             StartCoroutine(GoBienestar());
-        }else if (rpposiicion == 10)
+        }else if ((rpposiicion - (40 * NumVueltas)) % 10 == 0 && rpposiicion % 40 != 0 )
         {
             StartCoroutine(BienestarText("!Sólo visitando!!"));
             yield return new WaitForSeconds(1f);
@@ -395,11 +408,12 @@ public class Player : MonoBehaviour
 
             if(dado1.NumeroActual == dado2.NumeroActual)
             {
-                InBienestar = false;
+                
                 punto = dado1.NumeroActual + dado2.NumeroActual;
                 total = punto;
                 Resultado.text = punto.ToString();
                 StartCoroutine(Move());
+                InBienestar = false;
             }
             else
             {
@@ -411,17 +425,19 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z))
         {
             StartCoroutine(Pagar(200));
-            InBienestar = false;
+           
             ResetBienestarGuide();
             StartCoroutine(LanzarDado());
+            InBienestar = false;
         }
 
         if (Input.GetKeyDown(KeyCode.C)  && ExitCards > 0)
         {
-            InBienestar = false;
+            
             ExitCards--;
             ResetBienestarGuide();
             StartCoroutine(LanzarDado());
+            InBienestar = false;
         }      
         yield return new WaitForSeconds(1f);
     }
