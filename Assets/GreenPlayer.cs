@@ -36,6 +36,8 @@ public class GreenPlayer : Player
 
         PlayerColor = Color.green;
 
+        //StartCoroutine(GoBienestar());
+
     }
 
     // Update is called once per frame
@@ -58,8 +60,8 @@ public class GreenPlayer : Player
         }
 
 
-        AnotherMove = BluePlayer.movimie;
-        if (Input.GetKeyDown(KeyCode.X) && !movimie && !AnotherMove && !Cards && !Properties && !InBienestar)
+       
+        if (Input.GetKeyDown(KeyCode.X) && !movimie  && !Cards && !Properties && !InBienestar)
         {
             if (PlayerTurn != ControlPlayer.control.Turno)
             {   

@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     public GO Rott;
     public int rpposiicion;
     public int punto;
-    public static bool movimie;
+    public  bool movimie;
 
     [HideInInspector]
     public int dineroInicial=2000;
@@ -40,8 +40,6 @@ public class Player : MonoBehaviour
     public int PlayerTurn;
 
     public bool InBienestar=false;
-
-    public static bool EventTurn;
 
     public static bool Cards;
     public static bool Chances;

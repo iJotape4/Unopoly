@@ -290,7 +290,7 @@ public class CardsController : MonoBehaviour
     //Método General para ir a una posición desde ésta clase
     public void  CardMethodGoTo(int pos)
     {
-        Player.movimie = false ;
+        PlayerActual.movimie = false ;
         PlayerActual.MoveTowards(pos);
         
         PlayerActual.ComprobateProperties();
