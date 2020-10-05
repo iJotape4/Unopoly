@@ -57,23 +57,23 @@ public class Player : MonoBehaviour
     public Rigidbody rigi;
     
 
-    [HideInInspector]
-    public Quaternion Abajo = new Quaternion(0.0f, 0.0f, 0.0f, 1.0f);
-    [HideInInspector]
-    public Quaternion Izquierda = new Quaternion(0.0f, 0.7f, 0.0f, 0.7f);
-    [HideInInspector]
-    public Quaternion Arriba = new Quaternion(0.0f, 1.0f, 0.0f, 0.0f);
-    [HideInInspector]
-    public Quaternion Derecha = new Quaternion(0.0f, -0.7f, 0.0f, 0.7f);
+    
+    public static Quaternion Abajo = new Quaternion(0.3f, 0.0f, 0.0f, 1.0f);
+    
+    public static Quaternion Izquierda = new Quaternion(0.2f, 0.7f, -0.2f, 0.7f);
+    
+    public static Quaternion Arriba = new Quaternion(0.0f, 1.0f, -0.3f, 0.0f);
+    
+    public static Quaternion Derecha = new Quaternion(0.2f, -0.7f, 0.2f, 0.7f);
 
-    [HideInInspector]
-    public Vector3 PosAbj = new Vector3(-0.0127f, 0.0234f, 0.0063f);
-    [HideInInspector]
-    public Vector3 PosIzq = new Vector3(-0.02294f, -0.0027f, 0.0063f);
-    [HideInInspector]
-    public Vector3 PosArr = new Vector3(0.0009f, -0.0205f, 0.00441f);
-    [HideInInspector]
-    public Vector3 PosDer = new Vector3(0.0224f, 0f, 0.0063f);
+    
+    public static Vector3 PosAbj = new Vector3(-0.0127f, 0.03f, 0.062f);
+    
+    public static Vector3 PosIzq = new Vector3(-0.0194f, -0.0003f, 0.042f);
+    
+    public static Vector3 PosArr = new Vector3(0f, -0.02f, 0.0347f);
+    
+    public static Vector3 PosDer = new Vector3(0.0251f, 0f, 0.057f);
 
     
     // Start is called before the first frame update
@@ -105,7 +105,7 @@ public class Player : MonoBehaviour
         dado2 = GameObject.Find("Dado2").GetComponent<Dado>();
         RestoreText();
 
-        if(!dado1.IsMoving() && !dado2.IsMoving())
+        /*if(!dado1.IsMoving() && !dado2.IsMoving())
         {
             dado1.TirarDado();
             dado2.TirarDado();
@@ -131,9 +131,9 @@ public class Player : MonoBehaviour
         else
         {
             RepiteTurno = false; ;
-        }
-
-        // punto = Random.Range(3 ,3);
+        } */
+        yield return new WaitForSeconds(0.1f);
+        punto = Random.Range(3,3);
         //Debug.Log("Resul" + punto);
         total = punto;
         Resultado.text = punto.ToString();
@@ -247,10 +247,9 @@ public class Player : MonoBehaviour
                 yield return new WaitForSeconds(0.1f);
                 punto--;
                 rpposiicion++;
-                if (rpposiicion % 10 == 0)
-                {
+                
                     MoveCamera();
-                }             
+                           
                 
                 if (rpposiicion%40 == 0)
                 {
