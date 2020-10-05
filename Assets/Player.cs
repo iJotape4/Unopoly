@@ -28,7 +28,8 @@ public class Player : MonoBehaviour
     public Text TextoTirar;
     public Text UseCard;
     public Text TextoPagar;
-   
+
+    public Casilla casiillaSiguiente;
 
     public int ExitCards;
    
@@ -142,9 +143,35 @@ public class Player : MonoBehaviour
     }
 
     public bool MoveToNexNode(Vector3 goal)
-    {
+    {   
         return goal != (transform.position = Vector3.MoveTowards(transform.position, goal, 2f * Time.deltaTime));
-        
+    }
+
+    public void ComprobarOcupacion()
+    {
+        int posicion = (rpposiicion + 1) - (40 * NumVueltas);
+        casiillaSiguiente = GameObject.Find("POST (" + posicion + ")").GetComponent<Casilla>();
+
+        if (casiillaSiguiente.ocupada)
+        {
+            if (posicion < 10 || posicion == 40)
+            {
+                casiillaSiguiente.transform.position = new Vector3(casiillaSiguiente.transform.position.x, casiillaSiguiente.transform.position.y, 0.093f);
+            }
+            else if (posicion >= 30)
+            {
+                casiillaSiguiente.transform.position = new Vector3( 0.03f, casiillaSiguiente.transform.position.y, casiillaSiguiente.transform.position.z);
+            }
+                 
+            else if (posicion >= 20 )
+            {
+                casiillaSiguiente.transform.position = new Vector3(casiillaSiguiente.transform.position.x, casiillaSiguiente.transform.position.y, 10.594f); 
+            }
+            else if (posicion >= 10)
+            {
+                casiillaSiguiente.transform.position = new Vector3(-10.33f, casiillaSiguiente.transform.position.y, casiillaSiguiente.transform.position.z);
+            }   
+         }
     }
 
     public void MoveCamera()
@@ -232,23 +259,25 @@ public class Player : MonoBehaviour
     ///AQUI ESTÁ MOVE
     public IEnumerator Move()
     {
-      
+       
         Camera camara = GetComponentInChildren<Camera>();
         if (movimie)
         {
             yield break;
         }
+        
         movimie = true;
         if (PlayerTurn.Equals(ControlPlayer.control.Turno))
             while (punto > 0)
             {
+                ComprobarOcupacion();
                 Vector3 nextPos = GO.tablero.Seleccionar(rpposiicion+0).position;
                 while (MoveToNexNode(nextPos)) { yield return null; }
                 yield return new WaitForSeconds(0.1f);
                 punto--;
                 rpposiicion++;
-                
-                    MoveCamera();
+              
+                MoveCamera();
                            
                 
                 if (rpposiicion%40 == 0)

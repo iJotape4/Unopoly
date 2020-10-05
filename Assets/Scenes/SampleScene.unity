@@ -130,6 +130,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 12255065}
+  - component: {fileID: 12255066}
   m_Layer: 0
   m_Name: POST (33)
   m_TagString: Untagged
@@ -151,6 +152,26 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 180.20499, z: 0}
+--- !u!114 &12255066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12255064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &13161645
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,6 +581,7 @@ GameObject:
   m_Component:
   - component: {fileID: 149744277}
   - component: {fileID: 149744278}
+  - component: {fileID: 149744279}
   m_Layer: 0
   m_Name: POST (3)
   m_TagString: Untagged
@@ -603,6 +625,26 @@ MonoBehaviour:
   Renta: 15
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &149744279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149744276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &156593560
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,6 +853,7 @@ GameObject:
   m_Component:
   - component: {fileID: 206762003}
   - component: {fileID: 206762004}
+  - component: {fileID: 206762005}
   m_Layer: 0
   m_Name: POST (5)
   m_TagString: Untagged
@@ -854,6 +897,26 @@ MonoBehaviour:
   Renta: 20
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &206762005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206762002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &215382409
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,6 +1313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 327999532}
   - component: {fileID: 327999533}
+  - component: {fileID: 327999534}
   m_Layer: 0
   m_Name: POST (19)
   m_TagString: Untagged
@@ -1293,6 +1357,26 @@ MonoBehaviour:
   Renta: 0
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &327999534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327999531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &385927700
 GameObject:
   m_ObjectHideFlags: 0
@@ -1303,6 +1387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 385927701}
   - component: {fileID: 385927702}
+  - component: {fileID: 385927703}
   m_Layer: 0
   m_Name: POST (15)
   m_TagString: Untagged
@@ -1318,7 +1403,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 385927700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.2260003, y: 0.8500001, z: 3.5099998}
+  m_LocalPosition: {x: -7.16, y: 0.8500001, z: 3.5099998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1550032413}
@@ -1346,6 +1431,26 @@ MonoBehaviour:
   Renta: 0
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &385927703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385927700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &428033669
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,6 +1540,7 @@ GameObject:
   m_Component:
   - component: {fileID: 462956072}
   - component: {fileID: 462956073}
+  - component: {fileID: 462956074}
   m_Layer: 0
   m_Name: POST (6)
   m_TagString: Untagged
@@ -1478,6 +1584,26 @@ MonoBehaviour:
   Renta: 50
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &462956074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462956071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &487200388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1547,6 +1673,7 @@ GameObject:
   m_Component:
   - component: {fileID: 526322764}
   - component: {fileID: 526322765}
+  - component: {fileID: 526322766}
   m_Layer: 0
   m_Name: POST (14)
   m_TagString: Untagged
@@ -1590,6 +1717,26 @@ MonoBehaviour:
   Renta: 0
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &526322766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526322763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &550263567
 GameObject:
   m_ObjectHideFlags: 0
@@ -1600,6 +1747,7 @@ GameObject:
   m_Component:
   - component: {fileID: 550263568}
   - component: {fileID: 550263569}
+  - component: {fileID: 550263570}
   m_Layer: 0
   m_Name: POST (27)
   m_TagString: Untagged
@@ -1643,6 +1791,26 @@ MonoBehaviour:
   Renta: 0
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &550263570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550263567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &560942895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1653,6 +1821,7 @@ GameObject:
   m_Component:
   - component: {fileID: 560942896}
   - component: {fileID: 560942897}
+  - component: {fileID: 560942898}
   m_Layer: 0
   m_Name: POST (35)
   m_TagString: Untagged
@@ -1696,6 +1865,26 @@ MonoBehaviour:
   Renta: 0
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &560942898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560942895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &574288386
 GameObject:
   m_ObjectHideFlags: 0
@@ -1911,6 +2100,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 599118093}
+  - component: {fileID: 599118094}
   m_Layer: 0
   m_Name: POST (40)
   m_TagString: Untagged
@@ -1932,6 +2122,26 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &599118094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599118092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &636990315
 GameObject:
   m_ObjectHideFlags: 0
@@ -2029,6 +2239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 663355954}
   - component: {fileID: 663355955}
+  - component: {fileID: 663355956}
   m_Layer: 0
   m_Name: POST (9)
   m_TagString: Untagged
@@ -2072,6 +2283,26 @@ MonoBehaviour:
   Renta: 30
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &663355956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663355953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &675905904
 GameObject:
   m_ObjectHideFlags: 0
@@ -2082,6 +2313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 675905905}
   - component: {fileID: 675905906}
+  - component: {fileID: 675905907}
   m_Layer: 0
   m_Name: POST (39)
   m_TagString: Untagged
@@ -2125,6 +2357,26 @@ MonoBehaviour:
   Renta: 0
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &675905907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675905904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &708091158
 GameObject:
   m_ObjectHideFlags: 0
@@ -2135,6 +2387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 708091159}
   - component: {fileID: 708091160}
+  - component: {fileID: 708091161}
   m_Layer: 0
   m_Name: POST (23)
   m_TagString: Untagged
@@ -2178,6 +2431,26 @@ MonoBehaviour:
   Renta: 0
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &708091161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708091158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &750199539
 GameObject:
   m_ObjectHideFlags: 0
@@ -2360,6 +2633,7 @@ GameObject:
   m_Component:
   - component: {fileID: 795828493}
   - component: {fileID: 795828494}
+  - component: {fileID: 795828495}
   m_Layer: 0
   m_Name: POST (37)
   m_TagString: Untagged
@@ -2403,6 +2677,26 @@ MonoBehaviour:
   Renta: 0
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &795828495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795828492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &808538426
 GameObject:
   m_ObjectHideFlags: 0
@@ -2413,6 +2707,7 @@ GameObject:
   m_Component:
   - component: {fileID: 808538427}
   - component: {fileID: 808538428}
+  - component: {fileID: 808538429}
   m_Layer: 0
   m_Name: POST (28)
   m_TagString: Untagged
@@ -2456,6 +2751,26 @@ MonoBehaviour:
   Renta: 0
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &808538429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808538426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &874142626
 GameObject:
   m_ObjectHideFlags: 0
@@ -2481,8 +2796,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874142626}
   m_LocalRotation: {x: -0.7071068, y: -0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -4.658, y: -1.1699982, z: 5.464}
-  m_LocalScale: {x: 2.3706222, y: 2.8337834, z: 0.9000002}
+  m_LocalPosition: {x: -4.658, y: -1.1699982, z: 5.8}
+  m_LocalScale: {x: 2.3706222, y: 2.709097, z: 0.9000002}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 16
@@ -2546,6 +2861,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 874824314}
+  - component: {fileID: 874824315}
   m_Layer: 0
   m_Name: POST (17)
   m_TagString: Untagged
@@ -2567,6 +2883,26 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &874824315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874824313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &911833338
 GameObject:
   m_ObjectHideFlags: 0
@@ -3311,6 +3647,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1260782342}
+  - component: {fileID: 1260782343}
   m_Layer: 0
   m_Name: POST (7)
   m_TagString: Untagged
@@ -3332,6 +3669,26 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1260782343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260782341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1273810881
 GameObject:
   m_ObjectHideFlags: 0
@@ -3342,6 +3699,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1273810882}
   - component: {fileID: 1273810883}
+  - component: {fileID: 1273810884}
   m_Layer: 0
   m_Name: POST (8)
   m_TagString: Untagged
@@ -3385,6 +3743,26 @@ MonoBehaviour:
   Renta: 35
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &1273810884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273810881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1279313794
 GameObject:
   m_ObjectHideFlags: 0
@@ -3477,6 +3855,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1325646649}
   - component: {fileID: 1325646650}
+  - component: {fileID: 1325646651}
   m_Layer: 0
   m_Name: POST (34)
   m_TagString: Untagged
@@ -3520,6 +3899,26 @@ MonoBehaviour:
   Renta: 0
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &1325646651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325646648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1340086561
 GameObject:
   m_ObjectHideFlags: 0
@@ -3529,6 +3928,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1340086562}
+  - component: {fileID: 1340086563}
   m_Layer: 0
   m_Name: POST (2)
   m_TagString: Untagged
@@ -3550,6 +3950,26 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1340086563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340086561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!114 &1408517259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3575,6 +3995,7 @@ MonoBehaviour:
   TextoTirar: {fileID: 0}
   UseCard: {fileID: 0}
   TextoPagar: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
   ExitCards: 0
   PlayerColor: {r: 0.23945832, g: 1, b: 0, a: 0}
   RepiteTurno: 0
@@ -4013,6 +4434,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1503949433}
   - component: {fileID: 1503949434}
+  - component: {fileID: 1503949435}
   m_Layer: 0
   m_Name: POST (26)
   m_TagString: Untagged
@@ -4056,6 +4478,26 @@ MonoBehaviour:
   Renta: 0
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &1503949435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503949432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1520951713
 GameObject:
   m_ObjectHideFlags: 0
@@ -4390,6 +4832,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1537512228}
   - component: {fileID: 1537512229}
+  - component: {fileID: 1537512230}
   m_Layer: 0
   m_Name: POST (4)
   m_TagString: Untagged
@@ -4433,6 +4876,26 @@ MonoBehaviour:
   Renta: 15
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &1537512230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537512227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1550032408
 GameObject:
   m_ObjectHideFlags: 0
@@ -4589,6 +5052,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1587988311}
   - component: {fileID: 1587988312}
+  - component: {fileID: 1587988313}
   m_Layer: 0
   m_Name: POST (32)
   m_TagString: Untagged
@@ -4632,6 +5096,26 @@ MonoBehaviour:
   Renta: 0
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &1587988313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587988310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1619420485
 GameObject:
   m_ObjectHideFlags: 0
@@ -4642,6 +5126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1619420486}
   - component: {fileID: 1619420487}
+  - component: {fileID: 1619420488}
   m_Layer: 0
   m_Name: POST (21)
   m_TagString: Untagged
@@ -4685,6 +5170,26 @@ MonoBehaviour:
   Renta: 0
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &1619420488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619420485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1658379662
 GameObject:
   m_ObjectHideFlags: 0
@@ -4775,6 +5280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1692485289}
   - component: {fileID: 1692485290}
+  - component: {fileID: 1692485291}
   m_Layer: 0
   m_Name: POST (16)
   m_TagString: Untagged
@@ -4818,6 +5324,26 @@ MonoBehaviour:
   Renta: 0
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &1692485291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692485288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1695446749
 GameObject:
   m_ObjectHideFlags: 0
@@ -4827,6 +5353,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1695446750}
+  - component: {fileID: 1695446751}
   m_Layer: 0
   m_Name: POST (30)
   m_TagString: Untagged
@@ -4848,6 +5375,26 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 180.20499, z: 0}
+--- !u!114 &1695446751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695446749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1710588393
 GameObject:
   m_ObjectHideFlags: 0
@@ -4857,6 +5404,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1710588394}
+  - component: {fileID: 1710588395}
   m_Layer: 0
   m_Name: POST (20)
   m_TagString: Untagged
@@ -4878,6 +5426,26 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1710588395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710588393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1712252482
 GameObject:
   m_ObjectHideFlags: 0
@@ -4887,6 +5455,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1712252483}
+  - component: {fileID: 1712252484}
   m_Layer: 0
   m_Name: POST (22)
   m_TagString: Untagged
@@ -4908,6 +5477,26 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1712252484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712252482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1746599579
 GameObject:
   m_ObjectHideFlags: 0
@@ -4918,6 +5507,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1746599580}
   - component: {fileID: 1746599581}
+  - component: {fileID: 1746599582}
   m_Layer: 0
   m_Name: POST (29)
   m_TagString: Untagged
@@ -4961,6 +5551,26 @@ MonoBehaviour:
   Renta: 0
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &1746599582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746599579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1750575179
 GameObject:
   m_ObjectHideFlags: 0
@@ -5030,6 +5640,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1821040542}
   - component: {fileID: 1821040543}
+  - component: {fileID: 1821040544}
   m_Layer: 0
   m_Name: POST (31)
   m_TagString: Untagged
@@ -5073,6 +5684,26 @@ MonoBehaviour:
   Renta: 0
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &1821040544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821040541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1831639984
 GameObject:
   m_ObjectHideFlags: 0
@@ -5163,6 +5794,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1847155571}
   - component: {fileID: 1847155572}
+  - component: {fileID: 1847155573}
   m_Layer: 0
   m_Name: POST (13)
   m_TagString: Untagged
@@ -5206,6 +5838,26 @@ MonoBehaviour:
   Renta: 0
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &1847155573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847155570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1848338723
 GameObject:
   m_ObjectHideFlags: 0
@@ -5216,6 +5868,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1848338724}
   - component: {fileID: 1848338725}
+  - component: {fileID: 1848338726}
   m_Layer: 0
   m_Name: POST (11)
   m_TagString: Untagged
@@ -5231,7 +5884,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1848338723}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.22, y: 0.8500001, z: 0.9079998}
+  m_LocalPosition: {x: -7.226, y: 0.8500001, z: 0.9079998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1550032413}
@@ -5259,6 +5912,26 @@ MonoBehaviour:
   Renta: 0
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &1848338726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848338723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1890216938
 GameObject:
   m_ObjectHideFlags: 0
@@ -5425,6 +6098,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1918180132}
   - component: {fileID: 1918180133}
+  - component: {fileID: 1918180134}
   m_Layer: 0
   m_Name: POST (38)
   m_TagString: Untagged
@@ -5468,6 +6142,26 @@ MonoBehaviour:
   Renta: 0
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &1918180134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918180131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1934804059
 GameObject:
   m_ObjectHideFlags: 0
@@ -5478,6 +6172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1934804060}
   - component: {fileID: 1934804061}
+  - component: {fileID: 1934804062}
   m_Layer: 0
   m_Name: POST (1)
   m_TagString: Untagged
@@ -5521,6 +6216,26 @@ MonoBehaviour:
   Renta: 10
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &1934804062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934804059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1947964429
 GameObject:
   m_ObjectHideFlags: 0
@@ -5624,6 +6339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1979798534}
   - component: {fileID: 1979798535}
+  - component: {fileID: 1979798536}
   m_Layer: 0
   m_Name: POST (18)
   m_TagString: Untagged
@@ -5667,6 +6383,26 @@ MonoBehaviour:
   Renta: 0
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &1979798536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979798533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1992819638
 GameObject:
   m_ObjectHideFlags: 0
@@ -5677,6 +6413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1992819639}
   - component: {fileID: 1992819640}
+  - component: {fileID: 1992819641}
   m_Layer: 0
   m_Name: POST (24)
   m_TagString: Untagged
@@ -5720,6 +6457,26 @@ MonoBehaviour:
   Renta: 0
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &1992819641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992819638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1994264121
 GameObject:
   m_ObjectHideFlags: 0
@@ -5730,6 +6487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1994264122}
   - component: {fileID: 1994264123}
+  - component: {fileID: 1994264124}
   m_Layer: 0
   m_Name: POST (12)
   m_TagString: Untagged
@@ -5773,6 +6531,26 @@ MonoBehaviour:
   Renta: 0
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &1994264124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994264121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1996169379
 GameObject:
   m_ObjectHideFlags: 0
@@ -5783,6 +6561,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1996169380}
   - component: {fileID: 1996169381}
+  - component: {fileID: 1996169382}
   m_Layer: 0
   m_Name: POST (25)
   m_TagString: Untagged
@@ -5826,6 +6605,26 @@ MonoBehaviour:
   Renta: 0
   Tag: 
   Tarjeta: {fileID: 0}
+--- !u!114 &1996169382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996169379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &2001712127
 GameObject:
   m_ObjectHideFlags: 0
@@ -5835,6 +6634,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2001712128}
+  - component: {fileID: 2001712129}
   m_Layer: 0
   m_Name: POST (36)
   m_TagString: Untagged
@@ -5856,6 +6656,26 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 180.20499, z: 0}
+--- !u!114 &2001712129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001712127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &2058606961
 GameObject:
   m_ObjectHideFlags: 0
@@ -5965,6 +6785,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2147029075}
+  - component: {fileID: 2147029076}
   m_Layer: 0
   m_Name: POST (10)
   m_TagString: Untagged
@@ -5986,6 +6807,26 @@ Transform:
   m_Father: {fileID: 1550032413}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2147029076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147029074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5641e4a495e94e819bf4413b2107c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casilla: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ocupada: 0
+  Players: 0
+  Jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!23 &11488968098115959
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8220,6 +9061,7 @@ MonoBehaviour:
   TextoTirar: {fileID: 0}
   UseCard: {fileID: 0}
   TextoPagar: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
   ExitCards: 0
   PlayerColor: {r: 0.034784317, g: 0, b: 1, a: 0}
   RepiteTurno: 0
