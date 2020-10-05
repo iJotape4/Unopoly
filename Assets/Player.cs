@@ -285,10 +285,7 @@ public class Player : MonoBehaviour
         else if (!Cards && !Properties && !RepiteTurno)
         {
             FinishTurn();
-        }
-
-        
-
+        }        
     }
 
 
@@ -308,14 +305,15 @@ public class Player : MonoBehaviour
 
     public void ComprobateCards()
     {
-        if ((rpposiicion == 2 || rpposiicion == 17 || rpposiicion == 33)  &&punto == 0)
+        int TableroPos = rpposiicion - (NumVueltas * 40);
+        if ((TableroPos == 2 || TableroPos == 17 || TableroPos == 33)  && punto == 0)
         {
             ComARrcs = true;
             Cards = true;           
             CardsController.turno = PlayerTurn;
         }
 
-        if ((rpposiicion == 7 || rpposiicion == 22 || rpposiicion == 36) && punto == 0)
+        if ((TableroPos == 7 || TableroPos == 22 || TableroPos == 36) && punto == 0)
         {
             Chances = true;
             Cards = true;         
@@ -330,7 +328,7 @@ public class Player : MonoBehaviour
         foreach (int element in properties)
         {
            // Debug.Log("revisando + " + element);
-            if (element == rpposiicion)
+            if (element == (rpposiicion - (40 * NumVueltas)))
             {
                 
                 Properties = true;
