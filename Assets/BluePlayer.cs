@@ -53,8 +53,8 @@ public class BluePlayer : Player
 
         }
 
-        AnotherMove = GreenPlayer.movimie;
-        if (Input.GetKeyDown(KeyCode.X) && !movimie && !AnotherMove && !Cards && !Properties &&!InBienestar)
+        
+        if (Input.GetKeyDown(KeyCode.X) && !movimie &&  !Cards && !Properties &&!InBienestar)
         {
             if (PlayerTurn != ControlPlayer.control.Turno)
             {

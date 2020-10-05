@@ -119,8 +119,12 @@ public class Propiedad : MonoBehaviour
     public IEnumerator Waiter()
     {
         Player.Properties = false;
-        yield return new WaitForSeconds(0.5f);
-        PlayerActual.FinishTurn();
+        if (!PlayerActual.RepiteTurno)
+        {          
+            yield return new WaitForSeconds(0.5f);
+            PlayerActual.FinishTurn();
+        }
+        
     }
 
     

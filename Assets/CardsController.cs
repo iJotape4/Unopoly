@@ -211,8 +211,12 @@ public class CardsController : MonoBehaviour
 
     public IEnumerator Waiter()
     {
-        yield return new WaitForSeconds(0.2f);
-        PlayerActual.FinishTurn();
+        if (!PlayerActual.RepiteTurno)
+        {
+            yield return new WaitForSeconds(0.2f);
+            PlayerActual.FinishTurn();
+        }
+       
     }
     //Tienes Tu carro en el parqueadero, avanza hasta ahí para recogerlo
     public void GoParkway()

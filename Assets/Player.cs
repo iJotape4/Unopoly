@@ -28,12 +28,14 @@ public class Player : MonoBehaviour
     public Text TextoTirar;
     public Text UseCard;
     public Text TextoPagar;
+   
 
     public int ExitCards;
    
+   
     public Color PlayerColor;
 
-    public bool AnotherMove;
+    public bool RepiteTurno = false;
     public int PlayerTurn;
 
     public bool InBienestar=false;
@@ -119,12 +121,23 @@ public class Player : MonoBehaviour
         OwnCamera.enabled = true;
         DadosCamera.enabled = false;
         punto = dado1.NumeroActual + dado2.NumeroActual;
-       // punto = Random.Range(3 ,3);
+      
+
+        if(dado1.NumeroActual == dado2.NumeroActual)
+        {
+            RepiteTurno = true;
+            StartCoroutine(BienestarText("!!!Doubles!!!"));
+        }
+        else
+        {
+            RepiteTurno = false; ;
+        }
+
+        // punto = Random.Range(3 ,3);
         //Debug.Log("Resul" + punto);
         total = punto;
         Resultado.text = punto.ToString();
 
-        
         StartCoroutine(Move());
     }
 
@@ -253,16 +266,28 @@ public class Player : MonoBehaviour
         if ((rpposiicion-(40*NumVueltas))%30 ==0  && rpposiicion % 40 != 0)
         {        
             StartCoroutine(GoBienestar());
-        }else if ((rpposiicion - (40 * NumVueltas)) % 10 == 0 && rpposiicion % 40 != 0 )
+        }else if (RepiteTurno)
+        {
+            while (Cards || Properties)
+            {
+                yield return new WaitForSeconds(0.1f);
+            }
+            StartCoroutine(BienestarText("Lanza de nuevo!!"));
+            TextoTirar.enabled = true;
+            movimie = false;
+        }
+        else if ((rpposiicion - (40 * NumVueltas)) % 10 == 0 && rpposiicion % 40 != 0 )
         {
             StartCoroutine(BienestarText("!Sólo visitando!!"));
             yield return new WaitForSeconds(1f);
             FinishTurn();
         }
-        else if (!Cards && !Properties)
+        else if (!Cards && !Properties && !RepiteTurno)
         {
             FinishTurn();
         }
+
+        
 
     }
 
