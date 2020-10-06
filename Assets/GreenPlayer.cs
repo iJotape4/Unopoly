@@ -40,35 +40,4 @@ public class GreenPlayer : Player
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (PlayerTurn == ControlPlayer.control.Turno)
-        {
-            PlayerDinero.text = "$" + dinero.ToString();
-            PlayerDinero.color = PlayerColor;
-
-
-            if (!DadosCamera.enabled)
-            {
-                OwnCamera.enabled = true;
-            }
-            if (InBienestar)
-            {
-                StartCoroutine(SalirBienestar());
-            }
-        }
-
-
-       
-        if (Input.GetKeyDown(KeyCode.X) && !movimie  && !Cards && !Properties && !InBienestar)
-        {
-            if (PlayerTurn != ControlPlayer.control.Turno)
-            {   
-                return;
-            }
-            
-            StartCoroutine(LanzarDado());
-        }
-    } 
     }

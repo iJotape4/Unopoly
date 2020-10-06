@@ -19,7 +19,7 @@ public class CardsController : MonoBehaviour
     public bool Chances = false;
 
     public int[] cafeterias = new int[4] { 5, 12, 25, 38 };
-    public int[] laboratorios = new int[3] { 35,  37, 39 };
+    public int[] laboratoriosArr = new int[3] { 35,  37, 39 };
 
     public string Tag ;
 
@@ -78,21 +78,7 @@ public class CardsController : MonoBehaviour
         if (Input.GetKey("x"))
         {
             QuitCard();
-        }
-
-        /*else
-        {
-            if (turno==1)
-            {
-               
-            }else if (turno == 2)
-            {
-                if (Input.GetKey("z"))
-                {
-                    QuitCard();
-                }
-            }            
-        } */                           
+        }                        
     }
 
     public void QuitCard()
@@ -236,7 +222,7 @@ public class CardsController : MonoBehaviour
         int CafElegida = 0;
         foreach (int Cafetería in cafeterias)
         {
-            if (Cafetería > PlayerActual.rpposiicion)
+            if (Cafetería > PlayerActual.tableroPos)
             {
                 CafElegida = Cafetería;
                 break;
@@ -264,16 +250,18 @@ public class CardsController : MonoBehaviour
     public void GoToLaboratory()
     {
         int LaboElegido = 0;
-        foreach (int Laboratorio in laboratorios)
+        foreach (int Laboratorio in laboratoriosArr)
         {
-            if (Laboratorio > PlayerActual.rpposiicion)
+            Debug.Log("revisando" + Laboratorio);
+            if (Laboratorio > PlayerActual.tableroPos)
             {
                 LaboElegido = Laboratorio;
+                Debug.Log("labo" + LaboElegido); 
                 break;
             }
             else
             {
-                LaboElegido = laboratorios[0];
+                LaboElegido = laboratoriosArr[0];
                 
             }
         }

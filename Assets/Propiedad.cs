@@ -52,12 +52,14 @@ public class Propiedad : MonoBehaviour
     {
         Tag = ("Player" + ControlPlayer.control.Turno);
         PlayerActual = GameObject.FindGameObjectWithTag(Tag).GetComponent<Player>();
+       
+
          //Tarjeta = this.GetComponent<Propiedad>();
         if (Player.Properties)
         {
             for (int i = 0; i < PropertyCards.Length; i++)
             {
-                if (int.Parse(PropertyCards[i].name) == PlayerActual.rpposiicion)
+                if (int.Parse(PropertyCards[i].name) == PlayerActual.tableroPos)
                 {
                     Tarjeta = GameObject.Find("POST (" + PropertyCards[i].name + ")").GetComponent<Propiedad>();
                     PropertyIMage.sprite = PropertyCards[i];

@@ -12,7 +12,7 @@ public class BluePlayer : Player
     {
         OwnCamera = GetComponentInChildren<Camera>();
         PlayerTurn = 2;
-        dinero = 3000;
+        dinero = dineroInicial;
         StartCoroutine(PlayerFontText());
         OwnCamera.enabled = false;
 
@@ -32,41 +32,6 @@ public class BluePlayer : Player
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (PlayerTurn == ControlPlayer.control.Turno)
-        {
-            PlayerDinero.color = PlayerColor;
-            PlayerDinero.text = "$" + dinero.ToString();
-            
-
-            if (!DadosCamera.enabled)
-            {
-                OwnCamera.enabled = true;
-            }
-
-            if (InBienestar)
-            {
-                StartCoroutine(SalirBienestar());
-            }
-
-        }
-
-        
-        if (Input.GetKeyDown(KeyCode.X) && !movimie &&  !Cards && !Properties &&!InBienestar)
-        {
-            if (PlayerTurn != ControlPlayer.control.Turno)
-            {
-                return;
-            }
-            
-            StartCoroutine(LanzarDado());
-
-
-        }
-    }
-    
 
 }
 
