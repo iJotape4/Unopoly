@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
     public Text TextoPagar;
 
     public Casilla casiillaSiguiente;
+    public Casilla bienestar;
 
     public int ExitCards;
    
@@ -434,18 +435,29 @@ public class Player : MonoBehaviour
 
     public IEnumerator GoBienestar()
     {
-        //Hay que corregirlo y hacer un teletransporte animado como el de monopoly 64 https://www.youtube.com/watch?v=CyDnh7eVCl8 19:40      
-        Vector3 bienestar = GameObject.Find("Bienestar").transform.position;
+        //Hay que corregirlo y hacer un teletransporte animado como el de monopoly 64 https://www.youtube.com/watch?v=CyDnh7eVCl8 19:40    
+
+        Vector3 bienestarPos;
+
+        if (bienestar.ocupada)
+        {
+            bienestar.transform.localPosition = new Vector3(-10.9f, bienestar.PosicionOriginal.y, bienestar.PosicionOriginal.z);
+        }
+
+        bienestarPos = bienestar.transform.position;
+
         HuecoVisible = true;
         rigi.isKinematic = false;
 
         Player parent = OwnCamera.transform.GetComponentInParent<Player>();
 
-        while (transform.position != bienestar)
+        while (transform.position != bienestarPos)
         {
             OwnCamera.transform.SetParent(null);
             yield return new WaitForSeconds(1f);
-            transform.position = (bienestar);
+
+         
+            transform.position = (bienestarPos);
             OwnCamera.transform.SetParent(parent.transform);
         }        
         //Esto es para que caiga

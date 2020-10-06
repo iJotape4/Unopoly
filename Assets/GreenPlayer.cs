@@ -33,6 +33,7 @@ public class GreenPlayer : Player
         TextoPagar = GameObject.Find("TextoPagar").GetComponent<Text>();
         TextoPagar.enabled = false;
 
+        bienestar = GameObject.Find("Bienestar").GetComponent<Casilla>();
 
         PlayerColor = Color.green;
 

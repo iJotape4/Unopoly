@@ -28,6 +28,8 @@ public class BluePlayer : Player
         TextoPagar = GameObject.Find("TextoPagar").GetComponent<Text>();
         TextoPagar.enabled = false;
 
+        bienestar = GameObject.Find("Bienestar").GetComponent<Casilla>();
+
         PlayerColor = Color.blue;
 
     }
