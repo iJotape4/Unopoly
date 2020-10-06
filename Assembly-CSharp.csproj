@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\Casilla.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Tutorial_Info\Scripts\Readme.cs" />
+    <Compile Include="Assets\YellowPlayer.cs" />
     <Compile Include="Assets\cara.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Repositorios/Unopoly/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

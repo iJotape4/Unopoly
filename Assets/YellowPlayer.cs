@@ -1,24 +1,27 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GreenPlayer : Player
+public class YellowPlayer : Player
 {
-     
-    
-    
-
     // Start is called before the first frame update
     void Start()
     {
         OwnCamera = GetComponentInChildren<Camera>();
 
         dinero = dineroInicial;
-        PlayerTurn = 1;
-
-        PlayerDinero.text = "$"+dinero.ToString();
+        PlayerTurn = 3;
+        PlayerDinero = GameObject.Find("MoneyText").GetComponent<Text>();
+        PlayerDinero.text = "$" + dinero.ToString();
         PlayerDinero.enabled = true;
-        StartCoroutine(PlayerFontText());
+
+        PlayerText = GameObject.Find("PlayerText").GetComponent<Text>();
+        PlayerText.enabled = true;
+
+        Rott = GameObject.Find("GO").GetComponent<GO>();       
+
+        
         OwnCamera.enabled = false;
 
         DadosCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
@@ -35,8 +38,11 @@ public class GreenPlayer : Player
 
         bienestar = GameObject.Find("Bienestar").GetComponent<Casilla>();
 
-        PlayerColor = Color.green;
+        PlayerColor = Color.yellow;
 
     }
 
-    }
+    // Update is called once per frame
+
+    
+}

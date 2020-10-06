@@ -7,7 +7,7 @@ public class ControlPlayer : MonoBehaviour
 {   
     //Variables
     public int Turno = 0;
-    public static int LImitedeTurno = 2;
+    public static int LImitedeTurno = 3;
     public static ControlPlayer control;
 
 

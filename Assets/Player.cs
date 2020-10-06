@@ -160,7 +160,7 @@ public class Player : MonoBehaviour
             RepiteTurno = false; ;
         } */
         yield return new WaitForSeconds(0.1f);
-        punto = Random.Range(7,7);
+        punto = Random.Range(3,3);
         //Debug.Log("Resul" + punto);
         total = punto;
         //Resultado.text = punto.ToString();
