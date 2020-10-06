@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     public GO Rott;
     public int rpposiicion;
     public int punto;
+    public int tableroPos;
     public  bool movimie;
 
     [HideInInspector]
@@ -132,10 +133,10 @@ public class Player : MonoBehaviour
             RepiteTurno = false; ;
         } */
         yield return new WaitForSeconds(0.1f);
-        punto = Random.Range(3,4);
+        punto = Random.Range(7,7);
         //Debug.Log("Resul" + punto);
         total = punto;
-        Resultado.text = punto.ToString();
+        //Resultado.text = punto.ToString();
 
         StartCoroutine(Move());
     }
@@ -147,7 +148,10 @@ public class Player : MonoBehaviour
 
     public void ComprobarOcupacion()
     {
-        int posicion = (rpposiicion + 1) - (40 * NumVueltas);
+
+        int posicion = tableroPos+1;
+
+        Debug.Log(tableroPos);
         casiillaSiguiente = GameObject.Find("POST (" + posicion + ")").GetComponent<Casilla>();
 
         if (casiillaSiguiente.ocupada)
@@ -177,7 +181,7 @@ public class Player : MonoBehaviour
        
         Camera camara = GetComponentInChildren<Camera>();
 
-        int Posicion = rpposiicion - (NumVueltas * 40);
+        int Posicion = tableroPos;
         
 
         if (Posicion < 10 )
@@ -274,22 +278,24 @@ public class Player : MonoBehaviour
                 yield return new WaitForSeconds(0.1f);
                 punto--;
                 rpposiicion++;
-              
-                MoveCamera();
-                           
                 
-                if (rpposiicion%40 == 0)
+
+                MoveCamera();
+
+
+                if (rpposiicion % 40 == 0)
                 {
                     NumVueltas++;
                     StartCoroutine(Cobrar(200));
                 }
+                tableroPos = rpposiicion - (40 * NumVueltas);
             }
 
         ComprobateCards();
         ComprobateProperties();
 
 
-        if ((rpposiicion-(40*NumVueltas))%30 ==0  && rpposiicion % 40 != 0)
+        if (tableroPos ==30 )
         {        
             StartCoroutine(GoBienestar());
         }else if (RepiteTurno)
@@ -302,7 +308,7 @@ public class Player : MonoBehaviour
             TextoTirar.enabled = true;
             movimie = false;
         }
-        else if ((rpposiicion - (40 * NumVueltas)) % 10 == 0 && rpposiicion % 40 != 0 )
+        else if (tableroPos == 10 )
         {
             StartCoroutine(BienestarText("!Sólo visitando!!"));
             yield return new WaitForSeconds(1f);
@@ -318,28 +324,28 @@ public class Player : MonoBehaviour
     public void MoveTowards(int pos)
     {
         Debug.Log("se mueve hasta"+pos);
-        if (pos > rpposiicion)
+        if (pos > tableroPos)
         {
-            punto = pos-rpposiicion;
+            punto = pos- tableroPos;
         }
         else
         {
-            punto = 40 - rpposiicion + pos;
+            punto = 40 - tableroPos + pos;
         }
         StartCoroutine(Move());
     }
 
     public void ComprobateCards()
     {
-        int TableroPos = rpposiicion - (NumVueltas * 40);
-        if ((TableroPos == 2 || TableroPos == 17 || TableroPos == 33)  && punto == 0)
+        
+        if ((tableroPos == 2 || tableroPos == 17 || tableroPos == 33)  && punto == 0)
         {
             ComARrcs = true;
             Cards = true;           
             CardsController.turno = PlayerTurn;
         }
 
-        if ((TableroPos == 7 || TableroPos == 22 || TableroPos == 36) && punto == 0)
+        if ((tableroPos == 7 || tableroPos == 22 || tableroPos == 36) && punto == 0)
         {
             Chances = true;
             Cards = true;         
@@ -354,7 +360,7 @@ public class Player : MonoBehaviour
         foreach (int element in properties)
         {
            // Debug.Log("revisando + " + element);
-            if (element == (rpposiicion - (40 * NumVueltas)))
+            if (element == tableroPos)
             {
                 
                 Properties = true;
@@ -418,12 +424,15 @@ public class Player : MonoBehaviour
         }        
         //Esto es para que caiga
         rigi.isKinematic = true;
-        rpposiicion = 10;     
+        rpposiicion = 10;
+        NumVueltas = 0;
        
         InBienestar = true;
-        MoveCamera();
+        
+        OwnCamera.transform.rotation = Arriba;
+        OwnCamera.transform.localPosition =  new Vector3(0f, -0.0724f, 0.0347f);
 
-        StartCoroutine(BienestarText("!!En bienestar!!"));
+    StartCoroutine(BienestarText("!!En bienestar!!"));
         yield return new WaitForSeconds(1f);
         HuecoVisible = false;
        ResetBienestarGuide();

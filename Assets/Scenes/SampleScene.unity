@@ -2796,8 +2796,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874142626}
   m_LocalRotation: {x: -0.7071068, y: -0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -4.658, y: -1.1699982, z: 5.8}
-  m_LocalScale: {x: 2.3706222, y: 2.709097, z: 0.9000002}
+  m_LocalPosition: {x: -4.658, y: -1.1699982, z: 5.464}
+  m_LocalScale: {x: 2.3706222, y: 2.8337834, z: 0.9000002}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 16
@@ -3074,7 +3074,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 915283643}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.48981968, y: -0.082, z: 0.034}
+  m_LocalPosition: {x: -0.48981968, y: -0.075, z: 0.034}
   m_LocalScale: {x: 0.00066401786, y: 0.00022443375, z: 0.00066401786}
   m_Children: []
   m_Father: {fileID: 1890229673}
@@ -3168,7 +3168,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1027780937}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.06783637, y: -0.49, z: 0.024082359}
+  m_LocalPosition: {x: -0.06783637, y: -0.48300004, z: 0.024082359}
   m_LocalScale: {x: 1.298524, y: 0.52028257, z: 1.2712578}
   m_Children: []
   m_Father: {fileID: 1890229673}
@@ -3982,10 +3982,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f27977d530989d34d93950cb67d116a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Resultado: {fileID: 1478476303}
+  Resultado: {fileID: 0}
   Rott: {fileID: 1550032409}
   rpposiicion: 0
   punto: 0
+  movimie: 0
   dineroInicial: 2000
   dinero: 0
   PlayerDinero: {fileID: 750199541}
@@ -9029,6 +9030,7 @@ GameObject:
   - component: {fileID: 1711277888214227428}
   - component: {fileID: 753326984499693492}
   - component: {fileID: 753326984499693493}
+  - component: {fileID: 753326984499693494}
   m_Layer: 0
   m_Name: Player Blue
   m_TagString: Player2
@@ -9048,10 +9050,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59091316852044349a346c12022dabe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Resultado: {fileID: 232063763}
+  Resultado: {fileID: 0}
   Rott: {fileID: 1550032409}
   rpposiicion: 0
   punto: 0
+  movimie: 0
   dineroInicial: 2000
   dinero: 0
   PlayerDinero: {fileID: 750199541}
@@ -9087,6 +9090,42 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &753326984499693494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753326984499693491}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daa5cf76a46eb8944955b863bd07b2fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Resultado: {fileID: 0}
+  Rott: {fileID: 0}
+  rpposiicion: 0
+  punto: 0
+  movimie: 0
+  dineroInicial: 2000
+  dinero: 0
+  PlayerDinero: {fileID: 0}
+  DadosCamera: {fileID: 0}
+  OwnCamera: {fileID: 0}
+  PlayerText: {fileID: 0}
+  TextoTirar: {fileID: 0}
+  UseCard: {fileID: 0}
+  TextoPagar: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ExitCards: 0
+  PlayerColor: {r: 0.01375042, g: 0.015065047, b: 0.9716981, a: 0}
+  RepiteTurno: 0
+  PlayerTurn: 2
+  InBienestar: 0
+  NumVueltas: 0
+  dado1: {fileID: 0}
+  dado2: {fileID: 0}
+  rigi: {fileID: 0}
 --- !u!33 &755299258525057552
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -12682,6 +12721,7 @@ GameObject:
   - component: {fileID: 1549485631893517472}
   - component: {fileID: 1408517259}
   - component: {fileID: 1832266178026830697}
+  - component: {fileID: 1832266178026830698}
   m_Layer: 0
   m_Name: Player Green
   m_TagString: Player1
@@ -12705,6 +12745,42 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1832266178026830698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832266178026830696}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daa5cf76a46eb8944955b863bd07b2fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Resultado: {fileID: 0}
+  Rott: {fileID: 0}
+  rpposiicion: 0
+  punto: 0
+  movimie: 0
+  dineroInicial: 2000
+  dinero: 0
+  PlayerDinero: {fileID: 0}
+  DadosCamera: {fileID: 0}
+  OwnCamera: {fileID: 0}
+  PlayerText: {fileID: 0}
+  TextoTirar: {fileID: 0}
+  UseCard: {fileID: 0}
+  TextoPagar: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  ExitCards: 0
+  PlayerColor: {r: 0.022472408, g: 0.9528302, b: 0.024541494, a: 0}
+  RepiteTurno: 0
+  PlayerTurn: 1
+  InBienestar: 0
+  NumVueltas: 0
+  dado1: {fileID: 0}
+  dado2: {fileID: 0}
+  rigi: {fileID: 0}
 --- !u!23 &1844409830934128894
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21819,7 +21895,7 @@ PrefabInstance:
     - target: {fileID: 4276020635428396957, guid: 6e2ed7ed5d35c9445b56f8cd9d3ba858,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.082
+      value: -0.075
       objectReference: {fileID: 0}
     - target: {fileID: 4276020635428396957, guid: 6e2ed7ed5d35c9445b56f8cd9d3ba858,
         type: 3}
@@ -21834,7 +21910,7 @@ PrefabInstance:
     - target: {fileID: 4276020635534078057, guid: 6e2ed7ed5d35c9445b56f8cd9d3ba858,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.49
+      value: -0.48300004
       objectReference: {fileID: 0}
     - target: {fileID: 4276020635534078057, guid: 6e2ed7ed5d35c9445b56f8cd9d3ba858,
         type: 3}
