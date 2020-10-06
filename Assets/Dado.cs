@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityScript.TypeSystem;
 
 public class Dado : MonoBehaviour
 {

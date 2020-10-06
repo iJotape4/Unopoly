@@ -1,11 +1,6 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics.Contracts;
-using System.Linq;
-using System.Security.Policy;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityScript.Steps;
 
 public class Player : MonoBehaviour
 {
@@ -82,11 +77,44 @@ public class Player : MonoBehaviour
     {
         
         total = 0;
-        Resultado.text = "";
+      //  Resultado.text = "";
         PlayerText = GameObject.Find("PlayerText").GetComponent<Text>();
         PlayerText.enabled = false;
 
-       
+        OwnCamera = GetComponentInChildren<Camera>();
+
+        dinero = dineroInicial;
+
+        PlayerDinero = GameObject.Find("MoneyText").GetComponent<Text>();
+        PlayerDinero.text = "$" + dinero.ToString();
+        PlayerDinero.enabled = true;
+
+        PlayerText = GameObject.Find("PlayerText").GetComponent<Text>();
+        PlayerText.enabled = false;
+        StartCoroutine(PlayerFontText());
+
+
+        Rott = GameObject.Find("GO").GetComponent<GO>();
+
+
+        OwnCamera.enabled = false;
+
+        DadosCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        DadosCamera.enabled = false;
+
+        TextoTirar = GameObject.Find("TextoTirar").GetComponent<Text>();
+        TextoTirar.enabled = true;
+
+        UseCard = GameObject.Find("TextoTSalida").GetComponent<Text>();
+        UseCard.enabled = false;
+
+        TextoPagar = GameObject.Find("TextoPagar").GetComponent<Text>();
+        TextoPagar.enabled = false;
+
+        bienestar = GameObject.Find("Bienestar").GetComponent<Casilla>();
+
+
+
 
     }
 
@@ -132,7 +160,7 @@ public class Player : MonoBehaviour
         dado2 = GameObject.Find("Dado2").GetComponent<Dado>();
         RestoreText();
 
-        /*if(!dado1.IsMoving() && !dado2.IsMoving())
+        if(!dado1.IsMoving() && !dado2.IsMoving())
         {
             dado1.TirarDado();
             dado2.TirarDado();
@@ -158,9 +186,9 @@ public class Player : MonoBehaviour
         else
         {
             RepiteTurno = false; ;
-        } */
+        } 
         yield return new WaitForSeconds(0.1f);
-        punto = Random.Range(3,3);
+       // punto = Random.Range(3,3);
         //Debug.Log("Resul" + punto);
         total = punto;
         //Resultado.text = punto.ToString();

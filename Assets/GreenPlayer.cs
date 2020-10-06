@@ -11,30 +11,8 @@ public class GreenPlayer : Player
     // Start is called before the first frame update
     void Start()
     {
-        OwnCamera = GetComponentInChildren<Camera>();
-
-        dinero = dineroInicial;
+        base.Start();
         PlayerTurn = 1;
-
-        PlayerDinero.text = "$"+dinero.ToString();
-        PlayerDinero.enabled = true;
-        StartCoroutine(PlayerFontText());
-        OwnCamera.enabled = false;
-
-        DadosCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        DadosCamera.enabled = false;
-
-        TextoTirar = GameObject.Find("TextoTirar").GetComponent<Text>();
-        TextoTirar.enabled = true;
-
-        UseCard = GameObject.Find("TextoTSalida").GetComponent<Text>();
-        UseCard.enabled = false;
-
-        TextoPagar = GameObject.Find("TextoPagar").GetComponent<Text>();
-        TextoPagar.enabled = false;
-
-        bienestar = GameObject.Find("Bienestar").GetComponent<Casilla>();
-
         PlayerColor = Color.green;
 
     }

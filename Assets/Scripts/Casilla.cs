@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class Casilla : MonoBehaviour
@@ -9,6 +8,7 @@ public class Casilla : MonoBehaviour
     public Casilla casilla;
     public Casilla casiillaSiguiente;
     public bool ocupada;
+    public bool ocupadaby2;
     public int Players;
 
     public Player[] Jugadores = new Player[ControlPlayer.LImitedeTurno];

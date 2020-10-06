@@ -167,6 +167,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -277,7 +278,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 124400141}
-  m_LocalRotation: {x: -0.70552784, y: 0.16375856, z: -0.5529074, w: 0.4119552}
+  m_LocalRotation: {x: -0.70552903, y: 0.1637582, z: -0.5529068, w: 0.41195402}
   m_LocalPosition: {x: 1.03, y: 4.95, z: -0.62}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
@@ -289,7 +290,7 @@ Transform:
   - {fileID: 1416753241}
   m_Father: {fileID: 5006512735466380590}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -23.591002, y: 93.076004, z: -131.47601}
+  m_LocalEulerAnglesHint: {x: -23.591, y: 93.076, z: -131.476}
 --- !u!114 &124400143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,8 +320,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.009712393, y: 0.009712389, z: 0.009712389}
-  m_Center: {x: 0.015720876, y: -0.008704982, z: -0.0030100816}
+  m_Size: {x: 0.008746897, y: 0.009324436, z: 0.00937846}
+  m_Center: {x: 0.015743358, y: -0.008690767, z: -0.0029766897}
 --- !u!54 &124400145
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -640,6 +641,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -912,6 +914,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -1372,6 +1375,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -1446,6 +1450,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -1599,6 +1604,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -1732,6 +1738,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -1806,6 +1813,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -1880,6 +1888,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -2137,6 +2146,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -2196,7 +2206,7 @@ MeshRenderer:
   - {fileID: -354735261257320667, guid: b140ee47870f0974fb79a2b0adbc9742, type: 3}
   - {fileID: 2100000, guid: e79deb2e6d4a5b142a0efa22234d22f5, type: 2}
   - {fileID: 2100000, guid: 9b8eadc4de0544646b75ddcc43f8fd06, type: 2}
-  - {fileID: 2100008, guid: 27d05cd1825374599a2f9ce04c649102, type: 3}
+  - {fileID: 7741625113677808684, guid: 70f880bf877a7274485a03ae65630f55, type: 3}
   - {fileID: 2100002, guid: b2de02dc472471a40816cf840b819ac4, type: 3}
   - {fileID: 2100000, guid: c438e5c679f1be040a135443008e2fce, type: 2}
   - {fileID: 2100010, guid: 27d05cd1825374599a2f9ce04c649102, type: 3}
@@ -2298,6 +2308,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -2372,6 +2383,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -2446,6 +2458,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -2692,6 +2705,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -2766,6 +2780,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -2898,6 +2913,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -3035,7 +3051,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100002, guid: 27d05cd1825374599a2f9ce04c649102, type: 3}
+  - {fileID: 2100000, guid: 5d4d5d7ccf5efca43a103a9e62338734, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3684,6 +3700,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -3758,6 +3775,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -3914,6 +3932,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -3998,6 +4017,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -4016,24 +4036,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resultado: {fileID: 0}
-  Rott: {fileID: 1550032409}
+  Rott: {fileID: 0}
   rpposiicion: 0
   punto: 0
   tableroPos: 0
   movimie: 0
   dineroInicial: 2000
   dinero: 0
-  PlayerDinero: {fileID: 750199541}
+  PlayerDinero: {fileID: 0}
   DadosCamera: {fileID: 0}
   OwnCamera: {fileID: 0}
-  PlayerText: {fileID: 1122983936}
+  PlayerText: {fileID: 0}
   TextoTirar: {fileID: 0}
   UseCard: {fileID: 0}
   TextoPagar: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   bienestar: {fileID: 0}
   ExitCards: 0
-  PlayerColor: {r: 0.23945832, g: 1, b: 0, a: 0}
+  PlayerColor: {r: 0, g: 1, b: 0.011367798, a: 0}
   RepiteTurno: 0
   PlayerTurn: 1
   InBienestar: 0
@@ -4529,6 +4549,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -4927,6 +4948,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -5147,6 +5169,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -5221,6 +5244,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -5375,6 +5399,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -5426,6 +5451,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -5477,6 +5503,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -5611,6 +5638,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -5685,6 +5713,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -5818,6 +5847,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -5972,6 +6002,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -6046,6 +6077,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -6221,6 +6253,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -6295,6 +6328,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -6369,6 +6403,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -6536,6 +6571,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -6610,6 +6646,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -6684,6 +6721,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -6758,6 +6796,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -6809,6 +6848,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -6960,6 +7000,7 @@ MonoBehaviour:
   casilla: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   ocupada: 0
+  ocupadaby2: 0
   Players: 0
   Jugadores:
   - {fileID: 0}
@@ -9187,17 +9228,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resultado: {fileID: 0}
-  Rott: {fileID: 1550032409}
+  Rott: {fileID: 0}
   rpposiicion: 0
   punto: 0
   tableroPos: 0
   movimie: 0
   dineroInicial: 2000
   dinero: 0
-  PlayerDinero: {fileID: 750199541}
+  PlayerDinero: {fileID: 0}
   DadosCamera: {fileID: 0}
   OwnCamera: {fileID: 0}
-  PlayerText: {fileID: 1122983936}
+  PlayerText: {fileID: 0}
   TextoTirar: {fileID: 0}
   UseCard: {fileID: 0}
   TextoPagar: {fileID: 0}
@@ -16371,14 +16412,14 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100006, guid: 27d05cd1825374599a2f9ce04c649102, type: 3}
+  - {fileID: 2100000, guid: 5d4d5d7ccf5efca43a103a9e62338734, type: 2}
   - {fileID: -354735261257320667, guid: b140ee47870f0974fb79a2b0adbc9742, type: 3}
-  - {fileID: 2100004, guid: 27d05cd1825374599a2f9ce04c649102, type: 3}
+  - {fileID: -8243077836236464881, guid: 70f880bf877a7274485a03ae65630f55, type: 3}
   - {fileID: 2100000, guid: c820ae8e865d1d542b5c256e4270f6d4, type: 2}
   - {fileID: 2100000, guid: 4efcffd7ae23f1e41943fd914b18da10, type: 2}
-  - {fileID: 2100002, guid: b2de02dc472471a40816cf840b819ac4, type: 3}
+  - {fileID: 8256619098092396228, guid: 0abbbdc93158f944b80bf178ffbe0e37, type: 3}
   - {fileID: 2100000, guid: c438e5c679f1be040a135443008e2fce, type: 2}
-  - {fileID: 2100010, guid: 27d05cd1825374599a2f9ce04c649102, type: 3}
+  - {fileID: 2100000, guid: 32635d426d9629940b1d920cff4da879, type: 2}
   - {fileID: 752492319262309027, guid: 70f880bf877a7274485a03ae65630f55, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -16433,13 +16474,13 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: -8307573154506517046, guid: b140ee47870f0974fb79a2b0adbc9742, type: 3}
-  - {fileID: 2100002, guid: 36ed72df9b6f5de45819a1f02a1f034b, type: 3}
-  - {fileID: 2100000, guid: ff6dc36862fe41641bb21568d92147c9, type: 3}
+  - {fileID: 1110233775959259594, guid: c0609b7268d4b3f4eb46b7660ef7ef84, type: 3}
+  - {fileID: 7993982598810627253, guid: c0609b7268d4b3f4eb46b7660ef7ef84, type: 3}
   - {fileID: 2100000, guid: e93789f0a5d66df4a81613935579642b, type: 2}
   - {fileID: 7993982598810627253, guid: c0609b7268d4b3f4eb46b7660ef7ef84, type: 3}
-  - {fileID: 2100002, guid: b2de02dc472471a40816cf840b819ac4, type: 3}
+  - {fileID: -354735261257320667, guid: 70f880bf877a7274485a03ae65630f55, type: 3}
   - {fileID: 2100000, guid: c438e5c679f1be040a135443008e2fce, type: 2}
-  - {fileID: 2100010, guid: 27d05cd1825374599a2f9ce04c649102, type: 3}
+  - {fileID: -354735261257320667, guid: 70f880bf877a7274485a03ae65630f55, type: 3}
   - {fileID: 752492319262309027, guid: 70f880bf877a7274485a03ae65630f55, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -17868,15 +17909,15 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100002, guid: cd0713beb0b2adf44a000adc6215c9dd, type: 3}
+  - {fileID: 2100000, guid: ec739259ec61f5d4ba3ed6d34fd802a6, type: 2}
   - {fileID: -469649698186968152, guid: 70f880bf877a7274485a03ae65630f55, type: 3}
   - {fileID: 2100000, guid: bd2d742ee2ce7a740ae0cf992a38be74, type: 2}
   - {fileID: 7993982598810627253, guid: 3d60a6268d147cf449a0ce90301a09ee, type: 3}
   - {fileID: 752492319262309027, guid: 70f880bf877a7274485a03ae65630f55, type: 3}
   - {fileID: -4192297992474313835, guid: b140ee47870f0974fb79a2b0adbc9742, type: 3}
-  - {fileID: 2100010, guid: a09837bc152a9b9459581f48bee12074, type: 3}
+  - {fileID: 2100000, guid: ec739259ec61f5d4ba3ed6d34fd802a6, type: 2}
   - {fileID: -541708846208547136, guid: 3d60a6268d147cf449a0ce90301a09ee, type: 3}
-  - {fileID: 2100002, guid: 36ed72df9b6f5de45819a1f02a1f034b, type: 3}
+  - {fileID: 3089951504750048964, guid: 0abbbdc93158f944b80bf178ffbe0e37, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18207,9 +18248,9 @@ MeshRenderer:
   - {fileID: 2100000, guid: c438e5c679f1be040a135443008e2fce, type: 2}
   - {fileID: -541708846208547136, guid: 3d60a6268d147cf449a0ce90301a09ee, type: 3}
   - {fileID: 7993982598810627253, guid: c0609b7268d4b3f4eb46b7660ef7ef84, type: 3}
-  - {fileID: 2100002, guid: b2de02dc472471a40816cf840b819ac4, type: 3}
+  - {fileID: -1637880222114644024, guid: 70f880bf877a7274485a03ae65630f55, type: 3}
   - {fileID: 2100000, guid: c438e5c679f1be040a135443008e2fce, type: 2}
-  - {fileID: 2100010, guid: 27d05cd1825374599a2f9ce04c649102, type: 3}
+  - {fileID: 2100000, guid: 32635d426d9629940b1d920cff4da879, type: 2}
   - {fileID: 752492319262309027, guid: 70f880bf877a7274485a03ae65630f55, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -19679,7 +19720,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100008, guid: a09837bc152a9b9459581f48bee12074, type: 3}
+  - {fileID: -8307573154506517046, guid: b140ee47870f0974fb79a2b0adbc9742, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23649,8 +23690,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.009712393, y: 0.009712389, z: 0.009712389}
-  m_Center: {x: 0.015720876, y: -0.008704982, z: -0.0030100816}
+  m_Size: {x: 0.009164347, y: 0.008885435, z: 0.008951227}
+  m_Center: {x: 0.015730996, y: -0.008772691, z: -0.0030157769}
 --- !u!114 &4695666576036632084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35288,7 +35329,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: -8307573154506517046, guid: b140ee47870f0974fb79a2b0adbc9742, type: 3}
-  - {fileID: 2100002, guid: 691c8b080d8f55744a58f5e86b96915d, type: 3}
+  - {fileID: 7498461928983958705, guid: c0609b7268d4b3f4eb46b7660ef7ef84, type: 3}
   - {fileID: 1877244072416195789, guid: 70f880bf877a7274485a03ae65630f55, type: 3}
   - {fileID: 2100000, guid: c820ae8e865d1d542b5c256e4270f6d4, type: 2}
   - {fileID: 7993982598810627253, guid: c0609b7268d4b3f4eb46b7660ef7ef84, type: 3}
@@ -37938,7 +37979,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4695666576036632081}
-  m_LocalRotation: {x: -0.33274746, y: 0.41900498, z: -0.62426144, w: 0.56922024}
+  m_LocalRotation: {x: -0.33275032, y: 0.41900626, z: -0.6242599, w: 0.56921935}
   m_LocalPosition: {x: -0.99, y: 4.9499993, z: -0.62}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
@@ -37951,7 +37992,7 @@ Transform:
   - {fileID: 282840814}
   m_Father: {fileID: 5006512735466380590}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 8.298, y: 64.409004, z: -90.049}
+  m_LocalEulerAnglesHint: {x: 8.298, y: 64.409, z: -90.049}
 --- !u!23 &8852248123272824728
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -38699,7 +38740,7 @@ MeshRenderer:
   - {fileID: 2100000, guid: c438e5c679f1be040a135443008e2fce, type: 2}
   - {fileID: -5998004595915773402, guid: 3d60a6268d147cf449a0ce90301a09ee, type: 3}
   - {fileID: 6133712870518801159, guid: b140ee47870f0974fb79a2b0adbc9742, type: 3}
-  - {fileID: 2100002, guid: b2de02dc472471a40816cf840b819ac4, type: 3}
+  - {fileID: -5998004595915773402, guid: b140ee47870f0974fb79a2b0adbc9742, type: 3}
   - {fileID: 2100000, guid: c438e5c679f1be040a135443008e2fce, type: 2}
   - {fileID: 2100010, guid: 27d05cd1825374599a2f9ce04c649102, type: 3}
   - {fileID: 752492319262309027, guid: 70f880bf877a7274485a03ae65630f55, type: 3}
