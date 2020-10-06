@@ -92,7 +92,33 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (PlayerTurn == ControlPlayer.control.Turno)
+        {
+            PlayerDinero.text = "$" + dinero.ToString();
+            PlayerDinero.color = PlayerColor;
+
+
+            if (!DadosCamera.enabled)
+            {
+                OwnCamera.enabled = true;
+            }
+            if (InBienestar)
+            {
+                StartCoroutine(SalirBienestar());
+            }
+        }
+
+
+
+        if (Input.GetKeyDown(KeyCode.X) && !movimie && !Cards && !Properties && !InBienestar)
+        {
+            if (PlayerTurn != ControlPlayer.control.Turno)
+            {
+                return;
+            }
+
+            StartCoroutine(LanzarDado());
+        }
     }
 
 
@@ -477,7 +503,7 @@ public class Player : MonoBehaviour
                 
                 punto = dado1.NumeroActual + dado2.NumeroActual;
                 total = punto;
-                Resultado.text = punto.ToString();
+
                 StartCoroutine(Move());
                 InBienestar = false;
             }
