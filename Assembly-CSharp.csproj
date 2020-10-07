@@ -72,6 +72,7 @@
     <Compile Include="Assets\Hueco.cs" />
     <Compile Include="Assets\Player.cs" />
     <Compile Include="Assets\Propiedad.cs" />
+    <Compile Include="Assets\RedPlayer.cs" />
     <Compile Include="Assets\Scripts\Backup\GreenPlayerB.cs" />
     <Compile Include="Assets\Scripts\Backup\PlayerBackup StepMethod.cs" />
     <Compile Include="Assets\Scripts\Casilla.cs" />

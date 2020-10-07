@@ -11,9 +11,5 @@ public class YellowPlayer : Player
         base.Start();
         PlayerColor = Color.yellow;
         PlayerTurn = 3;
-    }
-
-    // Update is called once per frame
-
-    
+    }    
 }
