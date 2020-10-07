@@ -89,6 +89,7 @@ public class Propiedad : MonoBehaviour
         TextoComprar.text = ("X) Comprar $" + Tarjeta.precio);
         TextoComprar.enabled = true;
         TextoPasar.enabled = true;
+        TextoPasar.text = ("Z ) Pasar");
 
         if (Input.GetKey("x"))
         {

@@ -21,10 +21,14 @@ public class CardsController : MonoBehaviour
     public string Tag ;
 
     Player PlayerActual;
+    public Text TextoSiguiente;
 
     // Start is called before the first frame update
     void Start()
     {
+
+        TextoSiguiente = GameObject.Find("TextoPasar").GetComponent<Text>();
+
         CardImage = GameObject.Find("Image").GetComponent<Image>();
         ChanceCards = Resources.LoadAll<Sprite>("Chances");
         CardsNum = ChanceCards.Length;
@@ -72,6 +76,9 @@ public class CardsController : MonoBehaviour
             CardImage.sprite = Cards[elegida];                 
         }
 
+        TextoSiguiente.enabled = true;
+        TextoSiguiente.text = "X) Continuar";
+
         if (Input.GetKey("x"))
         {
             QuitCard();
@@ -80,6 +87,7 @@ public class CardsController : MonoBehaviour
 
     public void QuitCard()
     {
+        TextoSiguiente.enabled = false;
         CardImage.enabled = false;
         Player.Cards = false;
         if (Chances)
