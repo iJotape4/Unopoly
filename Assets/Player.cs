@@ -54,22 +54,22 @@ public class Player : MonoBehaviour
     
 
     
-    public static Quaternion Abajo = new Quaternion(0.3f, 0.0f, 0.0f, 1.0f);
+    public  static Quaternion Abajo = new Quaternion(0.4f, 0.0f, 0.0f, 1.0f);
     
-    public static Quaternion Izquierda = new Quaternion(0.2f, 0.7f, -0.2f, 0.7f);
+    public static  Quaternion Izquierda = new Quaternion(0.2f, 0.6f, -0.2f, 0.6f);
     
-    public static Quaternion Arriba = new Quaternion(0.0f, 1.0f, -0.3f, 0.0f);
+    public static  Quaternion Arriba = new Quaternion(0.0f, 1.0f, -0.5f, 0.0f);
     
-    public static Quaternion Derecha = new Quaternion(0.2f, -0.7f, 0.2f, 0.7f);
+    public static  Quaternion Derecha = new Quaternion(0.2f, -0.6f, 0.2f, 0.6f);
 
     
-    public static Vector3 PosAbj = new Vector3(-0.0127f, 0.03f, 0.062f);
+    public static Vector3 PosAbj = new Vector3(-0.0127f, 0.0228f, 0.062f);
     
-    public static Vector3 PosIzq = new Vector3(-0.0194f, -0.0003f, 0.042f);
+    public static Vector3 PosIzq = new Vector3(- 0.0291f, 0f, 0.0785f);
     
-    public static Vector3 PosArr = new Vector3(0f, -0.02f, 0.0347f);
+    public static Vector3 PosArr = new Vector3(0f, -0.0159f, 0.093f);
     
-    public static Vector3 PosDer = new Vector3(0.0251f, 0f, 0.057f);
+    public static Vector3 PosDer = new Vector3(0.0291f, 0f, 0.0785f);
 
     
     // Start is called before the first frame update
@@ -188,7 +188,7 @@ public class Player : MonoBehaviour
             RepiteTurno = false; ;
         } 
         yield return new WaitForSeconds(0.1f);
-       // punto = Random.Range(3,3);
+      //punto = Random.Range(3,3);
         //Debug.Log("Resul" + punto);
         total = punto;
         //Resultado.text = punto.ToString();
@@ -278,13 +278,13 @@ public class Player : MonoBehaviour
     public IEnumerator PlayerFontText()
     {
         PlayerText.enabled = true;
-        PlayerText.fontSize = 20;
+        PlayerText.fontSize = 40;
         PlayerText.text = ("Player " + ControlPlayer.control.Turno + " Turn!");
         
         while (PlayerText.fontSize > 1) {
             
            PlayerText.fontSize--;
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.02f);
             
         }
         
@@ -294,12 +294,12 @@ public class Player : MonoBehaviour
     public IEnumerator BienestarText(string Text)
     {
         PlayerText.enabled = true;
-        PlayerText.fontSize = 20;
+        PlayerText.fontSize = 40;
         PlayerText.text = (Text);
         while (PlayerText.fontSize > 1)
         { 
             PlayerText.fontSize--;
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.02f);
         }
         RestoreText();
         
@@ -308,7 +308,7 @@ public class Player : MonoBehaviour
     public void RestoreText()
     {
         PlayerText.enabled = false;
-        PlayerText.fontSize = 20;
+        PlayerText.fontSize = 40;
         
     }
 
