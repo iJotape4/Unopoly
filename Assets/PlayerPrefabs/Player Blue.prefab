@@ -119,7 +119,7 @@ MonoBehaviour:
   NumVueltas: 0
   dado1: {fileID: 0}
   dado2: {fileID: 0}
-  rigi: {fileID: 4713347305226067528}
+  rigi: {fileID: 0}
 --- !u!54 &4713347305226067528
 Rigidbody:
   m_ObjectHideFlags: 0
