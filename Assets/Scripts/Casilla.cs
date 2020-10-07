@@ -11,7 +11,7 @@ public class Casilla : MonoBehaviour
     public bool ocupadaby2;
     public int Players;
 
-    public Player[] Jugadores = new Player[ControlPlayer.LImitedeTurno];
+    public Player[] Jugadores;
     public  Vector3 PosicionOriginal;
 
     
@@ -19,6 +19,8 @@ public class Casilla : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Jugadores = new Player[ControlPlayer.LImitedeTurno];
+    
         for (int i = 0; i < Jugadores.Length; i++)
         {
             Jugadores[i] = GameObject.FindGameObjectWithTag("Player" + (i + 1)).GetComponent<Player>();
