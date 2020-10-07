@@ -10,6 +10,6 @@ public class GreenPlayer : Player
         base.Start();
         PlayerTurn = 1;
         PlayerColor = Color.green;
-
+        StartCoroutine(PlayerFontText());
     }
 }

@@ -79,8 +79,6 @@ public class Player : MonoBehaviour
         
         total = 0;
       //  Resultado.text = "";
-        PlayerText = GameObject.Find("PlayerText").GetComponent<Text>();
-        PlayerText.enabled = false;
 
         OwnCamera = GetComponentInChildren<Camera>();
 
@@ -91,10 +89,7 @@ public class Player : MonoBehaviour
         PlayerDinero.enabled = true;
 
         PlayerText = GameObject.Find("PlayerText").GetComponent<Text>();
-        PlayerText.enabled = false;
-
-
-        StartCoroutine(PlayerFontText());
+        PlayerText.enabled = false;       
 
         Rott = GameObject.Find("GO").GetComponent<GO>();
 
@@ -116,6 +111,8 @@ public class Player : MonoBehaviour
         bienestar = GameObject.Find("Bienestar").GetComponent<Casilla>();
 
         rigi = GetComponent<Rigidbody>();
+
+
     }
 
     // Update is called once per frame
@@ -125,7 +122,7 @@ public class Player : MonoBehaviour
         {
             PlayerDinero.text = "$" + dinero.ToString();
             PlayerDinero.color = PlayerColor;
-
+            
 
             if (!DadosCamera.enabled)
             {
@@ -277,13 +274,14 @@ public class Player : MonoBehaviour
             camara.transform.rotation = new Quaternion(0.0f, 1.0f, -0.3f, 0.0f);
             camara.transform.localPosition = new Vector3(0f, -0.0773f, 0.0501f);
         }
-
-        if (Posicion < 10 )
+        else if (Posicion < 10)
         {
             camara.transform.rotation = Abajo;
             camara.transform.localPosition = PosAbj;
         }
-        else if (Posicion >= 30)
+        else if (Posicion >= 30
+
+       )
         {
             camara.transform.rotation = Derecha;
             camara.transform.localPosition = PosDer;
@@ -316,7 +314,7 @@ public class Player : MonoBehaviour
 
     public IEnumerator PlayerFontText()
     {
-        Debug.Log(PlayerText.name);
+        yield return new WaitForSeconds(0.0001f);
         PlayerText.enabled = true;
         PlayerText.fontSize = 40;
         PlayerText.text = ("Player " + ControlPlayer.control.Turno + " Turn!");
@@ -518,6 +516,7 @@ public class Player : MonoBehaviour
         rigi.isKinematic = false;
 
         Player parent = OwnCamera.transform.GetComponentInParent<Player>();
+       
 
         while (transform.position != bienestarPos)
         {
@@ -534,11 +533,11 @@ public class Player : MonoBehaviour
         NumVueltas = 0;
        
         InBienestar = true;
-        
-        OwnCamera.transform.rotation = Arriba;
-        OwnCamera.transform.localPosition =  new Vector3(0f, -0.0724f, 0.0347f);
 
-    StartCoroutine(BienestarText("!!En bienestar!!"));
+        OwnCamera.transform.rotation = new Quaternion(0.0f, 1.0f, -0.3f, 0.0f);
+        OwnCamera.transform.localPosition = new Vector3(0f, -0.0773f, 0.0501f);
+        
+        StartCoroutine(BienestarText("!!En bienestar!!"));
         yield return new WaitForSeconds(1f);
         HuecoVisible = false;
        ResetBienestarGuide();
