@@ -11,5 +11,5 @@ public class RedPlayer : Player
         base.Start();
         PlayerTurn = 4;
         PlayerColor = Color.red;
-    }
+    }   
 }

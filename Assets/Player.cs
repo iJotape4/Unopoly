@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -91,8 +92,9 @@ public class Player : MonoBehaviour
 
         PlayerText = GameObject.Find("PlayerText").GetComponent<Text>();
         PlayerText.enabled = false;
-        StartCoroutine(PlayerFontText());
 
+
+        StartCoroutine(PlayerFontText());
 
         Rott = GameObject.Find("GO").GetComponent<GO>();
 
@@ -113,9 +115,7 @@ public class Player : MonoBehaviour
 
         bienestar = GameObject.Find("Bienestar").GetComponent<Casilla>();
 
-
-
-
+        rigi = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -186,7 +186,7 @@ public class Player : MonoBehaviour
         else
         {
             RepiteTurno = false; ;
-        } 
+    } 
         yield return new WaitForSeconds(0.1f);
       //punto = Random.Range(3,3);
         //Debug.Log("Resul" + punto);
@@ -203,32 +203,66 @@ public class Player : MonoBehaviour
 
     public void ComprobarOcupacion()
     {
+        int posicion = tableroPos + 1;
 
-        int posicion = tableroPos+1;
 
         Debug.Log(tableroPos);
         casiillaSiguiente = GameObject.Find("POST (" + posicion + ")").GetComponent<Casilla>();
 
         if (casiillaSiguiente.ocupada)
         {
-            if (posicion < 10 || posicion == 40)
+            if (casiillaSiguiente.ocupadaby2)
             {
-                casiillaSiguiente.transform.position = new Vector3(casiillaSiguiente.transform.position.x, casiillaSiguiente.transform.position.y, 0.093f);
+                if (casiillaSiguiente.ocupadaby3)
+                {
+                    MoverCasilla(3);
+                    casiillaSiguiente.ocupadaby2 = false;
+                    casiillaSiguiente.ocupadaby3 = false;
+                }
+                else
+                {
+                    MoverCasilla(2);
+                    casiillaSiguiente.ocupadaby3 = true;
+                }              
             }
-            else if (posicion >= 30)
+            else
             {
-                casiillaSiguiente.transform.position = new Vector3( 0.03f, casiillaSiguiente.transform.position.y, casiillaSiguiente.transform.position.z);
+                MoverCasilla(1);
+                casiillaSiguiente.ocupadaby2 = true;
             }
-                 
-            else if (posicion >= 20 )
-            {
-                casiillaSiguiente.transform.position = new Vector3(casiillaSiguiente.transform.position.x, casiillaSiguiente.transform.position.y, 10.594f); 
-            }
-            else if (posicion >= 10)
-            {
-                casiillaSiguiente.transform.position = new Vector3(-10.33f, casiillaSiguiente.transform.position.y, casiillaSiguiente.transform.position.z);
-            }   
-         }
+           
+        }
+    }
+
+    public  void MoverCasilla(int PlayersNum)
+    {
+        int posicion = tableroPos + 1;
+        float diff = 0.39f;
+        float diffLats = 0.48f;
+
+        diff *= PlayersNum;
+        diffLats *= PlayersNum;
+
+        if (posicion < 10 || posicion == 40)
+        {
+            casiillaSiguiente.transform.position = new Vector3(casiillaSiguiente.transform.position.x, casiillaSiguiente.transform.position.y, (casiillaSiguiente.transform.position.z + diff));
+
+        }
+        else if (posicion >= 30)
+        {
+            casiillaSiguiente.transform.position = new Vector3((casiillaSiguiente.transform.position.x - diffLats), casiillaSiguiente.transform.position.y, casiillaSiguiente.transform.position.z);
+        }
+
+        else if (posicion >= 20)
+        {
+            casiillaSiguiente.transform.position = new Vector3(casiillaSiguiente.transform.position.x, casiillaSiguiente.transform.position.y, (casiillaSiguiente.transform.position.z - diff));
+        }
+        else if (posicion >= 10)
+        {
+            casiillaSiguiente.transform.position = new Vector3((casiillaSiguiente.transform.position.x + diffLats), casiillaSiguiente.transform.position.y, casiillaSiguiente.transform.position.z);
+
+        }
+        
     }
 
     public void MoveCamera()
@@ -237,7 +271,12 @@ public class Player : MonoBehaviour
         Camera camara = GetComponentInChildren<Camera>();
 
         int Posicion = tableroPos;
-        
+
+        if (InBienestar)
+        {
+            camara.transform.rotation = new Quaternion(0.0f, 1.0f, -0.3f, 0.0f);
+            camara.transform.localPosition = new Vector3(0f, -0.0773f, 0.0501f);
+        }
 
         if (Posicion < 10 )
         {
@@ -250,7 +289,7 @@ public class Player : MonoBehaviour
             camara.transform.localPosition = PosDer;
 
         }
-        else if (Posicion >= 20 || InBienestar)
+        else if (Posicion >= 20 )
         {
             camara.transform.rotation = Arriba;
             camara.transform.localPosition = PosArr;
@@ -277,6 +316,7 @@ public class Player : MonoBehaviour
 
     public IEnumerator PlayerFontText()
     {
+        Debug.Log(PlayerText.name);
         PlayerText.enabled = true;
         PlayerText.fontSize = 40;
         PlayerText.text = ("Player " + ControlPlayer.control.Turno + " Turn!");

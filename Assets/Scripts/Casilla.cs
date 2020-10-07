@@ -9,6 +9,7 @@ public class Casilla : MonoBehaviour
     public Casilla casiillaSiguiente;
     public bool ocupada;
     public bool ocupadaby2;
+    public bool ocupadaby3;
     public int Players;
 
     public Player[] Jugadores;
