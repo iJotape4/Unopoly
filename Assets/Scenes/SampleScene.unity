@@ -25096,6 +25096,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Red
       objectReference: {fileID: 0}
+    - target: {fileID: 5207394642378071000, guid: 37842c884cb25454d80390b75a6d7bd6,
+        type: 3}
+      propertyPath: InBienestar
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5207394642378071005, guid: 37842c884cb25454d80390b75a6d7bd6,
         type: 3}
       propertyPath: m_LocalPosition.x
