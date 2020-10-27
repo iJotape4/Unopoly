@@ -126,7 +126,10 @@ public class Propiedad : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
             PlayerActual.FinishTurn();
         }
-        
+        else
+        {
+            Player.PuedeTirar = true;
+        }             
     }
 
     

@@ -185,6 +185,7 @@ public class Player : MonoBehaviour
         if(dado1.NumeroActual == dado2.NumeroActual)
         {
             RepiteTurno = true;
+            
             StartCoroutine(BienestarText("!!!Doubles!!!"));
         }
         else
@@ -210,7 +211,7 @@ public class Player : MonoBehaviour
         int posicion = tableroPos + 1;
 
 
-        Debug.Log(tableroPos);
+        //Debug.Log(tableroPos);
         casiillaSiguiente = GameObject.Find("POST (" + posicion + ")").GetComponent<Casilla>();
 
         if (casiillaSiguiente.ocupada)
@@ -403,13 +404,22 @@ public class Player : MonoBehaviour
             
         }else if (RepiteTurno)
         {
-            while (Cards || Properties)
+            while (Cards || Properties || movimie)
             {
                 yield return new WaitForSeconds(0.1f);
             }
-            StartCoroutine(BienestarText("Lanza de nuevo!!"));
-            TextoTirar.enabled = true;
-            movimie = false;
+            /// Esto hace que no pueda volver a lanzar si sacó un par para entrar a bienestar
+            if (InBienestar)
+            {
+                FinishTurn();
+            }
+            else
+            {
+                PuedeTirar = true;
+                StartCoroutine(BienestarText("Lanza de nuevo!!"));
+                TextoTirar.enabled = true;
+                movimie = false;
+            }         
         }
         else if (tableroPos == 10 )
         {
