@@ -98,3 +98,15 @@ Library/SourceAssetDB
 Library/SourceAssetDB-lock
 Library/StateCache/Hierarchy/b04584-mainStage.json
 Library/StateCache/SceneView/50d6f9-mainStage.json
+
+
+!Library/ScriptAssemblies/
+Library/ScriptAssemblies/*
+
+
+!Library/
+Library/*
+*.dll
+*.dll
+*.dll
+*.dwlt

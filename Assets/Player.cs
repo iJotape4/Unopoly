@@ -52,6 +52,8 @@ public class Player : MonoBehaviour
     public Dado dado2;
 
     public Rigidbody rigi;
+
+    public Canvas canvas;
     
 
     
@@ -112,6 +114,8 @@ public class Player : MonoBehaviour
 
         rigi = GetComponent<Rigidbody>();
 
+        canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
+        //canvas.enabled = false;
 
     }
 
@@ -157,18 +161,20 @@ public class Player : MonoBehaviour
         dado2 = GameObject.Find("Dado2").GetComponent<Dado>();
         RestoreText();
 
-        if(!dado1.IsMoving() && !dado2.IsMoving())
+        if(!dado1.IsMoving() && !dado2.IsMoving()  && !movimie)
         {
             dado1.TirarDado();
             dado2.TirarDado();
         }     
         
-        while (dado1.IsMoving() || dado2.IsMoving())
+        while (dado1.IsMoving() || dado2.IsMoving() || movimie)
         {           
             DadosCamera.enabled = true;
             OwnCamera.enabled = false;
-            yield return new WaitForSeconds(0.1f);
-        }      
+            yield return new WaitForSeconds(0.001f);
+        }
+
+        //yield return new WaitForSeconds(0.2f);
 
         OwnCamera.enabled = true;
         DadosCamera.enabled = false;
@@ -185,7 +191,7 @@ public class Player : MonoBehaviour
             RepiteTurno = false; ;
     } 
         yield return new WaitForSeconds(0.1f);
-   // punto = Random.Range(2,3);
+        punto = Random.Range(7,7);
         //Debug.Log("Resul" + punto);
         total = punto;
         //Resultado.text = punto.ToString();
@@ -314,6 +320,7 @@ public class Player : MonoBehaviour
 
     public IEnumerator PlayerFontText()
     {
+        //canvas.enabled = true;
         yield return new WaitForSeconds(0.0001f);
         PlayerText.enabled = true;
         PlayerText.fontSize = 40;
@@ -331,6 +338,7 @@ public class Player : MonoBehaviour
 
     public IEnumerator BienestarText(string Text)
     {
+       // canvas.enabled = true;
         PlayerText.enabled = true;
         PlayerText.fontSize = 40;
         PlayerText.text = (Text);
@@ -347,7 +355,7 @@ public class Player : MonoBehaviour
     {
         PlayerText.enabled = false;
         PlayerText.fontSize = 40;
-        
+       // canvas.enabled = false;
     }
 
 
@@ -391,6 +399,7 @@ public class Player : MonoBehaviour
         if (tableroPos ==30 )
         {        
             StartCoroutine(GoBienestar());
+            
         }else if (RepiteTurno)
         {
             while (Cards || Properties)
@@ -409,6 +418,7 @@ public class Player : MonoBehaviour
         }
         else if (!Cards && !Properties && !RepiteTurno)
         {
+            
             FinishTurn();
         }        
     }
@@ -542,12 +552,19 @@ public class Player : MonoBehaviour
         HuecoVisible = false;
        ResetBienestarGuide();
 
+        while (PlayerText.enabled || HuecoVisible)
+        {
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        Debug.Log("Se termina en gonbienes");
         FinishTurn();
         
     }
 
     public IEnumerator SalirBienestar()
     {
+       // canvas.enabled = true;
         TextoTirar.enabled = true;
         TextoPagar.enabled = true;
 
