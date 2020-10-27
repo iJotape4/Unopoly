@@ -46,6 +46,8 @@ public class Player : MonoBehaviour
     public static bool Properties;
     public static bool HuecoVisible = false;
 
+    public static bool PuedeTirar=true;
+
     public int NumVueltas=0;
 
     public Dado dado1;
@@ -128,19 +130,24 @@ public class Player : MonoBehaviour
             }
             if (InBienestar)
             {
+
+                if (PlayerTurn != ControlPlayer.control.Turno)
+                {
+                    return;
+                }
                 StartCoroutine(SalirBienestar());
             }
         }
 
 
 
-        if (Input.GetKeyDown(KeyCode.X) && !movimie && !Cards && !Properties && !InBienestar)
+        if (Input.GetKeyDown(KeyCode.X) && !movimie && !Cards && !Properties && !InBienestar  && PuedeTirar)
         {
             if (PlayerTurn != ControlPlayer.control.Turno)
             {
                 return;
             }
-
+            PuedeTirar = false;
             StartCoroutine(LanzarDado());
         }
     }
@@ -155,13 +162,13 @@ public class Player : MonoBehaviour
         dado2 = GameObject.Find("Dado2").GetComponent<Dado>();
         RestoreText();
 
-        if(!dado1.IsMoving() && !dado2.IsMoving()  && !movimie)
+        if(!dado1.IsMoving() && !dado2.IsMoving() )
         {
             dado1.TirarDado();
             dado2.TirarDado();
         }     
         
-        while (dado1.IsMoving() || dado2.IsMoving() || movimie)
+        while (dado1.IsMoving() || dado2.IsMoving())
         {           
             DadosCamera.enabled = true;
             OwnCamera.enabled = false;
@@ -310,6 +317,7 @@ public class Player : MonoBehaviour
         ControlPlayer.control.NextTurno();
         StartCoroutine(PlayerFontText());
         TextoTirar.enabled = true;
+        PuedeTirar = true;
     }
 
     public IEnumerator PlayerFontText()
@@ -505,7 +513,6 @@ public class Player : MonoBehaviour
     public IEnumerator GoBienestar()
     {
         //Hay que corregirlo y hacer un teletransporte animado como el de monopoly 64 https://www.youtube.com/watch?v=CyDnh7eVCl8 19:40    
-
         Vector3 bienestarPos;
 
         if (bienestar.ocupada)
@@ -564,7 +571,7 @@ public class Player : MonoBehaviour
         {
             UseCard.enabled = true;
         }
-
+        if (PuedeTirar) { 
         if (Input.GetKeyDown(KeyCode.X))
         {
             dado1 = GameObject.Find("Dado1").GetComponent<Dado>();
@@ -620,6 +627,7 @@ public class Player : MonoBehaviour
             InBienestar = false;
         }      
         yield return new WaitForSeconds(1f);
+        }
     }
 
     public void ResetBienestarGuide()
