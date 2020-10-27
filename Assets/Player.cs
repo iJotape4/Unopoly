@@ -53,8 +53,6 @@ public class Player : MonoBehaviour
 
     public Rigidbody rigi;
 
-    public Canvas canvas;
-    
 
     
     public  static Quaternion Abajo = new Quaternion(0.4f, 0.0f, 0.0f, 1.0f);
@@ -113,10 +111,6 @@ public class Player : MonoBehaviour
         bienestar = GameObject.Find("Bienestar").GetComponent<Casilla>();
 
         rigi = GetComponent<Rigidbody>();
-
-        canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
-        //canvas.enabled = false;
-
     }
 
     // Update is called once per frame
@@ -320,7 +314,7 @@ public class Player : MonoBehaviour
 
     public IEnumerator PlayerFontText()
     {
-        //canvas.enabled = true;
+      
         yield return new WaitForSeconds(0.0001f);
         PlayerText.enabled = true;
         PlayerText.fontSize = 40;
@@ -338,7 +332,7 @@ public class Player : MonoBehaviour
 
     public IEnumerator BienestarText(string Text)
     {
-       // canvas.enabled = true;
+       
         PlayerText.enabled = true;
         PlayerText.fontSize = 40;
         PlayerText.text = (Text);
@@ -355,7 +349,6 @@ public class Player : MonoBehaviour
     {
         PlayerText.enabled = false;
         PlayerText.fontSize = 40;
-       // canvas.enabled = false;
     }
 
 
@@ -564,7 +557,6 @@ public class Player : MonoBehaviour
 
     public IEnumerator SalirBienestar()
     {
-       // canvas.enabled = true;
         TextoTirar.enabled = true;
         TextoPagar.enabled = true;
 
