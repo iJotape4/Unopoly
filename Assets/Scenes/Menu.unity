@@ -683,7 +683,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -335, y: -38.3}
+  m_AnchoredPosition: {x: -479, y: -243}
   m_SizeDelta: {x: 587.6, y: 86.7}
   m_Pivot: {x: -0.08886482, y: 0.626954}
 --- !u!114 &1316388709
@@ -725,6 +725,85 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316388707}
+  m_CullTransparentMesh: 0
+--- !u!1 &1364388172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1364388173}
+  - component: {fileID: 1364388175}
+  - component: {fileID: 1364388174}
+  m_Layer: 5
+  m_Name: Creditos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1364388173
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364388172}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1724252974}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 263, y: -13}
+  m_SizeDelta: {x: 685.1, y: 691.6}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1364388174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364388172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: d1dd5219f312df247bef47c8a012f714, type: 3}
+    m_FontSize: 45
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 60
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "      3d modeling\njuan esteban grateron\n\n     art director\njuan carlos
+    linares\n\nprogrammer & tech Artist\njuan pablo camacho\n\n       designed by:\njuan
+    pablo camacho\njuan esteban grateron\n"
+--- !u!222 &1364388175
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364388172}
   m_CullTransparentMesh: 0
 --- !u!1 &1429204112
 GameObject:
@@ -1024,6 +1103,7 @@ RectTransform:
   - {fileID: 1648283116}
   - {fileID: 1100202785}
   - {fileID: 751479119}
+  - {fileID: 1364388173}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1051,3 +1131,8 @@ MonoBehaviour:
   Opcion3: {fileID: 0}
   Opcion4: {fileID: 0}
   title: {fileID: 0}
+  Creditos: {fileID: 0}
+  IniPosOp1: {x: 0, y: 0, z: 0}
+  IniPosOp2: {x: 0, y: 0, z: 0}
+  IniPosOp3: {x: 0, y: 0, z: 0}
+  IniPosOp4: {x: 0, y: 0, z: 0}
