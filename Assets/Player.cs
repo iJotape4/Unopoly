@@ -57,7 +57,7 @@ public class Player : MonoBehaviour
 
     public Rigidbody rigi;
 
-
+    public GameObject self;
     
     public  static Quaternion Abajo = new Quaternion(0.4f, 0.0f, 0.0f, 1.0f);
     
@@ -76,7 +76,12 @@ public class Player : MonoBehaviour
     
     public static Vector3 PosDer = new Vector3(0.0291f, 0f, 0.0785f);
 
-    
+
+    public void Awake()
+    {
+        this.self = gameObject;
+    }
+
     // Start is called before the first frame update
     public void Start()
     {
@@ -115,6 +120,13 @@ public class Player : MonoBehaviour
         bienestar = GameObject.Find("Bienestar").GetComponent<Casilla>();
 
         rigi = GetComponent<Rigidbody>();
+
+        if (ControlPlayer.LImitedeTurno < PlayerTurn)
+        {
+            self.SetActive(false);
+
+        }
+
     }
 
     // Update is called once per frame
@@ -195,7 +207,7 @@ public class Player : MonoBehaviour
             RepiteTurno = false;
     } 
         yield return new WaitForSeconds(0.1f);
-            punto = Random.Range(7,7);
+       //punto = Random.Range(4,4);
         //Debug.Log("Resul" + punto);
         total = punto;
         //Resultado.text = punto.ToString();
@@ -440,7 +452,7 @@ public class Player : MonoBehaviour
                 StartCoroutine(BienestarText("Lanza de nuevo!!"));
                 TextoTirar.enabled = true;
                 //Esto para que pueda alcanzarse a ver el texto
-                yield return new WaitForSeconds(0.8f);
+                yield return new WaitForSeconds(0.7f);
                 movimie = false;
             }         
         }
