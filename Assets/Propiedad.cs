@@ -83,7 +83,7 @@ public class Propiedad : MonoBehaviour
 
     public void ShowPropertie()
     {
-        
+        PropertyIMage.rectTransform.sizeDelta = new Vector2(700, 822);
         PropertyIMage.enabled = true;
 
         TextoComprar.text = ("X) Comprar $" + Tarjeta.precio);

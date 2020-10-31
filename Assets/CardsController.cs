@@ -70,7 +70,7 @@ public class CardsController : MonoBehaviour
                 Cards = ComArcsCards;
                 Player.ComARrcs = false;
             }
-
+            CardImage.rectTransform.sizeDelta = new Vector2(1500, 822);
             CardImage.enabled = true;
             Debug.Log("carta el" +elegida);
             CardImage.sprite = Cards[elegida];                
