@@ -432,6 +432,11 @@ public class Player : MonoBehaviour
                 ExecutingCardMethod = false;
                 PuedeTirar = true;
 
+                while (Cards || Properties)
+                {
+                    yield return new WaitForSeconds(0.1f);
+                }
+
                 StartCoroutine(BienestarText("Lanza de nuevo!!"));
                 TextoTirar.enabled = true;
                 //Esto para que pueda alcanzarse a ver el texto

@@ -2483,7 +2483,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 750199539}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -3.6}
+  m_LocalPosition: {x: 0, y: 0, z: -38}
   m_LocalScale: {x: 1.2, y: 1.4125, z: 1}
   m_Children: []
   m_Father: {fileID: 169070962}
@@ -2491,7 +2491,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 57, y: 320}
+  m_AnchoredPosition: {x: 57, y: 860}
   m_SizeDelta: {x: 383.4, y: 65.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &750199541
@@ -2626,7 +2626,6 @@ MonoBehaviour:
   CardsNum: 0
   elegida: 0
   Chances: 0
-  cafeterias: 050000000c0000001900000026000000
   laboratoriosArr: 230000002500000027000000
   Tag: 
   TextoSiguiente: {fileID: 0}
@@ -3445,7 +3444,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 17
+    m_FontSize: 1
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -4638,7 +4637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.7074198, b: 0, a: 1}
+  m_Color: {r: 0.7432424, g: 0.032840855, b: 0.7735849, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
