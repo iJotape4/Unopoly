@@ -617,14 +617,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  precio: 65
+  precio: 90
   PropertyIMage: {fileID: 0}
   PropertyCards: []
   TextoComprar: {fileID: 0}
   TextoPasar: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
-  Renta: 10
+  Renta: 9
   Tag: 
   Tarjeta: {fileID: 0}
 --- !u!114 &149744279
@@ -863,14 +863,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  precio: 100
+  precio: 90
   PropertyIMage: {fileID: 0}
   PropertyCards: []
   TextoComprar: {fileID: 0}
   TextoPasar: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
-  Renta: 20
+  Renta: 9
   Tag: 
   Tarjeta: {fileID: 0}
 --- !u!114 &206762005
@@ -1408,7 +1408,7 @@ MonoBehaviour:
   TextoPasar: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
-  Renta: 18
+  Renta: 20
   Tag: 
   Tarjeta: {fileID: 0}
 --- !u!114 &385927703
@@ -1563,7 +1563,7 @@ MonoBehaviour:
   TextoPasar: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
-  Renta: 7
+  Renta: 9
   Tag: 
   Tarjeta: {fileID: 0}
 --- !u!114 &462956074
@@ -2280,7 +2280,7 @@ MonoBehaviour:
   TextoPasar: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
-  Renta: 7
+  Renta: 9
   Tag: 
   Tarjeta: {fileID: 0}
 --- !u!114 &663355956
@@ -3747,14 +3747,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  precio: 95
+  precio: 100
   PropertyIMage: {fileID: 0}
   PropertyCards: []
   TextoComprar: {fileID: 0}
   TextoPasar: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
-  Renta: 7
+  Renta: 10
   Tag: 
   Tarjeta: {fileID: 0}
 --- !u!114 &1273810884
@@ -4404,14 +4404,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  precio: 300
+  precio: 200
   PropertyIMage: {fileID: 0}
   PropertyCards: []
   TextoComprar: {fileID: 0}
   TextoPasar: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
-  Renta: 30
+  Renta: 20
   Tag: 
   Tarjeta: {fileID: 0}
 --- !u!114 &1503949435
@@ -4811,7 +4811,7 @@ MonoBehaviour:
   TextoPasar: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
-  Renta: 10
+  Renta: 6
   Tag: 
   Tarjeta: {fileID: 0}
 --- !u!114 &1537512230
@@ -4855,7 +4855,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1550032409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5258,14 +5258,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  precio: 300
+  precio: 120
   PropertyIMage: {fileID: 0}
   PropertyCards: []
   TextoComprar: {fileID: 0}
   TextoPasar: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
-  Renta: 25
+  Renta: 12
   Tag: 
   Tarjeta: {fileID: 0}
 --- !u!114 &1692485291
@@ -5635,7 +5635,7 @@ MonoBehaviour:
   TextoPasar: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
-  Renta: 43
+  Renta: 42
   Tag: 
   Tarjeta: {fileID: 0}
 --- !u!114 &1821040544
@@ -5791,7 +5791,7 @@ MonoBehaviour:
   TextoPasar: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
-  Renta: 15
+  Renta: 14
   Tag: 
   Tarjeta: {fileID: 0}
 --- !u!114 &1847155573
@@ -5867,7 +5867,7 @@ MonoBehaviour:
   TextoPasar: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
-  Renta: 8
+  Renta: 10
   Tag: 
   Tarjeta: {fileID: 0}
 --- !u!114 &1848338726
@@ -6510,14 +6510,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  precio: 120
+  precio: 140
   PropertyIMage: {fileID: 0}
   PropertyCards: []
   TextoComprar: {fileID: 0}
   TextoPasar: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
-  Renta: 20
+  Renta: 10
   Tag: 
   Tarjeta: {fileID: 0}
 --- !u!114 &1994264124
@@ -6586,14 +6586,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7aba2ac5e2937b49894e317a0997bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  precio: 200
+  precio: 350
   PropertyIMage: {fileID: 0}
   PropertyCards: []
   TextoComprar: {fileID: 0}
   TextoPasar: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
-  Renta: 20
+  Renta: 35
   Tag: 
   Tarjeta: {fileID: 0}
 --- !u!114 &1996169382
