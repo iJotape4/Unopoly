@@ -15,8 +15,8 @@ public class CardsController : MonoBehaviour
 
     public bool Chances = false;
 
-    public int[] cafeterias = new int[4] { 5, 12, 25, 38 };
-    public int[] laboratoriosArr = new int[3] { 35,  37, 39 };
+    public static int[] cafeterias = new int[4] { 8, 16, 26, 38};
+    public int[] laboratoriosArr = new int[1] { 34 };
 
     public string Tag ;
 
@@ -72,8 +72,8 @@ public class CardsController : MonoBehaviour
             }
 
             CardImage.enabled = true;
-            elegida = Random.Range(0, Cards.Length);
-            CardImage.sprite = Cards[elegida];                 
+            Debug.Log("carta el" +elegida);
+            CardImage.sprite = Cards[elegida];                
         }
 
         TextoSiguiente.enabled = true;
@@ -90,6 +90,7 @@ public class CardsController : MonoBehaviour
         TextoSiguiente.enabled = false;
         CardImage.enabled = false;
         Player.Cards = false;
+        Player.ExecutingCardMethod = true;
         if (Chances)
         {
             CallCardMethodChances(elegida);
@@ -141,11 +142,16 @@ public class CardsController : MonoBehaviour
             PlayerActual.ExitCards++;
             StartCoroutine(Waiter());
         }
-        //6. Ve al laboratorio más cercano
+        //6. Ve al laboratorio de telecomunicaciones
         else if (elegida == 6)
         {
 
             GoToLaboratory();
+        }
+        //7. Tienes un taller de deporte, ve al CSU
+        else if (elegida == 7)
+        {
+            CardMethodGoTo(13);
         }
         
     }
@@ -202,10 +208,15 @@ public class CardsController : MonoBehaviour
 
     public IEnumerator Waiter()
     {
+        Player.ExecutingCardMethod = false;
         if (!PlayerActual.RepiteTurno)
         {
             yield return new WaitForSeconds(0.2f);
             PlayerActual.FinishTurn();
+        }
+        else
+        {
+            Player.PuedeTirar = true;
         }
        
     }
@@ -251,7 +262,7 @@ public class CardsController : MonoBehaviour
         
     }
 
-    //Avanza hasta el laboratorio más cercano
+    //Avanza hasta el laboratorio más cercsano
     public void GoToLaboratory()
     {
         int LaboElegido = 0;
@@ -285,9 +296,13 @@ public class CardsController : MonoBehaviour
     {
         PlayerActual.movimie = false ;
         PlayerActual.MoveTowards(pos);
-        
-        PlayerActual.ComprobateProperties();
        
+        PlayerActual.ComprobateProperties();
+
+        
+      
+    
+
     }
 
 }

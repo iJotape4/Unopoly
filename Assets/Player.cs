@@ -38,10 +38,12 @@ public class Player : MonoBehaviour
     public int PlayerTurn;
 
     public bool InBienestar=false;
+    
 
     public static bool Cards;
     public static bool Chances;
     public static bool ComARrcs;
+    public static bool ExecutingCardMethod=false;
 
     public static bool Properties;
     public static bool HuecoVisible = false;
@@ -190,7 +192,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            RepiteTurno = false; ;
+            RepiteTurno = false;
     } 
         yield return new WaitForSeconds(0.1f);
             punto = Random.Range(7,7);
@@ -312,6 +314,10 @@ public class Player : MonoBehaviour
 
     public void FinishTurn()
     {
+        if (ExecutingCardMethod)
+        {
+            ExecutingCardMethod = false;
+        }
         movimie = false;
         OwnCamera.enabled = false;
 
@@ -341,9 +347,15 @@ public class Player : MonoBehaviour
 
     public IEnumerator BienestarText(string Text)
     {
-       
-        PlayerText.enabled = true;
+
+        while (Cards || Properties)
+        {
+            yield return new WaitForSeconds(0.02f);
+        }
+
         PlayerText.fontSize = 40;
+        PlayerText.enabled = true;
+       
         PlayerText.text = (Text);
         while (PlayerText.fontSize > 1)
         { 
@@ -364,7 +376,6 @@ public class Player : MonoBehaviour
     ///AQUI ESTÁ MOVE
     public IEnumerator Move()
     {
-       
         Camera camara = GetComponentInChildren<Camera>();
         if (movimie)
         {
@@ -378,10 +389,9 @@ public class Player : MonoBehaviour
                 ComprobarOcupacion();
                 Vector3 nextPos = GO.tablero.Seleccionar(rpposiicion+0).position;
                 while (MoveToNexNode(nextPos)) { yield return null; }
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.06f);
                 punto--;
                 rpposiicion++;
-                
 
                 MoveCamera();
 
@@ -404,7 +414,7 @@ public class Player : MonoBehaviour
             
         }else if (RepiteTurno)
         {
-            while (Cards || Properties || movimie)
+            while (Cards || Properties )
             {
                 yield return new WaitForSeconds(0.1f);
             }
@@ -415,9 +425,17 @@ public class Player : MonoBehaviour
             }
             else
             {
+                while (ExecutingCardMethod && punto>0 )
+                {
+                    yield return new WaitForSeconds(0.1f);
+                }
+                ExecutingCardMethod = false;
                 PuedeTirar = true;
+
                 StartCoroutine(BienestarText("Lanza de nuevo!!"));
                 TextoTirar.enabled = true;
+                //Esto para que pueda alcanzarse a ver el texto
+                yield return new WaitForSeconds(0.8f);
                 movimie = false;
             }         
         }
@@ -446,6 +464,7 @@ public class Player : MonoBehaviour
         {
             punto = 40 - tableroPos + pos;
         }
+        Debug.Log("se mueve hasta" + pos);
         StartCoroutine(Move());
     }
 
@@ -471,6 +490,7 @@ public class Player : MonoBehaviour
     {
         int[] properties = new int[30] { 1, 3, 4, 5, 6, 8, 9, 11, 12, 13, 14, 15, 16, 18, 19, 21, 23, 24, 25, 26, 27, 28, 29, 31, 32, 34, 35, 37, 38, 39 };
 
+       
         foreach (int element in properties)
         {
            // Debug.Log("revisando + " + element);
