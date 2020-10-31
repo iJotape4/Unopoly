@@ -193,7 +193,7 @@ public class Player : MonoBehaviour
             RepiteTurno = false; ;
     } 
         yield return new WaitForSeconds(0.1f);
-        punto = Random.Range(7,7);
+            punto = Random.Range(7,7);
         //Debug.Log("Resul" + punto);
         total = punto;
         //Resultado.text = punto.ToString();
@@ -411,7 +411,7 @@ public class Player : MonoBehaviour
             /// Esto hace que no pueda volver a lanzar si sacó un par para entrar a bienestar
             if (InBienestar)
             {
-                FinishTurn();
+                RepiteTurno = false;
             }
             else
             {
@@ -584,6 +584,7 @@ public class Player : MonoBehaviour
         if (PuedeTirar) { 
         if (Input.GetKeyDown(KeyCode.X))
         {
+            //PuedeTirar = false;
             dado1 = GameObject.Find("Dado1").GetComponent<Dado>();
             dado2 = GameObject.Find("Dado2").GetComponent<Dado>();
 
@@ -618,6 +619,7 @@ public class Player : MonoBehaviour
             }
             ResetBienestarGuide();
         }
+
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
