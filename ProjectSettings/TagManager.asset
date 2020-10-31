@@ -9,6 +9,8 @@ TagManager:
   - Player3
   - Player4
   - Player5
+  - Tablero
+  - Dado
   layers:
   - Default
   - TransparentFX

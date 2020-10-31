@@ -8,8 +8,10 @@ public class YellowPlayer : Player
     // Start is called before the first frame update
     void Start()
     {
-        base.Start();
+       
         PlayerColor = Color.yellow;
         PlayerTurn = 3;
+        base.Start();
+
     }    
 }

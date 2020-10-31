@@ -230,12 +230,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: d1dd5219f312df247bef47c8a012f714, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 20
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -321,8 +321,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0087469015, y: 0.009324436, z: 0.009378459}
-  m_Center: {x: 0.015743356, y: -0.008690767, z: -0.0029766893}
+  m_Size: {x: 0.009901542, y: 0.0101491865, z: 0.009378459}
+  m_Center: {x: 0.015770838, y: -0.008718259, z: -0.0029766893}
 --- !u!54 &124400145
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -951,12 +951,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: d1dd5219f312df247bef47c8a012f714, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 20
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1489,12 +1489,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: d1dd5219f312df247bef47c8a012f714, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 20
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -2484,14 +2484,14 @@ RectTransform:
   m_GameObject: {fileID: 750199539}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -38}
-  m_LocalScale: {x: 1.2, y: 1.4125, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 169070962}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 57, y: 860}
+  m_AnchoredPosition: {x: 710, y: 723}
   m_SizeDelta: {x: 383.4, y: 65.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &750199541
@@ -2513,10 +2513,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: d1dd5219f312df247bef47c8a012f714, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 1
+    m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 0
@@ -3364,12 +3364,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: d1dd5219f312df247bef47c8a012f714, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 20
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -4643,12 +4643,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: d1dd5219f312df247bef47c8a012f714, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 20
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -4855,7 +4855,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1550032409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23108,7 +23108,7 @@ GameObject:
   - component: {fileID: 4695666576036632084}
   m_Layer: 0
   m_Name: Dado1
-  m_TagString: Untagged
+  m_TagString: Dado
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23140,8 +23140,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.009164347, y: 0.008885435, z: 0.008951227}
-  m_Center: {x: 0.015730996, y: -0.008772691, z: -0.0030157769}
+  m_Size: {x: 0.009989101, y: 0.010040088, z: 0.008951227}
+  m_Center: {x: 0.015758485, y: -0.00880018, z: -0.0030157769}
 --- !u!114 &4695666576036632084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25099,6 +25099,11 @@ PrefabInstance:
         type: 3}
       propertyPath: InBienestar
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5207394642378071000, guid: 37842c884cb25454d80390b75a6d7bd6,
+        type: 3}
+      propertyPath: self
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5207394642378071005, guid: 37842c884cb25454d80390b75a6d7bd6,
         type: 3}
