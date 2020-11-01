@@ -72,7 +72,7 @@ public class CardsController : MonoBehaviour
             }
             CardImage.rectTransform.sizeDelta = new Vector2(1500, 822);
             CardImage.enabled = true;
-            elegida = Random.Range(2,2);
+            elegida = Random.Range(0, Cards.Length);
             Debug.Log("carta el" +elegida);
             CardImage.sprite = Cards[elegida];                
         }

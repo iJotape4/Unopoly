@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
 
+    public Text Resultado;
     protected int total;
     public GO Rott;
     public int rpposiicion;
@@ -20,7 +21,6 @@ public class Player : MonoBehaviour
 
     public Camera DadosCamera;
     public Camera OwnCamera;
-    public Camera BienestarCamera;
     public Text PlayerText;
     public Text TextoTirar;
     public Text UseCard;
@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
     public int PlayerTurn;
 
     public bool InBienestar=false;
-    public bool inChameraRotateChange = false;
+    
 
     public static bool Cards;
     public static bool Chances;
@@ -48,11 +48,9 @@ public class Player : MonoBehaviour
     public static bool Properties;
     public static bool HuecoVisible = false;
 
-
     public static bool PuedeTirar=true;
 
     public int NumVueltas=0;
-    public string MeshSeted;
 
     public Dado dado1;
     public Dado dado2;
@@ -70,8 +68,6 @@ public class Player : MonoBehaviour
     
     public static  Quaternion Derecha = new Quaternion(0.2f, -0.6f, 0.2f, 0.6f);
 
-    public  Quaternion rotationActual;
-
     [HideInInspector]
     public  Quaternion GirarAbajo;
     [HideInInspector]
@@ -84,7 +80,7 @@ public class Player : MonoBehaviour
 
 
 
-   public static Vector3 PosAbj = new Vector3(-0.02135776f, 0.0370839f, 0.124f);
+    public static Vector3 PosAbj = new Vector3(-0.02135776f, 0.0370839f, 0.124f);
     
     public static Vector3 PosIzq = new Vector3(-0.042f, -0.036f, 0.151f);
     
@@ -101,13 +97,11 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-
+        
         total = 0;
-        //  Resultado.text = "";
+      //  Resultado.text = "";
 
         OwnCamera = GameObject.Find("GreenCamera").GetComponent<Camera>();
-
-        
 
         dinero = dineroInicial;
 
@@ -116,12 +110,12 @@ public class Player : MonoBehaviour
         PlayerDinero.enabled = true;
 
         PlayerText = GameObject.Find("PlayerText").GetComponent<Text>();
-        PlayerText.enabled = false;
+        PlayerText.enabled = false;       
 
         Rott = GameObject.Find("GO").GetComponent<GO>();
 
 
-        OwnCamera.enabled = true;
+        OwnCamera.enabled = false;
 
         DadosCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         DadosCamera.enabled = false;
@@ -137,21 +131,16 @@ public class Player : MonoBehaviour
 
         bienestar = GameObject.Find("Bienestar").GetComponent<Casilla>();
 
-        BienestarCamera = GameObject.Find("BienestarCamera").GetComponent<Camera>();
-        BienestarCamera.enabled = false;
-
         rigi = GetComponent<Rigidbody>();
 
         MeshFilter = GetComponent<MeshFilter>();
-
-      //  rotationActual = OwnCamera.transform.rotation;
 
         if (ControlPlayer.LImitedeTurno < PlayerTurn)
         {
             self.SetActive(false);
 
         }
-        //SetCameraPosByMesh();
+        SetCameraPosByMesh();
 
       
 
@@ -175,6 +164,11 @@ public class Player : MonoBehaviour
             PlayerDinero.text = "$" + dinero.ToString();
             PlayerDinero.color = PlayerColor;
             
+
+            if (!DadosCamera.enabled)
+            {
+                OwnCamera.enabled = true;
+            }
             if (InBienestar)
             {
 
@@ -182,7 +176,6 @@ public class Player : MonoBehaviour
                 {
                     return;
                 }
-                
                 StartCoroutine(SalirBienestar());
             }
         }
@@ -203,12 +196,12 @@ public class Player : MonoBehaviour
 
     public IEnumerator LanzarDado()
     {
-        BienestarCamera.enabled = false;
+
         TextoTirar.enabled = false;
         dado1 = GameObject.Find("Dado1").GetComponent<Dado>();
         dado2 = GameObject.Find("Dado2").GetComponent<Dado>();
         RestoreText();
-        
+       /* 
         if(!dado1.IsMoving() && !dado2.IsMoving() )
         {
             dado1.TirarDado();
@@ -221,11 +214,10 @@ public class Player : MonoBehaviour
             OwnCamera.enabled = false;
             yield return new WaitForSeconds(0.001f);
         }
-
+        
         //yield return new WaitForSeconds(0.2f);
 
         OwnCamera.enabled = true;
-
         DadosCamera.enabled = false;
         punto = dado1.NumeroActual + dado2.NumeroActual;
       
@@ -239,10 +231,12 @@ public class Player : MonoBehaviour
         else
         {
             RepiteTurno = false;
-    } 
+    } */
         yield return new WaitForSeconds(0.1f);
-       punto = Random.Range(7,7);
+       punto = Random.Range(9,9);
+        //Debug.Log("Resul" + punto);
         total = punto;
+        //Resultado.text = punto.ToString();
 
         StartCoroutine(Move());
 
@@ -320,11 +314,9 @@ public class Player : MonoBehaviour
 
     public void RotatePosicion()
     {
-
+      
 
         int Posicion = tableroPos;
-
-        
 
         if (InBienestar)
         {
@@ -361,7 +353,6 @@ public class Player : MonoBehaviour
            self.transform.rotation = GirarIzq;
 
         }
-       
         
     }
 
@@ -369,21 +360,19 @@ public class Player : MonoBehaviour
 
     public void FinishTurn()
     {
-        BienestarCamera.enabled = false;
-        
+        MoveCamera();
         if (ExecutingCardMethod)
         {
             ExecutingCardMethod = false;
         }
         movimie = false;
-
-        MoveCamera();
-
        
+
+        ControlPlayer.control.NextTurno();
 
         
         ChangeCameraParent();
-   
+        //MoveCamera();
 
         StartCoroutine(PlayerFontText());
         TextoTirar.enabled = true;
@@ -393,15 +382,12 @@ public class Player : MonoBehaviour
 
     public void ChangeCameraParent()
     {
-        ControlPlayer.control.NextTurno();
+        OwnCamera.transform.SetParent(GameObject.FindGameObjectWithTag("Player" + ControlPlayer.control.Turno).transform);
+        //MoveCamera();
+
       
-        //SetCameraPosByMesh();
-  
-            OwnCamera.transform.SetParent(GameObject.FindGameObjectWithTag("Player" + ControlPlayer.control.Turno).transform);
         
-     
- 
-     
+
          if(OwnCamera.transform.parent.tag == "Player4")
         {
             OwnCamera.transform.localPosition = new Vector3(-0.5f, -0.3f, 0f);
@@ -417,15 +403,12 @@ public class Player : MonoBehaviour
          else if(OwnCamera.transform.parent.tag == "Player3")
         {
             OwnCamera.transform.localPosition = new Vector3(0.48f, -2.62f, 5.13f);
-        }
-
-        
+        }      
     }
 
 
     public void MoveCamera()
     {
-      //  inChameraRotateChange = true;
         int turnSiguiente=0;
         if (PlayerTurn == 4){
             turnSiguiente = 1;
@@ -439,7 +422,12 @@ public class Player : MonoBehaviour
         int Posicion = NextPlayer.tableroPos;
         Debug.Log(Posicion);    
 
-        if (Posicion < 10)
+        if (InBienestar)
+        {
+            //camara.transform.rotation = new Quaternion(0.0f, 1.0f, -0.3f, 0.0f);
+            // camara.transform.localPosition = new Vector3(0f, -0.0773f, 0.0501f);
+        }
+        else if (Posicion < 10)
         {
             OwnCamera.transform.rotation = Abajo;
             //camara.transform.localPosition = PosAbj;
@@ -467,9 +455,6 @@ public class Player : MonoBehaviour
 
 
         }
-       // rotationActual = OwnCamera.transform.rotation;
-
-      //  inChameraRotateChange = false;
 
 
     }
@@ -539,18 +524,17 @@ public class Player : MonoBehaviour
                 punto--;
                 rpposiicion++;
 
-                /*  Debug.Log("Player" + self.name + "x" + self.transform.rotation.x);
-                  Debug.Log("Player" + self.name + "y" + self.transform.rotation.y);
-                  Debug.Log("Player" + self.name + "z" + self.transform.rotation.z);
-                  Debug.Log("Player" + self.name + "w" + self.transform.rotation.w);
+              /*  Debug.Log("Player" + self.name + "x" + self.transform.rotation.x);
+                Debug.Log("Player" + self.name + "y" + self.transform.rotation.y);
+                Debug.Log("Player" + self.name + "z" + self.transform.rotation.z);
+                Debug.Log("Player" + self.name + "w" + self.transform.rotation.w);
+                */
 
-
-                  Debug.Log("Cam" + self.name + "x" + OwnCamera.transform.rotation.x);
-                  Debug.Log("Cam" + self.name + "y" + OwnCamera.transform.rotation.y);
-                  Debug.Log("Cam" + self.name + "z" + OwnCamera.transform.rotation.z);
-                  Debug.Log("Cam" + self.name + "w" + OwnCamera.transform.rotation.w);*/
+                Debug.Log("Cam" + self.name + "x" + OwnCamera.transform.rotation.x);
+                Debug.Log("Cam" + self.name + "y" + OwnCamera.transform.rotation.y);
+                Debug.Log("Cam" + self.name + "z" + OwnCamera.transform.rotation.z);
+                Debug.Log("Cam" + self.name + "w" + OwnCamera.transform.rotation.w);
                 RotatePosicion();
-                MoveCamera();
 
 
                 if (rpposiicion % 40 == 0)
@@ -719,74 +703,44 @@ public class Player : MonoBehaviour
         rigi.isKinematic = false;
 
         Player parent = OwnCamera.transform.GetComponentInParent<Player>();
-
+       
 
         while (transform.position != bienestarPos)
         {
             OwnCamera.transform.SetParent(null);
             yield return new WaitForSeconds(1f);
 
-
+         
             transform.position = (bienestarPos);
-          
-        }
-        OwnCamera.transform.SetParent(parent.transform);
+            OwnCamera.transform.SetParent(parent.transform);
+        }        
         //Esto es para que caiga
         rigi.isKinematic = true;
         rpposiicion = 10;
         NumVueltas = 0;
-
+       
         InBienestar = true;
 
-        self.transform.rotation = GirarIzq;
-        //OwnCamera.transform.rotation = Arriba;
-
-        //poner la cámara según cada uno
-
-        //CamaraBienestar();
-        BienestarCamera.enabled =true;
-
+        OwnCamera.transform.rotation = new Quaternion(0.0f, 1.0f, -0.3f, 0.0f);
+        OwnCamera.transform.localPosition = new Vector3(0f, -0.0773f, 0.0501f);
+        
         StartCoroutine(BienestarText("!!En bienestar!!"));
         yield return new WaitForSeconds(1f);
         HuecoVisible = false;
-        ResetBienestarGuide();
+       ResetBienestarGuide();
 
         while (PlayerText.enabled || HuecoVisible)
         {
             yield return new WaitForSeconds(0.1f);
         }
 
+        Debug.Log("Se termina en gonbienes");
         FinishTurn();
         
     }
 
-    public void CamaraBienestar()
-    {
-        if (self.tag == "Player1")
-        {
-            OwnCamera.transform.localPosition = new Vector3(-0.0733f, -0.0689f, 0.1839f);
-        }
-        else if (self.tag == "Player2")
-        {
-            OwnCamera.transform.localPosition = new Vector3(-8.800361f, -273.7f, 231.4f);
-        }
-        else if (self.tag == "Player3")
-        {
-            OwnCamera.transform.localPosition = new Vector3(-8.15f, -2.54f, -1.997924f);
-        }
-        else if (self.tag == "Player4")
-        {
-            OwnCamera.transform.localPosition = new Vector3(-0.872f, 0.152f, 0.343f);
-        }
-
-    }
-
     public IEnumerator SalirBienestar()
     {
-        if (!BienestarCamera.enabled && !dado1.IsMoving() && !dado2.IsMoving())
-        {
-            BienestarCamera.enabled = true;
-        }
         TextoTirar.enabled = true;
         TextoPagar.enabled = true;
 
@@ -811,11 +765,10 @@ public class Player : MonoBehaviour
             {
                 DadosCamera.enabled = true;
                 OwnCamera.enabled = false;
-                BienestarCamera.enabled = false;
                 yield return new WaitForSeconds(0.1f);
             }
-             BienestarCamera.enabled = true;
-            //OwnCamera.enabled = true;
+
+            OwnCamera.enabled = true;
             DadosCamera.enabled = false;
 
             if(dado1.NumeroActual == dado2.NumeroActual)
@@ -823,13 +776,10 @@ public class Player : MonoBehaviour
                 
                 punto = dado1.NumeroActual + dado2.NumeroActual;
                 total = punto;
-                    
+
                 StartCoroutine(Move());
                 InBienestar = false;
-                BienestarCamera.enabled = false;
-                OwnCamera.enabled = true;
-                    ChangeCameraParent();
-                }
+            }
             else
             {
                 FinishTurn();
@@ -844,12 +794,8 @@ public class Player : MonoBehaviour
            
             ResetBienestarGuide();
             StartCoroutine(LanzarDado());
-                
             InBienestar = false;
-                BienestarCamera.enabled = false;
-                OwnCamera.enabled = true;
-                ChangeCameraParent();
-            }
+        }
 
         if (Input.GetKeyDown(KeyCode.C)  && ExitCards > 0)
         {
@@ -857,12 +803,8 @@ public class Player : MonoBehaviour
             ExitCards--;
             ResetBienestarGuide();
             StartCoroutine(LanzarDado());
-                
-                InBienestar = false;
-                BienestarCamera.enabled = false;
-                OwnCamera.enabled = true;
-                ChangeCameraParent();
-            }      
+            InBienestar = false;
+        }      
         yield return new WaitForSeconds(1f);
         }
     }
