@@ -58,6 +58,7 @@ public class Player : MonoBehaviour
     public Rigidbody rigi;
 
     public GameObject self;
+    public GameObject TridiModel;
     
     public  static Quaternion Abajo = new Quaternion(0.4f, 0.0f, 0.0f, 1.0f);
     
@@ -76,10 +77,20 @@ public class Player : MonoBehaviour
     
     public static Vector3 PosDer = new Vector3(0.0291f, 0f, 0.0785f);
 
+    [HideInInspector]
+    public Quaternion GirarAbajo;
+    [HideInInspector]
+    public Quaternion GirarIzq;
+    [HideInInspector]
+    public Quaternion GirarArriba;
+    [HideInInspector]
+    public Quaternion GirarDerecha;
+
 
     public void Awake()
     {
         this.self = gameObject;
+        
     }
 
     // Start is called before the first frame update
@@ -175,7 +186,7 @@ public class Player : MonoBehaviour
         dado1 = GameObject.Find("Dado1").GetComponent<Dado>();
         dado2 = GameObject.Find("Dado2").GetComponent<Dado>();
         RestoreText();
-
+        /*
         if(!dado1.IsMoving() && !dado2.IsMoving() )
         {
             dado1.TirarDado();
@@ -205,9 +216,9 @@ public class Player : MonoBehaviour
         else
         {
             RepiteTurno = false;
-    } 
+    } */
         yield return new WaitForSeconds(0.1f);
-       //punto = Random.Range(4,4);
+       punto = Random.Range(3,3);
         //Debug.Log("Resul" + punto);
         total = punto;
         //Resultado.text = punto.ToString();
@@ -296,31 +307,47 @@ public class Player : MonoBehaviour
             camara.transform.rotation = new Quaternion(0.0f, 1.0f, -0.3f, 0.0f);
             camara.transform.localPosition = new Vector3(0f, -0.0773f, 0.0501f);
         }
+     
         else if (Posicion < 10)
         {
             camara.transform.rotation = Abajo;
-            camara.transform.localPosition = PosAbj;
+            camara.transform.localPosition = PosAbj;           
         }
         else if (Posicion >= 30
-
        )
         {
             camara.transform.rotation = Derecha;
             camara.transform.localPosition = PosDer;
-
         }
         else if (Posicion >= 20 )
         {
             camara.transform.rotation = Arriba;
-            camara.transform.localPosition = PosArr;
+            camara.transform.localPosition = PosArr;           
         }
         else if (Posicion >= 10)
         {
             camara.transform.localPosition = PosIzq;
-            camara.transform.rotation = Izquierda;
+            camara.transform.rotation = Izquierda;            
+        }
+
+
+        if (Posicion < 9 || Posicion == 40)
+        {
+            TridiModel.transform.rotation = GirarAbajo;
+        }
+        else if (Posicion >=29)
+        {
+            TridiModel.transform.rotation = GirarDerecha;
+        }
+        else if (Posicion >= 19)
+        {
+            TridiModel.transform.rotation = GirarArriba;
 
         }
-        
+        else if (Posicion >= 9)
+        {
+            TridiModel.transform.rotation = GirarIzq;
+        }
     }
 
 
@@ -583,7 +610,8 @@ public class Player : MonoBehaviour
          
             transform.position = (bienestarPos);
             OwnCamera.transform.SetParent(parent.transform);
-        }        
+        }
+        TridiModel.transform.rotation = GirarIzq;
         //Esto es para que caiga
         rigi.isKinematic = true;
         rpposiicion = 10;

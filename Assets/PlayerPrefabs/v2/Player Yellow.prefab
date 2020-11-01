@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5805571365119112611
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2859570416896632382}
+  - component: {fileID: 5700313423820824587}
+  - component: {fileID: 1110254261599452582}
+  - component: {fileID: 7319001010254751832}
+  - component: {fileID: 8989216503774391110}
+  m_Layer: 0
+  m_Name: Player Yellow
+  m_TagString: Player1
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2859570416896632382
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5805571365119112611}
+  m_LocalRotation: {x: -0.6724985, y: -0.21850806, z: -0.21850806, w: 0.6724985}
+  m_LocalPosition: {x: 0.028, y: -0.869, z: 0.151}
+  m_LocalScale: {x: 30, y: 25, z: 15}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -36}
+--- !u!33 &5700313423820824587
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5805571365119112611}
+  m_Mesh: {fileID: -6733968552015710313, guid: f11353a6a894d74489491f0ff22c3051, type: 3}
+--- !u!23 &1110254261599452582
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5805571365119112611}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 1110233775959259594, guid: 3d60a6268d147cf449a0ce90301a09ee, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!114 &7319001010254751832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5805571365119112611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a64773ebe716cb74699474564d68e53f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rott: {fileID: 0}
+  rpposiicion: 0
+  punto: 0
+  tableroPos: 0
+  movimie: 0
+  dineroInicial: 2000
+  dinero: 0
+  PlayerDinero: {fileID: 0}
+  DadosCamera: {fileID: 0}
+  OwnCamera: {fileID: 0}
+  BienestarCamera: {fileID: 0}
+  PlayerText: {fileID: 0}
+  TextoTirar: {fileID: 0}
+  UseCard: {fileID: 0}
+  TextoPagar: {fileID: 0}
+  casiillaSiguiente: {fileID: 0}
+  bienestar: {fileID: 0}
+  ExitCards: 0
+  PlayerColor: {r: 1, g: 0.47276115, b: 0, a: 0}
+  RepiteTurno: 0
+  PlayerTurn: 0
+  InBienestar: 0
+  inChameraRotateChange: 0
+  NumVueltas: 0
+  MeshSeted: 
+  dado1: {fileID: 0}
+  dado2: {fileID: 0}
+  rigi: {fileID: 0}
+  self: {fileID: 0}
+  MeshFilter: {fileID: 0}
+  rotationActual: {x: 0, y: 0, z: 0, w: 0}
+  GirarAbajo: {x: 0, y: 0, z: 0, w: 0}
+  GirarIzq: {x: 0, y: 0, z: 0, w: 0}
+  GirarArriba: {x: 0, y: 0, z: 0, w: 0}
+  GirarDerecha: {x: 0, y: 0, z: 0, w: 0}
+--- !u!54 &8989216503774391110
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5805571365119112611}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

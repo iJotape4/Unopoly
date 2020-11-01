@@ -14,7 +14,11 @@ public class BluePlayer : Player
         PlayerColor = Color.blue;
 
         base.Start();
-        
+
+        GirarAbajo = new Quaternion(-0.5f, -0.5f, -0.5f, 0.5f);
+        GirarIzq = new Quaternion(-0.7071068f, -0f, -0f, 0.7071068f);
+        GirarArriba = new Quaternion(-0.5f, 0.5f, 0.5f, 0.5f);
+        GirarDerecha = new Quaternion(-0f, 0.7071068f, 0.7071068f, -0f);
 
     }
 }

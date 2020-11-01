@@ -9,8 +9,13 @@ public class RedPlayer : Player
     void Start()
     {
         
-        PlayerTurn = 4;
+        PlayerTurn = 3;
         PlayerColor = Color.red;
         base.Start();
+
+        GirarAbajo = new Quaternion(1f, 0f, 0f, -0f);
+        GirarIzq = new Quaternion(0.7f, 0f, -0.7f, 0f);
+        GirarArriba = new Quaternion(0f, 0f, -1f, 0f);
+        GirarDerecha = new Quaternion(0.7f, 0f, 0.7f, 0f);
     }   
 }
