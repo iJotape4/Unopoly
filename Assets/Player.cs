@@ -58,7 +58,6 @@ public class Player : MonoBehaviour
     public Rigidbody rigi;
 
     public GameObject self;
-    public MeshFilter MeshFilter;
     
     public  static Quaternion Abajo = new Quaternion(0.4f, 0.0f, 0.0f, 1.0f);
     
@@ -68,25 +67,14 @@ public class Player : MonoBehaviour
     
     public static  Quaternion Derecha = new Quaternion(0.2f, -0.6f, 0.2f, 0.6f);
 
-    [HideInInspector]
-    public  Quaternion GirarAbajo;
-    [HideInInspector]
-    public  Quaternion GirarIzq;
-    [HideInInspector]
-    public  Quaternion GirarArriba;
-    [HideInInspector]
-    public  Quaternion GirarDerecha;
-
-
-
-
-    public static Vector3 PosAbj = new Vector3(-0.02135776f, 0.0370839f, 0.124f);
     
-    public static Vector3 PosIzq = new Vector3(-0.042f, -0.036f, 0.151f);
+    public static Vector3 PosAbj = new Vector3(-0.0127f, 0.0228f, 0.062f);
     
-    public static Vector3 PosArr = new Vector3(0.01085193f, -0.03380395f, 0.2340318f);
+    public static Vector3 PosIzq = new Vector3(- 0.0291f, 0f, 0.0785f);
     
-    public static Vector3 PosDer = new Vector3(0.0391f, 0.04f, 0.154f);
+    public static Vector3 PosArr = new Vector3(0f, -0.0159f, 0.093f);
+    
+    public static Vector3 PosDer = new Vector3(0.0291f, 0f, 0.0785f);
 
 
     public void Awake()
@@ -133,27 +121,12 @@ public class Player : MonoBehaviour
 
         rigi = GetComponent<Rigidbody>();
 
-        MeshFilter = GetComponent<MeshFilter>();
-
         if (ControlPlayer.LImitedeTurno < PlayerTurn)
         {
             self.SetActive(false);
 
         }
-        SetCameraPosByMesh();
 
-      
-
-    }
-
-    void SetCameraPosByMesh()
-    {
-        if (MeshFilter.mesh.name == "Mesh.005 Instance"){
-        PosAbj = new Vector3(-0.02135776f, 0.0370839f, 0.124f);
-        PosIzq = new Vector3(-0.042f, -0.036f, 0.151f);
-        PosArr = new Vector3(0.01085193f, -0.03380395f, 0.2340318f);
-        PosDer = new Vector3(0.0391f, 0.04f, 0.154f);
-}
     }
 
     // Update is called once per frame
@@ -202,7 +175,7 @@ public class Player : MonoBehaviour
         dado1 = GameObject.Find("Dado1").GetComponent<Dado>();
         dado2 = GameObject.Find("Dado2").GetComponent<Dado>();
         RestoreText();
-        /*
+
         if(!dado1.IsMoving() && !dado2.IsMoving() )
         {
             dado1.TirarDado();
@@ -215,7 +188,7 @@ public class Player : MonoBehaviour
             OwnCamera.enabled = false;
             yield return new WaitForSeconds(0.001f);
         }
-        
+
         //yield return new WaitForSeconds(0.2f);
 
         OwnCamera.enabled = true;
@@ -232,16 +205,14 @@ public class Player : MonoBehaviour
         else
         {
             RepiteTurno = false;
-    } */
+    } 
         yield return new WaitForSeconds(0.1f);
-       punto = Random.Range(35,35);
+       //punto = Random.Range(4,4);
         //Debug.Log("Resul" + punto);
         total = punto;
         //Resultado.text = punto.ToString();
 
         StartCoroutine(Move());
-
-        
     }
 
     public bool MoveToNexNode(Vector3 goal)
@@ -322,37 +293,31 @@ public class Player : MonoBehaviour
 
         if (InBienestar)
         {
-            //camara.transform.rotation = new Quaternion(0.0f, 1.0f, -0.3f, 0.0f);
-           // camara.transform.localPosition = new Vector3(0f, -0.0773f, 0.0501f);
+            camara.transform.rotation = new Quaternion(0.0f, 1.0f, -0.3f, 0.0f);
+            camara.transform.localPosition = new Vector3(0f, -0.0773f, 0.0501f);
         }
-        else if (Posicion < 9)
+        else if (Posicion < 10)
         {
-            //camara.transform.rotation = Abajo;
-            //camara.transform.localPosition = PosAbj;
-            //camara.transform.rotation = new Quaternion(1f, 0.0f, -0.0f, 0.0f);
-
-            self.transform.rotation = GirarAbajo;
+            camara.transform.rotation = Abajo;
+            camara.transform.localPosition = PosAbj;
         }
-        else if (Posicion >= 29)
-        {
-            //camara.transform.rotation = Derecha;
-           // camara.transform.localPosition = PosDer;
+        else if (Posicion >= 30
 
-            self.transform.rotation = GirarDerecha;
+       )
+        {
+            camara.transform.rotation = Derecha;
+            camara.transform.localPosition = PosDer;
 
         }
-        else if (Posicion >= 19 )
+        else if (Posicion >= 20 )
         {
-         //   camara.transform.rotation = Arriba;
-         //   camara.transform.localPosition = PosArr;
-
-            self.transform.rotation = GirarArriba;
+            camara.transform.rotation = Arriba;
+            camara.transform.localPosition = PosArr;
         }
-        else if (Posicion >= 9)
+        else if (Posicion >= 10)
         {
-            //camara.transform.localPosition = PosIzq;
-            //camara.transform.rotation = Izquierda;
-           self.transform.rotation = GirarIzq;
+            camara.transform.localPosition = PosIzq;
+            camara.transform.rotation = Izquierda;
 
         }
         
@@ -440,10 +405,6 @@ public class Player : MonoBehaviour
                 punto--;
                 rpposiicion++;
 
-                Debug.Log("Player" + self.name + "x" + self.transform.rotation.x);
-                Debug.Log("Player" + self.name + "y" + self.transform.rotation.y);
-                Debug.Log("Player" + self.name + "z" + self.transform.rotation.z);
-                Debug.Log("Player" + self.name + "w" + self.transform.rotation.w);
                 MoveCamera();
 
 
@@ -454,7 +415,6 @@ public class Player : MonoBehaviour
                 }
                 tableroPos = rpposiicion - (40 * NumVueltas);
             }
-        
 
         ComprobateCards();
         ComprobateProperties();
