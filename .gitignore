@@ -110,3 +110,7 @@ Library/*
 *.dll
 *.dll
 *.dwlt
+*.cache
+*.json
+*.pdb
+*.dll
