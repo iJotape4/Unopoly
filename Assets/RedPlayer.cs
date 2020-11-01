@@ -14,7 +14,7 @@ public class RedPlayer : Player
         GirarArriba = new Quaternion(0f, 0f, -1f, 0f);
         GirarDerecha = new Quaternion(0.7f, 0f, 0.7f, 0f);
 
-        PlayerTurn = 4;
+        PlayerTurn = 3;
         PlayerColor = Color.red;
         base.Start();
     }   

@@ -101,7 +101,7 @@ public class Player : MonoBehaviour
         total = 0;
       //  Resultado.text = "";
 
-        OwnCamera = GetComponentInChildren<Camera>();
+        OwnCamera = GameObject.Find("GreenCamera").GetComponent<Camera>();
 
         dinero = dineroInicial;
 
@@ -197,12 +197,11 @@ public class Player : MonoBehaviour
     public IEnumerator LanzarDado()
     {
 
-        MoveCamera();
         TextoTirar.enabled = false;
         dado1 = GameObject.Find("Dado1").GetComponent<Dado>();
         dado2 = GameObject.Find("Dado2").GetComponent<Dado>();
         RestoreText();
-        /*
+       /* 
         if(!dado1.IsMoving() && !dado2.IsMoving() )
         {
             dado1.TirarDado();
@@ -234,7 +233,7 @@ public class Player : MonoBehaviour
             RepiteTurno = false;
     } */
         yield return new WaitForSeconds(0.1f);
-       punto = Random.Range(35,35);
+       punto = Random.Range(9,9);
         //Debug.Log("Resul" + punto);
         total = punto;
         //Resultado.text = punto.ToString();
@@ -313,10 +312,9 @@ public class Player : MonoBehaviour
         
     }
 
-    public void MoveCamera()
+    public void RotatePosicion()
     {
-       
-        Camera camara = GetComponentInChildren<Camera>();
+      
 
         int Posicion = tableroPos;
 
@@ -359,21 +357,107 @@ public class Player : MonoBehaviour
     }
 
 
+
     public void FinishTurn()
     {
+        MoveCamera();
         if (ExecutingCardMethod)
         {
             ExecutingCardMethod = false;
         }
         movimie = false;
-        OwnCamera.enabled = false;
+       
 
         ControlPlayer.control.NextTurno();
+
+        
+        ChangeCameraParent();
+        //MoveCamera();
+
         StartCoroutine(PlayerFontText());
         TextoTirar.enabled = true;
         PuedeTirar = true;
     }
 
+
+    public void ChangeCameraParent()
+    {
+        OwnCamera.transform.SetParent(GameObject.FindGameObjectWithTag("Player" + ControlPlayer.control.Turno).transform);
+        //MoveCamera();
+
+      
+        
+
+         if(OwnCamera.transform.parent.tag == "Player4")
+        {
+            OwnCamera.transform.localPosition = new Vector3(-0.5f, -0.3f, 0f);
+        }
+         else if(OwnCamera.transform.parent.tag == "Player2")
+        {
+            OwnCamera.transform.localPosition = new Vector3(-95.8f, 7.4f, 247.6f);
+        }
+         else if(OwnCamera.transform.parent.tag == "Player1")
+        {
+            OwnCamera.transform.localPosition = new Vector3(-0.0014f, 0.0428f, 0.1346f);
+        }
+         else if(OwnCamera.transform.parent.tag == "Player3")
+        {
+            OwnCamera.transform.localPosition = new Vector3(0.48f, -2.62f, 5.13f);
+        }      
+    }
+
+
+    public void MoveCamera()
+    {
+        int turnSiguiente=0;
+        if (PlayerTurn == 4){
+            turnSiguiente = 1;
+            }
+        else
+        {
+            turnSiguiente = PlayerTurn + 1;
+        }
+
+        Player NextPlayer = GameObject.FindGameObjectWithTag("Player" + (turnSiguiente)).GetComponent<Player>();
+        int Posicion = NextPlayer.tableroPos;
+        Debug.Log(Posicion);    
+
+        if (InBienestar)
+        {
+            //camara.transform.rotation = new Quaternion(0.0f, 1.0f, -0.3f, 0.0f);
+            // camara.transform.localPosition = new Vector3(0f, -0.0773f, 0.0501f);
+        }
+        else if (Posicion < 10)
+        {
+            OwnCamera.transform.rotation = Abajo;
+            //camara.transform.localPosition = PosAbj;
+
+
+
+        }
+        else if (Posicion >= 30)
+        {
+            OwnCamera.transform.rotation = Derecha;
+            // camara.transform.localPosition = PosDer;
+
+
+        }
+        else if (Posicion >= 20)
+        {
+            OwnCamera.transform.rotation = Arriba;
+            //   camara.transform.localPosition = PosArr;
+
+        }
+        else if (Posicion >= 10)
+        {
+            //camara.transform.localPosition = PosIzq;
+            OwnCamera.transform.rotation = Izquierda;
+
+
+        }
+
+
+    }
     public IEnumerator PlayerFontText()
     {
       
@@ -436,15 +520,21 @@ public class Player : MonoBehaviour
                 ComprobarOcupacion();
                 Vector3 nextPos = GO.tablero.Seleccionar(rpposiicion+0).position;
                 while (MoveToNexNode(nextPos)) { yield return null; }
-                yield return new WaitForSeconds(0.06f);
+                //yield return new WaitForSeconds(0.06f);
                 punto--;
                 rpposiicion++;
 
-                Debug.Log("Player" + self.name + "x" + self.transform.rotation.x);
+              /*  Debug.Log("Player" + self.name + "x" + self.transform.rotation.x);
                 Debug.Log("Player" + self.name + "y" + self.transform.rotation.y);
                 Debug.Log("Player" + self.name + "z" + self.transform.rotation.z);
                 Debug.Log("Player" + self.name + "w" + self.transform.rotation.w);
-                MoveCamera();
+                */
+
+                Debug.Log("Cam" + self.name + "x" + OwnCamera.transform.rotation.x);
+                Debug.Log("Cam" + self.name + "y" + OwnCamera.transform.rotation.y);
+                Debug.Log("Cam" + self.name + "z" + OwnCamera.transform.rotation.z);
+                Debug.Log("Cam" + self.name + "w" + OwnCamera.transform.rotation.w);
+                RotatePosicion();
 
 
                 if (rpposiicion % 40 == 0)

@@ -14,8 +14,10 @@ public class YellowPlayer : Player
         GirarDerecha = new Quaternion(0.32745f, 0.6272399f, 0.6263673f, -0.3271223f);
 
         PlayerColor = Color.yellow;
-        PlayerTurn = 3;
+        PlayerTurn = 1;
         base.Start();
+        StartCoroutine(PlayerFontText());
+
 
     }    
 }
