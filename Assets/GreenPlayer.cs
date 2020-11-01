@@ -9,12 +9,12 @@ public class GreenPlayer : Player
     {
         GirarAbajo = new Quaternion(-0.5f,0.5f,0.5f,-0.5f);
         GirarIzq = new Quaternion(0f, 0f, 0.7f, -0.7f);
-        GirarArriba = new Quaternion(-0.5f,0.5f,-0.5f,0.5f);     
+        GirarArriba = new Quaternion(-0.5f,0.5f,-0.7f,0.7f);     
         GirarDerecha = new Quaternion(-0.7f, 0.7f, 0f, 0f);
 
-        PlayerTurn = 4;
+        PlayerTurn = 1;
         PlayerColor = Color.green;
         base.Start();
-       
+        StartCoroutine(PlayerFontText());
     }
 }
