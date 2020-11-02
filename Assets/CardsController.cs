@@ -21,27 +21,21 @@ public class CardsController : MonoBehaviour
     public string Tag ;
 
     Player PlayerActual;
-    public Text TextoSiguiente;
     public Image IconPass;
 
     // Start is called before the first frame update
     void Start()
     {
-
-        TextoSiguiente = GameObject.Find("TextoPasar").GetComponent<Text>();
-
         CardImage = GameObject.Find("Image").GetComponent<Image>();
         ChanceCards = Resources.LoadAll<Sprite>("Chances");
         CardsNum = ChanceCards.Length;
 
+        IconPass = GameObject.Find("ContinuarIcon").GetComponent<Image>();
+        IconPass.enabled = false;
+
         ComArcsCards = Resources.LoadAll<Sprite>("ComArcs");
         CardsNum = ComArcsCards.Length;
-        CardImage.enabled = false;
-
-       // ComArcsCards.Append(CardImage.sprite);
-    
-        
-       
+        CardImage.enabled = false;          
     }
 
     // Update is called once per frame
@@ -78,8 +72,8 @@ public class CardsController : MonoBehaviour
             CardImage.sprite = Cards[elegida];                
         }
 
-        TextoSiguiente.enabled = true;
-        TextoSiguiente.text = "X) Continuar";
+        IconPass.enabled = true;
+        
 
         if (Input.GetKey("x"))
         {
@@ -89,7 +83,7 @@ public class CardsController : MonoBehaviour
 
     public void QuitCard()
     {
-        TextoSiguiente.enabled = false;
+        IconPass.enabled = false;
         CardImage.enabled = false;
         Player.Cards = false;
         Player.ExecutingCardMethod = true;

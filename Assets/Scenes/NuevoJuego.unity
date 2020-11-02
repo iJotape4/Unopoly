@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607842, g: 1, b: 0.21593024, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -242,7 +242,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2000
+  m_Text: 
 --- !u!222 &13122022
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -268,7 +268,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &13161646
 RectTransform:
   m_ObjectHideFlags: 0
@@ -697,8 +697,8 @@ MonoBehaviour:
   precio: 90
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 9
@@ -726,6 +726,79 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
+--- !u!1 &155679475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 155679476}
+  - component: {fileID: 155679478}
+  - component: {fileID: 155679477}
+  m_Layer: 5
+  m_Name: ContinuarIcon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &155679476
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155679475}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -911}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 169070962}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -105, y: -374}
+  m_SizeDelta: {x: 150, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &155679477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155679475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ffd0b743dea98c74d899db22a30da009, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &155679478
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155679475}
+  m_CullTransparentMesh: 0
 --- !u!1 &156593560
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,6 +906,7 @@ RectTransform:
   - {fileID: 362694019}
   - {fileID: 2039845840}
   - {fileID: 732107891}
+  - {fileID: 155679476}
   m_Father: {fileID: 574288390}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -955,8 +1029,8 @@ MonoBehaviour:
   precio: 90
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 9
@@ -1001,7 +1075,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &215382410
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1417,8 +1491,8 @@ MonoBehaviour:
   precio: 400
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 40
@@ -1566,8 +1640,8 @@ MonoBehaviour:
   precio: 200
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 20
@@ -1612,7 +1686,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &428033670
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1721,8 +1795,8 @@ MonoBehaviour:
   precio: 90
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 9
@@ -1929,8 +2003,8 @@ MonoBehaviour:
   precio: 165
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 16
@@ -2078,8 +2152,8 @@ MonoBehaviour:
   precio: 350
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 35
@@ -2227,8 +2301,8 @@ MonoBehaviour:
   precio: 600
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 60
@@ -2557,7 +2631,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 786, y: 67}
+  m_AnchoredPosition: {x: 750, y: 67}
   m_SizeDelta: {x: 383.4, y: 65.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &599904413
@@ -2573,7 +2647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607842, g: 1, b: 0.21593024, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2591,7 +2665,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2000
+  m_Text: 
 --- !u!222 &599904414
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2734,8 +2808,8 @@ MonoBehaviour:
   precio: 90
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 9
@@ -2810,8 +2884,8 @@ MonoBehaviour:
   precio: 1200
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 120
@@ -2886,8 +2960,8 @@ MonoBehaviour:
   precio: 600
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 60
@@ -3000,7 +3074,7 @@ GameObject:
   - component: {fileID: 750199542}
   - component: {fileID: 750199541}
   m_Layer: 5
-  m_Name: MoneyText
+  m_Name: MoneyTextEmpanada
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3038,7 +3112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607842, g: 1, b: 0.21593024, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3056,7 +3130,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2000
+  m_Text: 
 --- !u!222 &750199542
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3159,7 +3233,7 @@ MonoBehaviour:
   Chances: 0
   laboratoriosArr: 230000002500000027000000
   Tag: 
-  TextoSiguiente: {fileID: 0}
+  IconPass: {fileID: 0}
 --- !u!1 &795828492
 GameObject:
   m_ObjectHideFlags: 0
@@ -3207,8 +3281,8 @@ MonoBehaviour:
   precio: 700
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 70
@@ -3283,8 +3357,8 @@ MonoBehaviour:
   precio: 400
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 40
@@ -3856,7 +3930,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1116125495
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4468,8 +4542,8 @@ MonoBehaviour:
   precio: 100
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 10
@@ -4626,8 +4700,8 @@ MonoBehaviour:
   precio: 550
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 55
@@ -4766,9 +4840,9 @@ MonoBehaviour:
   DadosCamera: {fileID: 0}
   OwnCamera: {fileID: 0}
   PlayerText: {fileID: 0}
-  TextoTirar: {fileID: 0}
-  UseCard: {fileID: 0}
-  TextoPagar: {fileID: 0}
+  IconTirar: {fileID: 0}
+  IconUseCard: {fileID: 0}
+  IconPagar: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   bienestar: {fileID: 0}
   ExitCards: 0
@@ -5252,8 +5326,8 @@ MonoBehaviour:
   precio: 200
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 20
@@ -5449,7 +5523,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1535046160
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5545,7 +5619,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 783, y: 625}
+  m_AnchoredPosition: {x: 747, y: 625}
   m_SizeDelta: {x: 383.4, y: 65.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1536236980
@@ -5561,7 +5635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607842, g: 1, b: 0.21593024, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5579,7 +5653,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2000
+  m_Text: 
 --- !u!222 &1536236981
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5729,8 +5803,8 @@ MonoBehaviour:
   precio: 65
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 6
@@ -6024,8 +6098,8 @@ MonoBehaviour:
   precio: 450
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 45
@@ -6113,9 +6187,9 @@ MonoBehaviour:
   DadosCamera: {fileID: 0}
   OwnCamera: {fileID: 0}
   PlayerText: {fileID: 0}
-  TextoTirar: {fileID: 0}
-  UseCard: {fileID: 0}
-  TextoPagar: {fileID: 0}
+  IconTirar: {fileID: 0}
+  IconUseCard: {fileID: 0}
+  IconPagar: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   bienestar: {fileID: 0}
   ExitCards: 0
@@ -6243,8 +6317,8 @@ MonoBehaviour:
   precio: 500
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 50
@@ -6430,8 +6504,8 @@ MonoBehaviour:
   precio: 120
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 12
@@ -6665,8 +6739,8 @@ MonoBehaviour:
   precio: 400
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 40
@@ -6800,8 +6874,8 @@ MonoBehaviour:
   precio: 425
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 42
@@ -6956,8 +7030,8 @@ MonoBehaviour:
   precio: 140
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 14
@@ -7032,8 +7106,8 @@ MonoBehaviour:
   precio: 100
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 10
@@ -7285,8 +7359,8 @@ MonoBehaviour:
   precio: 0
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 0
@@ -7361,8 +7435,8 @@ MonoBehaviour:
   precio: 60
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 6
@@ -7530,8 +7604,8 @@ MonoBehaviour:
   precio: 600
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 60
@@ -7606,8 +7680,8 @@ MonoBehaviour:
   precio: 800
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 80
@@ -7682,8 +7756,8 @@ MonoBehaviour:
   precio: 140
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 10
@@ -7758,8 +7832,8 @@ MonoBehaviour:
   precio: 350
   PropertyIMage: {fileID: 0}
   PropertyCards: []
-  TextoComprar: {fileID: 0}
-  TextoPasar: {fileID: 0}
+  IconComprar: {fileID: 0}
+  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 35
@@ -18858,9 +18932,9 @@ MonoBehaviour:
   DadosCamera: {fileID: 0}
   OwnCamera: {fileID: 0}
   PlayerText: {fileID: 0}
-  TextoTirar: {fileID: 0}
-  UseCard: {fileID: 0}
-  TextoPagar: {fileID: 0}
+  IconTirar: {fileID: 0}
+  IconUseCard: {fileID: 0}
+  IconPagar: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   bienestar: {fileID: 0}
   ExitCards: 0
@@ -24628,9 +24702,9 @@ MonoBehaviour:
   DadosCamera: {fileID: 0}
   OwnCamera: {fileID: 0}
   PlayerText: {fileID: 0}
-  TextoTirar: {fileID: 0}
-  UseCard: {fileID: 0}
-  TextoPagar: {fileID: 0}
+  IconTirar: {fileID: 0}
+  IconUseCard: {fileID: 0}
+  IconPagar: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   bienestar: {fileID: 0}
   ExitCards: 0

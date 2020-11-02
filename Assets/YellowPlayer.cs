@@ -11,6 +11,7 @@ public class YellowPlayer : Player
        
         PlayerColor = Color.yellow;
         PlayerTurn = 1;
+        PlayerDinero = GameObject.Find("MoneyTextEmpanada").GetComponent<Text>();
         base.Start();
         StartCoroutine(PlayerFontText());
 

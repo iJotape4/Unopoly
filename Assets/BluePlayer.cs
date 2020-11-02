@@ -12,7 +12,7 @@ public class BluePlayer : Player
         
         PlayerTurn = 2;
         PlayerColor = Color.blue;
-
+        PlayerDinero = GameObject.Find("MoneyTextSquirrel").GetComponent<Text>();
         base.Start();
 
         GirarAbajo = new Quaternion(-0.5f, -0.5f, -0.5f, 0.5f);

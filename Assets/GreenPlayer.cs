@@ -10,6 +10,7 @@ public class GreenPlayer : Player
      
         PlayerTurn = 4;
         PlayerColor = Color.green;
+        PlayerDinero = GameObject.Find("MoneyTextLeaf").GetComponent<Text>();
         base.Start();
 
         GirarAbajo = new Quaternion(-0.5f, 0.5f, 0.5f, -0.5f);

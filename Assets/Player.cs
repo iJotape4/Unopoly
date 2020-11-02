@@ -22,10 +22,7 @@ public class Player : MonoBehaviour
     public Camera DadosCamera;
     public Camera OwnCamera;
     public Text PlayerText;
-    public Text TextoTirar;
-    public Text UseCard;
-    public Text TextoPagar;
-
+    
     public Image IconTirar;
     public Image IconUseCard;
     public Image IconPagar;
@@ -105,13 +102,12 @@ public class Player : MonoBehaviour
     {
         
         total = 0;
-      //  Resultado.text = "";
 
         OwnCamera = GetComponentInChildren<Camera>();
 
         dinero = dineroInicial;
 
-        PlayerDinero = GameObject.Find("MoneyText").GetComponent<Text>();
+        
         PlayerDinero.text = "$" + dinero.ToString();
         PlayerDinero.enabled = true;
 
@@ -126,21 +122,15 @@ public class Player : MonoBehaviour
         DadosCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         DadosCamera.enabled = false;
 
-        TextoTirar = GameObject.Find("TextoTirar").GetComponent<Text>();
-        TextoTirar.enabled = true;
-
         IconTirar = GameObject.Find("LanzarIcon").GetComponent<Image>();
 
 
-        UseCard = GameObject.Find("TextoTSalida").GetComponent<Text>();
-        UseCard.enabled = false;
-
         IconUseCard = GameObject.Find("TsalidaIcon").GetComponent<Image>();
+        IconUseCard.enabled = false;
 
-        TextoPagar = GameObject.Find("TextoPagar").GetComponent<Text>();
-        TextoPagar.enabled = false;
 
         IconPagar = GameObject.Find("PagarIcon").GetComponent<Image>();
+        IconPagar.enabled = false;
 
         bienestar = GameObject.Find("Bienestar").GetComponent<Casilla>();
 
@@ -196,7 +186,7 @@ public class Player : MonoBehaviour
     {
 
         MoveCamera();
-        TextoTirar.enabled = false;
+        IconTirar.enabled = false;
         dado1 = GameObject.Find("Dado1").GetComponent<Dado>();
         dado2 = GameObject.Find("Dado2").GetComponent<Dado>();
         RestoreText();
@@ -232,7 +222,7 @@ public class Player : MonoBehaviour
             RepiteTurno = false;
     } 
         yield return new WaitForSeconds(0.1f);
-     //punto = Random.Range(12,12);
+     //punto = Random.Range(7,7);
         //Debug.Log("Resul" + punto);
         total = punto;
         //Resultado.text = punto.ToString();
@@ -376,7 +366,7 @@ public class Player : MonoBehaviour
 
         ControlPlayer.control.NextTurno();
         StartCoroutine(PlayerFontText());
-        TextoTirar.enabled = true;
+        IconTirar.enabled = true;
         PuedeTirar = true;
     }
 
@@ -491,7 +481,7 @@ public class Player : MonoBehaviour
                 }
 
                 StartCoroutine(BienestarText("Lanza de nuevo!!"));
-                TextoTirar.enabled = true;
+                IconTirar.enabled = true;
                 //Esto para que pueda alcanzarse a ver el texto
                 yield return new WaitForSeconds(0.7f);
                 movimie = false;
@@ -653,12 +643,12 @@ public class Player : MonoBehaviour
 
     public IEnumerator SalirBienestar()
     {
-        TextoTirar.enabled = true;
-        TextoPagar.enabled = true;
+        IconTirar.enabled = true;
+        IconPagar.enabled = true;
 
         if (ExitCards > 0)
         {
-            UseCard.enabled = true;
+            IconUseCard.enabled = true;
         }
         if (PuedeTirar) { 
         if (Input.GetKeyDown(KeyCode.X))
@@ -723,9 +713,9 @@ public class Player : MonoBehaviour
 
     public void ResetBienestarGuide()
     {
-        TextoTirar.enabled = false;
-        TextoPagar.enabled = false;
-        UseCard.enabled = false;
+        IconTirar.enabled = false;
+        IconPagar.enabled = false;
+        IconUseCard.enabled = false;
     }
 }
 

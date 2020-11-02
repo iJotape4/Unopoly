@@ -11,6 +11,7 @@ public class RedPlayer : Player
         
         PlayerTurn = 3;
         PlayerColor = Color.red;
+        PlayerDinero = GameObject.Find("MoneyTextBook").GetComponent<Text>();
         base.Start();
 
         GirarAbajo = new Quaternion(1f, 0f, 0f, -0f);

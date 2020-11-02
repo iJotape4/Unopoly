@@ -12,11 +12,9 @@ public class Propiedad : MonoBehaviour
     public Sprite[] PropertyCards;
 
     [HideInInspector]
-    public Text TextoComprar;
     public Image IconComprar;
 
     [HideInInspector]
-    public Text TextoPasar;
     public Image IconPass;
 
     public Player propietario;
@@ -39,14 +37,12 @@ public class Propiedad : MonoBehaviour
 
         PropertyCards = Resources.LoadAll<Sprite>("Properties");
 
-        TextoComprar = GameObject.Find("TextoComprar").GetComponent<Text>();
-        TextoPasar = GameObject.Find("TextoPasar").GetComponent<Text>();
 
         IconComprar = GameObject.Find("ComprarIcon").GetComponent<Image>();
         IconPass = GameObject.Find("PasarIcon").GetComponent<Image>();
 
-        TextoComprar.enabled = false;
-        TextoPasar.enabled = false;
+        IconComprar.enabled = false;
+        IconPass.enabled = false;
 
         PropertyIMage.enabled = false;
        
@@ -92,10 +88,10 @@ public class Propiedad : MonoBehaviour
         PropertyIMage.rectTransform.sizeDelta = new Vector2(700, 822);
         PropertyIMage.enabled = true;
 
-        TextoComprar.text = ("X) Comprar $" + Tarjeta.precio);
-        TextoComprar.enabled = true;
-        TextoPasar.enabled = true;
-        TextoPasar.text = ("Z ) Pasar");
+       
+        IconComprar.enabled = true;
+        IconPass.enabled = true;
+    
 
         if (Input.GetKey("x"))
         {
@@ -108,8 +104,8 @@ public class Propiedad : MonoBehaviour
     }
     public void QuitCard()
     {
-        TextoComprar.enabled = false;
-        TextoPasar.enabled = false;
+        IconComprar.enabled = false;
+        IconPass.enabled = false;
 
         PropertyIMage.enabled = false;
         
