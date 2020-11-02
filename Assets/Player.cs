@@ -150,7 +150,7 @@ public class Player : MonoBehaviour
         if (PlayerTurn == ControlPlayer.control.Turno)
         {
             PlayerDinero.text = "$" + dinero.ToString();
-            PlayerDinero.color = PlayerColor;
+            //PlayerDinero.color = PlayerColor;
             
 
             if (!DadosCamera.enabled)
@@ -222,7 +222,7 @@ public class Player : MonoBehaviour
             RepiteTurno = false;
     } 
         yield return new WaitForSeconds(0.1f);
-     //punto = Random.Range(7,7);
+     //punto = Random.Range(3,3);
         //Debug.Log("Resul" + punto);
         total = punto;
         //Resultado.text = punto.ToString();
@@ -564,10 +564,11 @@ public class Player : MonoBehaviour
             else
             {
                 dinero++;
-            }
+                PlayerDinero.text = "$" + dinero.ToString();
+                yield return new WaitForSeconds(0.015f);
 
-            yield return new WaitForSeconds(0.015f);
         }
+    }
     }
 
     public IEnumerator Pagar(int cantidad)
@@ -582,7 +583,7 @@ public class Player : MonoBehaviour
             else
             {
                 dinero--;
-            } 
+            }
            
             yield return new WaitForSeconds(0.015f);
         }            
@@ -643,14 +644,15 @@ public class Player : MonoBehaviour
 
     public IEnumerator SalirBienestar()
     {
-        IconTirar.enabled = true;
-        IconPagar.enabled = true;
 
         if (ExitCards > 0)
         {
             IconUseCard.enabled = true;
         }
         if (PuedeTirar) { 
+            
+        IconTirar.enabled = true;
+        IconPagar.enabled = true;
         if (Input.GetKeyDown(KeyCode.X))
         {
             //PuedeTirar = false;
