@@ -22,6 +22,7 @@ public class CardsController : MonoBehaviour
 
     Player PlayerActual;
     public Text TextoSiguiente;
+    public Image IconPass;
 
     // Start is called before the first frame update
     void Start()

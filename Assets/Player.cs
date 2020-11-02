@@ -26,6 +26,10 @@ public class Player : MonoBehaviour
     public Text UseCard;
     public Text TextoPagar;
 
+    public Image IconTirar;
+    public Image IconUseCard;
+    public Image IconPagar;
+
     public Casilla casiillaSiguiente;
     public Casilla bienestar;
 
@@ -35,6 +39,7 @@ public class Player : MonoBehaviour
     public Color PlayerColor;
 
     public bool RepiteTurno = false;
+    [HideInInspector]
     public int PlayerTurn;
 
     public bool InBienestar=false;
@@ -60,6 +65,7 @@ public class Player : MonoBehaviour
     public GameObject self;
     public GameObject TridiModel;
     
+    //Quaterniones de la orientación de la cámara al girar
     public  static Quaternion Abajo = new Quaternion(0.4f, 0.0f, 0.0f, 1.0f);
     
     public static  Quaternion Izquierda = new Quaternion(0.2f, 0.6f, -0.2f, 0.6f);
@@ -68,7 +74,7 @@ public class Player : MonoBehaviour
     
     public static  Quaternion Derecha = new Quaternion(0.2f, -0.6f, 0.2f, 0.6f);
 
-    
+    //Vectores de Giro de la posición de la camara
     public static Vector3 PosAbj = new Vector3(-0.0127f, 0.0228f, 0.062f);
     
     public static Vector3 PosIzq = new Vector3(- 0.0291f, 0f, 0.0785f);
@@ -77,6 +83,7 @@ public class Player : MonoBehaviour
     
     public static Vector3 PosDer = new Vector3(0.0291f, 0f, 0.0785f);
 
+    //Quaterniones de Giro de los modelos 3D
     [HideInInspector]
     public Quaternion GirarAbajo;
     [HideInInspector]
@@ -122,11 +129,18 @@ public class Player : MonoBehaviour
         TextoTirar = GameObject.Find("TextoTirar").GetComponent<Text>();
         TextoTirar.enabled = true;
 
+        IconTirar = GameObject.Find("LanzarIcon").GetComponent<Image>();
+
+
         UseCard = GameObject.Find("TextoTSalida").GetComponent<Text>();
         UseCard.enabled = false;
 
+        IconUseCard = GameObject.Find("TsalidaIcon").GetComponent<Image>();
+
         TextoPagar = GameObject.Find("TextoPagar").GetComponent<Text>();
         TextoPagar.enabled = false;
+
+        IconPagar = GameObject.Find("PagarIcon").GetComponent<Image>();
 
         bienestar = GameObject.Find("Bienestar").GetComponent<Casilla>();
 
@@ -186,7 +200,7 @@ public class Player : MonoBehaviour
         dado1 = GameObject.Find("Dado1").GetComponent<Dado>();
         dado2 = GameObject.Find("Dado2").GetComponent<Dado>();
         RestoreText();
-        /*
+        
         if(!dado1.IsMoving() && !dado2.IsMoving() )
         {
             dado1.TirarDado();
@@ -216,9 +230,9 @@ public class Player : MonoBehaviour
         else
         {
             RepiteTurno = false;
-    } */
+    } 
         yield return new WaitForSeconds(0.1f);
-       punto = Random.Range(3,3);
+     //punto = Random.Range(12,12);
         //Debug.Log("Resul" + punto);
         total = punto;
         //Resultado.text = punto.ToString();
@@ -331,7 +345,7 @@ public class Player : MonoBehaviour
         }
 
 
-        if (Posicion < 9 || Posicion == 40)
+        if (Posicion < 9 || Posicion == 39)
         {
             TridiModel.transform.rotation = GirarAbajo;
         }
@@ -542,7 +556,7 @@ public class Player : MonoBehaviour
             {
                 
                 Properties = true;
-                //Debug.Log("Properties = true" + rpposiicion);
+                
                 break;
             }
         }                   

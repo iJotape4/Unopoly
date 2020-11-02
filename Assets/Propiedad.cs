@@ -13,9 +13,12 @@ public class Propiedad : MonoBehaviour
 
     [HideInInspector]
     public Text TextoComprar;
+    public Image IconComprar;
+
     [HideInInspector]
     public Text TextoPasar;
-    
+    public Image IconPass;
+
     public Player propietario;
 
     public int casas;
@@ -38,6 +41,9 @@ public class Propiedad : MonoBehaviour
 
         TextoComprar = GameObject.Find("TextoComprar").GetComponent<Text>();
         TextoPasar = GameObject.Find("TextoPasar").GetComponent<Text>();
+
+        IconComprar = GameObject.Find("ComprarIcon").GetComponent<Image>();
+        IconPass = GameObject.Find("PasarIcon").GetComponent<Image>();
 
         TextoComprar.enabled = false;
         TextoPasar.enabled = false;
