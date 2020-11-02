@@ -27,6 +27,8 @@ public class Player : MonoBehaviour
     public Image IconUseCard;
     public Image IconPagar;
 
+    public Image ChibiIcon;
+
     public Casilla casiillaSiguiente;
     public Casilla bienestar;
 
@@ -139,7 +141,8 @@ public class Player : MonoBehaviour
         if (ControlPlayer.LImitedeTurno < PlayerTurn)
         {
             self.SetActive(false);
-
+            PlayerDinero.enabled = false;
+            ChibiIcon.enabled = false;
         }
 
     }

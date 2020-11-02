@@ -12,8 +12,10 @@ public class YellowPlayer : Player
         PlayerColor = Color.yellow;
         PlayerTurn = 1;
         PlayerDinero = GameObject.Find("MoneyTextEmpanada").GetComponent<Text>();
+        ChibiIcon = GameObject.Find("ImageEmpanada").GetComponent<Image>();
         base.Start();
         StartCoroutine(PlayerFontText());
+       
 
         GirarAbajo = new Quaternion(-0.6724985f, -0.2185081f, -0.2185081f, 0.6724985f);
         GirarIzq = new Quaternion(-0.6275942f, 0.32476171f, 0.3250952f, 0.6284654f);
