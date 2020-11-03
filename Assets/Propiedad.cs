@@ -7,15 +7,15 @@ public class Propiedad : MonoBehaviour
     public int precio;
 
     [HideInInspector]
-    public Image PropertyIMage;
+    public static Image PropertyIMage;
     [HideInInspector]
     public Sprite[] PropertyCards;
 
     [HideInInspector]
-    public Image IconComprar;
+    public static Image IconComprar;
 
     [HideInInspector]
-    public Image IconPass;
+    public static Image IconPass;
 
     public Player propietario;
 
@@ -30,7 +30,7 @@ public class Propiedad : MonoBehaviour
     [HideInInspector]
     public Propiedad Tarjeta;
 
-    public Text  MoneyTextComprar;
+    public static Text  MoneyTextComprar;
 
     // Start is called before the first frame update
     void Start()

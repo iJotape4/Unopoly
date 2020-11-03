@@ -5408,6 +5408,7 @@ MonoBehaviour:
   RepiteTurno: 0
   PlayerTurn: 0
   InBienestar: 0
+  eliminado: 0
   NumVueltas: 0
   dado1: {fileID: 0}
   dado2: {fileID: 0}
@@ -5917,6 +5918,8 @@ MonoBehaviour:
   IconUpDown: {fileID: 0}
   TutorialImage: {fileID: 0}
   canvasPause: {fileID: 0}
+  PlayerActual: {fileID: 0}
+  Tag: 
 --- !u!1 &1501334602
 GameObject:
   m_ObjectHideFlags: 0
@@ -6766,6 +6769,7 @@ MonoBehaviour:
   RepiteTurno: 0
   PlayerTurn: 0
   InBienestar: 0
+  eliminado: 0
   NumVueltas: 0
   dado1: {fileID: 0}
   dado2: {fileID: 0}
@@ -19753,6 +19757,7 @@ MonoBehaviour:
   RepiteTurno: 0
   PlayerTurn: 0
   InBienestar: 0
+  eliminado: 0
   NumVueltas: 0
   dado1: {fileID: 0}
   dado2: {fileID: 0}
@@ -25525,6 +25530,7 @@ MonoBehaviour:
   RepiteTurno: 0
   PlayerTurn: 0
   InBienestar: 0
+  eliminado: 0
   NumVueltas: 0
   dado1: {fileID: 0}
   dado2: {fileID: 0}

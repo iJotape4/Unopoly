@@ -26,7 +26,13 @@ public class Pause : MonoBehaviour
 
     public Canvas canvasPause;
 
-    public void Awake()
+    public Player PlayerActual;
+    public string Tag;
+
+    public Dado dado1;
+    public Dado dado2;
+
+    public void Awake() 
     {
         this.self = gameObject;
 
@@ -35,7 +41,10 @@ public class Pause : MonoBehaviour
 
     void Start()
     {
-        
+
+        dado1 = GameObject.Find("Dado1").GetComponent<Dado>();
+        dado2 = GameObject.Find("Dado2").GetComponent<Dado>();
+
         Opcion1 = GameObject.Find("Opcion1").GetComponent<Text>();
         Opcion2 = GameObject.Find("Opcion2").GetComponent<Text>();
         Opcion3 = GameObject.Find("Opcion3").GetComponent<Text>();
@@ -66,9 +75,11 @@ public class Pause : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {     
 
-        if (Input.GetKeyDown("space"))
+        Tag = ("Player" + ControlPlayer.control.Turno);
+        PlayerActual = GameObject.FindGameObjectWithTag(Tag).GetComponent<Player>();
+        if (Input.GetKeyDown("space") && !dado1.IsMoving() && !dado2.IsMoving())
         {
             Pausar();
         }
@@ -126,6 +137,11 @@ public class Pause : MonoBehaviour
                 TutorialImage.enabled = true;
                 Arrow.enabled = false;
 
+            }
+            else if (opcion.gameObject.name == "Opcion3")
+            {
+                Pausar();
+                StartCoroutine(PlayerActual.Perder(" se retira"));
             }
 
 

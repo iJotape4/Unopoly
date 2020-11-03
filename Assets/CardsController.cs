@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CardsController : MonoBehaviour
 {
 
-    public Image CardImage;
+    public static Image CardImage;
     public Sprite[] ChanceCards;
     public Sprite[] ComArcsCards;
     public int CardsNum;
@@ -21,7 +21,7 @@ public class CardsController : MonoBehaviour
     public string Tag ;
 
     Player PlayerActual;
-    public Image IconPass;
+    public static Image IconPass;
 
     // Start is called before the first frame update
     void Start()

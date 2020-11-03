@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
     public int PlayerTurn;
 
     public bool InBienestar=false;
-    
+    public bool eliminado = false;
 
     public static bool Cards;
     public static bool Chances;
@@ -53,6 +53,7 @@ public class Player : MonoBehaviour
     public static bool HuecoVisible = false;
 
     public static bool PuedeTirar = true;
+
 
     public int NumVueltas=0;
 
@@ -104,6 +105,7 @@ public class Player : MonoBehaviour
         HuecoVisible = false;
         RepiteTurno = false;
         InBienestar = false;
+        eliminado = false;
 
     }
 
@@ -162,6 +164,12 @@ public class Player : MonoBehaviour
     {
         if (PlayerTurn == ControlPlayer.control.Turno)
         {
+            if (eliminado)
+            {
+                FinishTurn();
+                return;
+            }
+            
             PlayerDinero.text = "$" + dinero.ToString();
             //PlayerDinero.color = PlayerColor;
             
@@ -378,7 +386,12 @@ public class Player : MonoBehaviour
         OwnCamera.enabled = false;
 
         ControlPlayer.control.NextTurno();
-        StartCoroutine(PlayerFontText());
+        if (!eliminado)
+        {
+            StartCoroutine(PlayerFontText());
+        }
+
+
         IconTirar.enabled = true;
         PuedeTirar = true;
     }
@@ -387,11 +400,12 @@ public class Player : MonoBehaviour
     {
       
         yield return new WaitForSeconds(0.0001f);
-        PlayerText.enabled = true;
         PlayerText.fontSize = 40;
+        PlayerText.enabled = true;
+        
         PlayerText.text = ("Player " + ControlPlayer.control.Turno + " Turn!");
         
-        while (PlayerText.fontSize > 1) {
+        while (PlayerText.fontSize > 2) {
             
            PlayerText.fontSize--;
             yield return new WaitForSeconds(0.02f);
@@ -413,7 +427,7 @@ public class Player : MonoBehaviour
         PlayerText.enabled = true;
        
         PlayerText.text = (Text);
-        while (PlayerText.fontSize > 1)
+        while (PlayerText.fontSize > 2)
         { 
             PlayerText.fontSize--;
             yield return new WaitForSeconds(0.02f);
@@ -733,5 +747,48 @@ public class Player : MonoBehaviour
         IconPagar.enabled = false;
         IconUseCard.enabled = false;
     }
+
+    public IEnumerator Perder(string perder)
+    {
+        HuecoVisible = true;
+        rigi.isKinematic = false;
+
+        RestoreText();
+        StartCoroutine(BienestarText("Player "+PlayerTurn+perder));
+
+        Player parent = OwnCamera.transform.GetComponentInParent<Player>();
+        OwnCamera.transform.SetParent(null);
+
+        Cards = false;
+        Properties = false;
+        InBienestar = false;
+        Propiedad.PropertyIMage.enabled = false;
+        CardsController.CardImage.enabled = false;
+
+        IconPagar.enabled = false;
+        IconTirar.enabled = false;
+        IconUseCard.enabled = false;
+
+        CardsController.IconPass.enabled = false;
+
+        Propiedad.IconPass.enabled = false;
+        Propiedad.IconComprar.enabled = false;
+        Propiedad.MoneyTextComprar.enabled = false;
+
+        yield return new WaitForSeconds(1f);
+
+        ChibiIcon.enabled = false;
+        PlayerDinero.enabled = false;       
+
+        HuecoVisible = false;
+
+       yield return new WaitForSeconds(0.3f);
+
+        eliminado = true;
+        StartCoroutine(PlayerFontText());
+
+
+    }
+    
 }
 

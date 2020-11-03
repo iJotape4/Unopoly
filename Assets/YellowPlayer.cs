@@ -15,7 +15,9 @@ public class YellowPlayer : Player
         ChibiIcon = GameObject.Find("ImageEmpanada").GetComponent<Image>();
         base.Start();
         StartCoroutine(PlayerFontText());
-       
+
+       StartCoroutine(GoBienestar());
+
 
         GirarAbajo = new Quaternion(-0.6724985f, -0.2185081f, -0.2185081f, 0.6724985f);
         GirarIzq = new Quaternion(-0.6275942f, 0.32476171f, 0.3250952f, 0.6284654f);
