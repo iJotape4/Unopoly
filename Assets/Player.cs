@@ -164,6 +164,7 @@ public class Player : MonoBehaviour
     {
         if (PlayerTurn == ControlPlayer.control.Turno)
         {
+
             if (eliminado)
             {
                 FinishTurn();
@@ -212,7 +213,7 @@ public class Player : MonoBehaviour
         dado2 = GameObject.Find("Dado2").GetComponent<Dado>();
         RestoreText();
         
-      /*  if(!dado1.IsMoving() && !dado2.IsMoving() )
+       if(!dado1.IsMoving() && !dado2.IsMoving() )
         {
             dado1.TirarDado();
             dado2.TirarDado();
@@ -241,9 +242,9 @@ public class Player : MonoBehaviour
         else
         {
             RepiteTurno = false;
-    } ¨*/
+    } 
         yield return new WaitForSeconds(0.1f);
-     punto = Random.Range(1,1);
+     //punto = Random.Range(1,1);
         //Debug.Log("Resul" + punto);
         total = punto;
         //Resultado.text = punto.ToString();
@@ -326,13 +327,15 @@ public class Player : MonoBehaviour
         Camera camara = GetComponentInChildren<Camera>();
 
         int Posicion = tableroPos;
-
-        if (InBienestar)
+        //Esto para evitar el error de consola al rendirse mientras se mueve
+        if (camara.transform.parent != null)
+        {
+            if (InBienestar)
         {
             camara.transform.rotation = new Quaternion(0.0f, 1.0f, -0.3f, 0.0f);
             camara.transform.localPosition = new Vector3(0f, -0.0773f, 0.0501f);
         }
-     
+    
         else if (Posicion < 10)
         {
             camara.transform.rotation = Abajo;
@@ -372,6 +375,7 @@ public class Player : MonoBehaviour
         else if (Posicion >= 9)
         {
             TridiModel.transform.rotation = GirarIzq;
+        }
         }
     }
 
@@ -601,6 +605,13 @@ public class Player : MonoBehaviour
     public IEnumerator Pagar(int cantidad)
     {
         int Goal = dinero - cantidad;
+
+        if (Goal < 1)
+        {
+            StartCoroutine(Perder(" expulsado"));
+            yield break;
+        }
+
         while (dinero != Goal)
         {
             if (dinero - Goal > 10)
@@ -753,7 +764,6 @@ public class Player : MonoBehaviour
         HuecoVisible = true;
         rigi.isKinematic = false;
 
-        RestoreText();
         StartCoroutine(BienestarText("Player "+PlayerTurn+perder));
 
         Player parent = OwnCamera.transform.GetComponentInParent<Player>();
@@ -775,7 +785,7 @@ public class Player : MonoBehaviour
         Propiedad.IconComprar.enabled = false;
         Propiedad.MoneyTextComprar.enabled = false;
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
 
         ChibiIcon.enabled = false;
         PlayerDinero.enabled = false;       
@@ -785,9 +795,12 @@ public class Player : MonoBehaviour
        yield return new WaitForSeconds(0.3f);
 
         eliminado = true;
-        StartCoroutine(PlayerFontText());
 
-
+        if(perder==" se retira")
+        {
+            StartCoroutine(PlayerFontText());
+        }
+       
     }
     
 }
