@@ -26,21 +26,20 @@ public class Menu : MonoBehaviour
     int indice = 0;
 
 
-    private void Awake()
+
+    void Start()
     {
+
+        lista = GameObject.Find("Lista");
+
         Opcion1 = GameObject.Find("Opcion1").GetComponent<Text>();
         Opcion2 = GameObject.Find("Opcion2").GetComponent<Text>();
         Opcion3 = GameObject.Find("Opcion3").GetComponent<Text>();
         Opcion4 = GameObject.Find("Opcion4").GetComponent<Text>();
 
-        IniPosOp1 = new Vector3(-329.4f,    212.86f);
-        IniPosOp2 = new Vector3(-331,    131);
-        IniPosOp3 = new Vector3(-331.4f,    40.5f);
-
-
-    }
-    void Start()
-    {
+        IniPosOp1 = new Vector3(-329.4f, 212.86f);
+        IniPosOp2 = new Vector3(-331, 131);
+        IniPosOp3 = new Vector3(-331.4f, 40.5f);
         flecha = GameObject.Find("Flecha").GetComponent<Text>();
 
         flecha.rectTransform.localPosition = new Vector2(7.600001f, 151.86f);
@@ -135,21 +134,21 @@ public class Menu : MonoBehaviour
         {
             ControlPlayer.LImitedeTurno = 2;
 
-
+            Time.timeScale = 1;
             SceneManager.LoadScene("NuevoJuego");
         }
          else if (opcion.gameObject.name == "Opcion2" && opcion.gameObject.GetComponent<Text>().text == "3 Jugadores")
         {
             ControlPlayer.LImitedeTurno = 3;
 
-
+            Time.timeScale = 1;
             SceneManager.LoadScene("NuevoJuego");
         }
          else if (opcion.gameObject.name == "Opcion3" && opcion.gameObject.GetComponent<Text>().text == "4 Jugadores")
         {
             ControlPlayer.LImitedeTurno = 4;
 
-
+            Time.timeScale = 1;
             SceneManager.LoadScene("NuevoJuego");
         }    
         else if (opcion.gameObject.name == "Opcion2" && opcion.gameObject.GetComponent<Text>().text == "CREDITOS")
