@@ -13,6 +13,7 @@ public class RedPlayer : Player
         PlayerColor = Color.red;
         PlayerDinero = GameObject.Find("MoneyTextBook").GetComponent<Text>();
         ChibiIcon = GameObject.Find("ImageBook").GetComponent<Image>();
+        WinSprite = Resources.Load<Sprite>("BookWins");
         base.Start();
 
         GirarAbajo = new Quaternion(1f, 0f, 0f, -0f);

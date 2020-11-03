@@ -727,16 +727,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 90
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 9
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &149744279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -936,6 +932,7 @@ RectTransform:
   - {fileID: 13122020}
   - {fileID: 449452421}
   - {fileID: 1244909446}
+  - {fileID: 1386151383}
   m_Father: {fileID: 574288390}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1056,16 +1053,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 90
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 9
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &206762005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1440,16 +1433,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 400
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 40
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &327999534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1590,16 +1579,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 200
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 20
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &385927703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1833,16 +1818,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 90
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 9
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &462956074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2042,16 +2023,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 165
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 16
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &526322766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2192,16 +2169,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 350
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 35
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &550263570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2342,16 +2315,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 600
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 60
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &560942898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2773,16 +2742,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 90
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 9
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &663355956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2850,16 +2815,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 1200
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 120
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &675905907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2927,16 +2888,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 600
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 60
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &708091161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3118,7 +3075,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46ab3c730cd729645b521f2cc8428281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CardImage: {fileID: 755193018}
   ChanceCards: []
   ComArcsCards: []
   CardsNum: 0
@@ -3126,7 +3082,6 @@ MonoBehaviour:
   Chances: 0
   laboratoriosArr: 230000002500000027000000
   Tag: 
-  IconPass: {fileID: 0}
 --- !u!1 &795828492
 GameObject:
   m_ObjectHideFlags: 0
@@ -3172,16 +3127,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 700
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 70
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &795828495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3249,16 +3200,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 400
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 40
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &808538429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4786,16 +4733,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 100
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 10
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1273810884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5142,16 +5085,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 550
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 55
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1325646651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5373,6 +5312,99 @@ RectTransform:
   m_AnchoredPosition: {x: 398.10236, y: 66.88794}
   m_SizeDelta: {x: -167.98999, y: 146}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1386151382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1386151383}
+  - component: {fileID: 1386151386}
+  - component: {fileID: 1386151385}
+  - component: {fileID: 1386151384}
+  m_Layer: 5
+  m_Name: Ganar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1386151383
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386151382}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_Children: []
+  m_Father: {fileID: 169070962}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -5.5999756, y: 3.2999878}
+  m_SizeDelta: {x: 1120, y: 630}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1386151384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386151382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46ab3c730cd729645b521f2cc8428281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChanceCards: []
+  ComArcsCards: []
+  CardsNum: 0
+  elegida: 0
+  Chances: 0
+  laboratoriosArr: 230000002500000027000000
+  Tag: 
+--- !u!114 &1386151385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386151382}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 7896ea234e86183489c3a1304d47b4a6, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1386151386
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386151382}
+  m_CullTransparentMesh: 0
 --- !u!114 &1408517259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5920,6 +5952,8 @@ MonoBehaviour:
   canvasPause: {fileID: 0}
   PlayerActual: {fileID: 0}
   Tag: 
+  dado1: {fileID: 0}
+  dado2: {fileID: 0}
 --- !u!1 &1501334602
 GameObject:
   m_ObjectHideFlags: 0
@@ -6048,16 +6082,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 200
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 20
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1503949435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6370,16 +6400,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 65
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 6
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1537512230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6666,16 +6692,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 450
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 45
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1587988313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6889,16 +6911,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 500
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 50
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1619420488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7046,16 +7064,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 120
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 12
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1692485291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7375,16 +7389,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 400
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 40
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1746599582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7511,16 +7521,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 425
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 42
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1821040544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7668,16 +7674,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 140
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 14
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1847155573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7745,16 +7747,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 100
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 10
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1848338726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8072,16 +8070,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 0
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 0
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1918180134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8149,16 +8143,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 60
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 6
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1934804062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8412,16 +8402,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 600
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 60
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1979798536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8489,16 +8475,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 800
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 80
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1992819641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8566,16 +8548,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 140
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 10
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1994264124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8643,16 +8621,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   precio: 350
-  PropertyIMage: {fileID: 0}
   PropertyCards: []
-  IconComprar: {fileID: 0}
-  IconPass: {fileID: 0}
   propietario: {fileID: 0}
   casas: 0
   Renta: 35
   Tag: 
   Tarjeta: {fileID: 0}
-  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1996169382
 MonoBehaviour:
   m_ObjectHideFlags: 0

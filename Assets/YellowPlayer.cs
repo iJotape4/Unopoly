@@ -13,6 +13,7 @@ public class YellowPlayer : Player
         PlayerTurn = 1;
         PlayerDinero = GameObject.Find("MoneyTextEmpanada").GetComponent<Text>();
         ChibiIcon = GameObject.Find("ImageEmpanada").GetComponent<Image>();
+        WinSprite = Resources.Load<Sprite>("EmpanadaWins");
         base.Start();
         StartCoroutine(PlayerFontText());
 

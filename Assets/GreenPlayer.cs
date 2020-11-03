@@ -12,6 +12,7 @@ public class GreenPlayer : Player
         PlayerColor = Color.green;
         PlayerDinero = GameObject.Find("MoneyTextLeaf").GetComponent<Text>();
         ChibiIcon = GameObject.Find("ImageLeaf").GetComponent<Image>();
+        WinSprite = Resources.Load<Sprite>("LeafWins");
         base.Start();
 
         GirarAbajo = new Quaternion(-0.5f, 0.5f, 0.5f, -0.5f);

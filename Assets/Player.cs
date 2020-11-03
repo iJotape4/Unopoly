@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
@@ -29,8 +30,12 @@ public class Player : MonoBehaviour
 
     public Image ChibiIcon;
 
+    public Image GanarImage;
+
     public Casilla casiillaSiguiente;
     public Casilla bienestar;
+
+    public Sprite WinSprite;
 
     public int ExitCards;
    
@@ -43,6 +48,7 @@ public class Player : MonoBehaviour
 
     public bool InBienestar=false;
     public bool eliminado = false;
+    public static int eliminados = 0;
 
     public static bool Cards;
     public static bool Chances;
@@ -106,6 +112,7 @@ public class Player : MonoBehaviour
         RepiteTurno = false;
         InBienestar = false;
         eliminado = false;
+        eliminados = 0;
 
     }
 
@@ -148,7 +155,10 @@ public class Player : MonoBehaviour
         rigi = GetComponent<Rigidbody>();
 
         PauseMenu = GameObject.Find("Pausemenu");
-    
+
+        GanarImage = GameObject.Find("Ganar").GetComponent<Image>();
+        GanarImage.enabled = false;
+
 
         if (ControlPlayer.LImitedeTurno < PlayerTurn)
         {
@@ -171,6 +181,8 @@ public class Player : MonoBehaviour
                 return;
             }
             
+            
+
             PlayerDinero.text = "$" + dinero.ToString();
             //PlayerDinero.color = PlayerColor;
             
@@ -178,6 +190,12 @@ public class Player : MonoBehaviour
             if (!DadosCamera.enabled)
             {
                 OwnCamera.enabled = true;
+
+                if (!eliminado && eliminados == (ControlPlayer.LImitedeTurno - 1))
+                {
+                    Ganar();
+                    return;
+                }
             }
             if (InBienestar && Time.timeScale == 1)
             {
@@ -765,7 +783,7 @@ public class Player : MonoBehaviour
         rigi.isKinematic = false;
 
         StartCoroutine(BienestarText("Player "+PlayerTurn+perder));
-
+            
         Player parent = OwnCamera.transform.GetComponentInParent<Player>();
         OwnCamera.transform.SetParent(null);
 
@@ -793,14 +811,29 @@ public class Player : MonoBehaviour
         HuecoVisible = false;
 
        yield return new WaitForSeconds(0.3f);
-
+        rigi.isKinematic = true;
         eliminado = true;
+        eliminados++;
 
         if(perder==" se retira")
         {
             StartCoroutine(PlayerFontText());
         }
        
+    }
+
+    public void Ganar()
+    {
+        IconTirar.enabled = false;
+        GanarImage.sprite = WinSprite;
+        GanarImage.enabled = true;
+        CardsController.IconPass.enabled = true;
+
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            SceneManager.LoadScene("Menu");
+        }
+
     }
     
 }
