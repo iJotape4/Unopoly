@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
     public static bool Properties;
     public static bool HuecoVisible = false;
 
-    public static bool PuedeTirar=true;
+    public static bool PuedeTirar = true;
 
     public int NumVueltas=0;
 
@@ -63,6 +63,8 @@ public class Player : MonoBehaviour
 
     public GameObject self;
     public GameObject TridiModel;
+
+    public GameObject PauseMenu;
     
     //Quaterniones de la orientación de la cámara al girar
     public  static Quaternion Abajo = new Quaternion(0.4f, 0.0f, 0.0f, 1.0f);
@@ -96,13 +98,18 @@ public class Player : MonoBehaviour
     public void Awake()
     {
         this.self = gameObject;
-        
+        //Definir Variables Estáticas Globales Cada que inicia un nuevo Juego
+        PuedeTirar = true;
+        ExecutingCardMethod = false;
+        HuecoVisible = false;
+        RepiteTurno = false;
+        InBienestar = false;
+
     }
 
     // Start is called before the first frame update
     public void Start()
     {
-        
         total = 0;
 
         OwnCamera = GetComponentInChildren<Camera>();
@@ -138,6 +145,9 @@ public class Player : MonoBehaviour
 
         rigi = GetComponent<Rigidbody>();
 
+        PauseMenu = GameObject.Find("Pausemenu");
+    
+
         if (ControlPlayer.LImitedeTurno < PlayerTurn)
         {
             self.SetActive(false);
@@ -160,7 +170,7 @@ public class Player : MonoBehaviour
             {
                 OwnCamera.enabled = true;
             }
-            if (InBienestar)
+            if (InBienestar && Time.timeScale == 1)
             {
 
                 if (PlayerTurn != ControlPlayer.control.Turno)
@@ -173,7 +183,7 @@ public class Player : MonoBehaviour
 
 
 
-        if (Input.GetKeyDown(KeyCode.X) && !movimie && !Cards && !Properties && !InBienestar  && PuedeTirar)
+        if (Input.GetKeyDown(KeyCode.X) && !movimie && !Cards && !Properties && !InBienestar  && PuedeTirar  && Time.timeScale==1)
         {
             if (PlayerTurn != ControlPlayer.control.Turno)
             {
