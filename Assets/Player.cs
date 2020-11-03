@@ -204,7 +204,7 @@ public class Player : MonoBehaviour
         dado2 = GameObject.Find("Dado2").GetComponent<Dado>();
         RestoreText();
         
-        if(!dado1.IsMoving() && !dado2.IsMoving() )
+      /*  if(!dado1.IsMoving() && !dado2.IsMoving() )
         {
             dado1.TirarDado();
             dado2.TirarDado();
@@ -233,9 +233,9 @@ public class Player : MonoBehaviour
         else
         {
             RepiteTurno = false;
-    } 
+    } ¨*/
         yield return new WaitForSeconds(0.1f);
-     //punto = Random.Range(3,3);
+     punto = Random.Range(1,1);
         //Debug.Log("Resul" + punto);
         total = punto;
         //Resultado.text = punto.ToString();
@@ -632,8 +632,9 @@ public class Player : MonoBehaviour
         TridiModel.transform.rotation = GirarIzq;
         //Esto es para que caiga
         rigi.isKinematic = true;
-        rpposiicion = 10;
-        NumVueltas = 0;
+        rpposiicion = 10*(NumVueltas+1);
+        tableroPos = 10;
+
        
         InBienestar = true;
 
@@ -650,7 +651,7 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
 
-        Debug.Log("Se termina en gonbienes");
+
         FinishTurn();
         
     }
