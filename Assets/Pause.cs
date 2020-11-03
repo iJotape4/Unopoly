@@ -99,10 +99,11 @@ public class Pause : MonoBehaviour
         void Pausar()
         {
             canvasPause.enabled = !canvasPause.isActiveAndEnabled;
-            Arrow.enabled = !Arrow.isActiveAndEnabled;
+            Arrow.enabled = true; ;
             IconEscoger.enabled = !IconEscoger.isActiveAndEnabled;
             IconUnPause.enabled = !IconUnPause.isActiveAndEnabled;
             IconUpDown.enabled = !IconUpDown.isActiveAndEnabled;
+            TutorialImage.enabled = false;
 
             indice = 0;
             Transform opcion = lista.transform.GetChild(0);
