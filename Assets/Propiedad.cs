@@ -73,7 +73,7 @@ public class Propiedad : MonoBehaviour
                 }
             }
 
-            if (Tarjeta.propietario == null)
+            if (Tarjeta.propietario == null || Tarjeta.propietario.eliminado)
             {
                 ShowPropertie();
             }
