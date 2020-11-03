@@ -736,6 +736,7 @@ MonoBehaviour:
   Renta: 9
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &149744279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -934,6 +935,7 @@ RectTransform:
   - {fileID: 38590533}
   - {fileID: 13122020}
   - {fileID: 449452421}
+  - {fileID: 1244909446}
   m_Father: {fileID: 574288390}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1063,6 +1065,7 @@ MonoBehaviour:
   Renta: 9
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &206762005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1446,6 +1449,7 @@ MonoBehaviour:
   Renta: 40
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &327999534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1595,6 +1599,7 @@ MonoBehaviour:
   Renta: 20
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &385927703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1837,6 +1842,7 @@ MonoBehaviour:
   Renta: 9
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &462956074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2045,6 +2051,7 @@ MonoBehaviour:
   Renta: 16
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &526322766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2194,6 +2201,7 @@ MonoBehaviour:
   Renta: 35
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &550263570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2343,6 +2351,7 @@ MonoBehaviour:
   Renta: 60
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &560942898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2773,6 +2782,7 @@ MonoBehaviour:
   Renta: 9
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &663355956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2849,6 +2859,7 @@ MonoBehaviour:
   Renta: 120
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &675905907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2925,6 +2936,7 @@ MonoBehaviour:
   Renta: 60
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &708091161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3169,6 +3181,7 @@ MonoBehaviour:
   Renta: 70
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &795828495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3245,6 +3258,7 @@ MonoBehaviour:
   Renta: 40
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &808538429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4508,6 +4522,99 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.114645086
   m_Center: {x: -4.6309237e-12, y: 0.0072648893, z: 0.0026446185}
+--- !u!1 &1244909445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1244909446}
+  - component: {fileID: 1244909449}
+  - component: {fileID: 1244909448}
+  - component: {fileID: 1244909447}
+  m_Layer: 5
+  m_Name: MoneyTextComprar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1244909446
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244909445}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 4.3, y: 4.3, z: 4.3}
+  m_Children: []
+  m_Father: {fileID: 169070962}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 61, y: -239}
+  m_SizeDelta: {x: -760, y: -430}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1244909447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244909445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 0.2, y: -0.2}
+  m_UseGraphicAlpha: 1
+--- !u!114 &1244909448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244909445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.59620863, g: 0.6224342, b: 0.6226415, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: d1dd5219f312df247bef47c8a012f714, type: 3}
+    m_FontSize: 5
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 5
+    m_MaxSize: 5
+    m_Alignment: 0
+    m_AlignByGeometry: 1
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: $2000
+--- !u!222 &1244909449
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244909445}
+  m_CullTransparentMesh: 0
 --- !u!1 &1248976158
 GameObject:
   m_ObjectHideFlags: 0
@@ -4688,6 +4795,7 @@ MonoBehaviour:
   Renta: 10
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1273810884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5043,6 +5151,7 @@ MonoBehaviour:
   Renta: 55
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1325646651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5714,7 +5823,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1497462691}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 0}
@@ -5945,6 +6054,7 @@ MonoBehaviour:
   Renta: 20
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1503949435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6266,6 +6376,7 @@ MonoBehaviour:
   Renta: 6
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1537512230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6561,6 +6672,7 @@ MonoBehaviour:
   Renta: 45
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1587988313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6782,6 +6894,7 @@ MonoBehaviour:
   Renta: 50
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1619420488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6938,6 +7051,7 @@ MonoBehaviour:
   Renta: 12
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1692485291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7266,6 +7380,7 @@ MonoBehaviour:
   Renta: 40
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1746599582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7401,6 +7516,7 @@ MonoBehaviour:
   Renta: 42
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1821040544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7557,6 +7673,7 @@ MonoBehaviour:
   Renta: 14
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1847155573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7633,6 +7750,7 @@ MonoBehaviour:
   Renta: 10
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1848338726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7959,6 +8077,7 @@ MonoBehaviour:
   Renta: 0
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1918180134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8035,6 +8154,7 @@ MonoBehaviour:
   Renta: 6
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1934804062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8297,6 +8417,7 @@ MonoBehaviour:
   Renta: 60
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1979798536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8373,6 +8494,7 @@ MonoBehaviour:
   Renta: 80
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1992819641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8449,6 +8571,7 @@ MonoBehaviour:
   Renta: 10
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1994264124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8525,6 +8648,7 @@ MonoBehaviour:
   Renta: 35
   Tag: 
   Tarjeta: {fileID: 0}
+  MoneyTextComprar: {fileID: 0}
 --- !u!114 &1996169382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33141,8 +33265,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2778365311846421274}
   m_LocalRotation: {x: -0.038055815, y: 0.70636296, z: -0.7054571, w: 0.043970577}
-  m_LocalPosition: {x: -2.230409, y: 0.65095425, z: 0.61016864}
-  m_LocalScale: {x: 0.1443096, y: 0.73259586, z: 0.055132955}
+  m_LocalPosition: {x: -2.2959, y: 0.6475, z: 0.609}
+  m_LocalScale: {x: 0.15556574, y: 0.73259586, z: 0.055132955}
   m_Children: []
   m_Father: {fileID: 3236586656778892093}
   m_RootOrder: 0

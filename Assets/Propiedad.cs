@@ -30,6 +30,8 @@ public class Propiedad : MonoBehaviour
     [HideInInspector]
     public Propiedad Tarjeta;
 
+    public Text  MoneyTextComprar;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +42,9 @@ public class Propiedad : MonoBehaviour
 
         IconComprar = GameObject.Find("ComprarIcon").GetComponent<Image>();
         IconPass = GameObject.Find("PasarIcon").GetComponent<Image>();
+
+        MoneyTextComprar = GameObject.Find("MoneyTextComprar").GetComponent<Text>();
+        MoneyTextComprar.enabled = false;
 
         IconComprar.enabled = false;
         IconPass.enabled = false;
@@ -91,7 +96,9 @@ public class Propiedad : MonoBehaviour
        
         IconComprar.enabled = true;
         IconPass.enabled = true;
-    
+
+        MoneyTextComprar.text = ("$"+Tarjeta.precio);
+        MoneyTextComprar.enabled = true;
 
         if (Input.GetKey("x"))
         {
@@ -108,6 +115,7 @@ public class Propiedad : MonoBehaviour
         IconPass.enabled = false;
 
         PropertyIMage.enabled = false;
+        MoneyTextComprar.enabled = false;
         
         StartCoroutine(Waiter());
     }
