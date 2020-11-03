@@ -93,14 +93,17 @@ public class Propiedad : MonoBehaviour
         PropertyIMage.rectTransform.sizeDelta = new Vector2(700, 822);
         PropertyIMage.enabled = true;
 
+       if (PlayerActual.dinero > Tarjeta.precio)
+        {
+            IconComprar.enabled = true;
+        }
        
-        IconComprar.enabled = true;
         IconPass.enabled = true;
 
         MoneyTextComprar.text = ("$"+Tarjeta.precio);
         MoneyTextComprar.enabled = true;
 
-        if (Input.GetKey("x"))
+        if (Input.GetKey("x") && PlayerActual.dinero > Tarjeta.precio)
         {
             StartCoroutine(Comprar());
         }else if (Input.GetKey("z"))
