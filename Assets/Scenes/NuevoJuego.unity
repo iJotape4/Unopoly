@@ -170,9 +170,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &13122019
 GameObject:
@@ -751,9 +748,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &155679475
 GameObject:
@@ -1077,9 +1071,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &232063761
 GameObject:
@@ -1457,9 +1448,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &362694018
 GameObject:
@@ -1603,9 +1591,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &449452420
 GameObject:
@@ -1842,9 +1827,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &487200388
 GameObject:
@@ -2047,9 +2029,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &537462098
 GameObject:
@@ -2193,9 +2172,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &557411352
 GameObject:
@@ -2339,9 +2315,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &574288386
 GameObject:
@@ -2606,9 +2579,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &636990315
 GameObject:
@@ -2766,9 +2736,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &675905904
 GameObject:
@@ -2839,9 +2806,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &708091158
 GameObject:
@@ -2912,9 +2876,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &732107890
 GameObject:
@@ -3151,9 +3112,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &808538426
 GameObject:
@@ -3224,9 +3182,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &868926896
 GameObject:
@@ -3451,9 +3406,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &911833338
 GameObject:
@@ -4684,9 +4636,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1273810881
 GameObject:
@@ -4757,9 +4706,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1279313794
 GameObject:
@@ -5109,9 +5055,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1335702376
 GameObject:
@@ -5195,10 +5138,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1342125381
 GameObject:
@@ -6108,9 +6047,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1520951713
 GameObject:
@@ -6426,9 +6362,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1550032408
 GameObject:
@@ -6718,9 +6651,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1616520527
 GameObject:
@@ -6939,9 +6869,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1658379662
 GameObject:
@@ -7092,9 +7019,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1695446749
 GameObject:
@@ -7145,9 +7069,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1710588393
 GameObject:
@@ -7198,9 +7119,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1712252482
 GameObject:
@@ -7251,9 +7169,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1736690076
 GameObject:
@@ -7417,9 +7332,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1750575179
 GameObject:
@@ -7549,9 +7461,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1831639984
 GameObject:
@@ -7702,9 +7611,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1848338723
 GameObject:
@@ -7775,9 +7681,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1850281904
 GameObject:
@@ -8025,9 +7928,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1918180131
 GameObject:
@@ -8098,9 +7998,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1934804059
 GameObject:
@@ -8171,9 +8068,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1947964429
 GameObject:
@@ -8303,7 +8197,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 314, y: 127}
+  m_AnchoredPosition: {x: 312.70007, y: 127}
   m_SizeDelta: {x: -760, y: -430}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1968800583
@@ -8430,9 +8324,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1992819638
 GameObject:
@@ -8503,9 +8394,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1994264121
 GameObject:
@@ -8576,9 +8464,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &1996169379
 GameObject:
@@ -8649,9 +8534,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &2001712127
 GameObject:
@@ -8702,9 +8584,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!1 &2039845839
 GameObject:
@@ -8901,9 +8780,6 @@ MonoBehaviour:
   ocupadaby2: 0
   ocupadaby3: 0
   Players: 0
-  Jugadores:
-  - {fileID: 0}
-  - {fileID: 0}
   PosicionOriginal: {x: 0, y: 0, z: 0}
 --- !u!23 &11488968098115959
 MeshRenderer:

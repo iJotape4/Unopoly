@@ -538,7 +538,7 @@ public class Player : MonoBehaviour
         }
         else if (tableroPos == 10 )
         {
-            StartCoroutine(BienestarText("!Sólo visitando!!"));
+            StartCoroutine(BienestarText("!Solo visitando!!"));
             yield return new WaitForSeconds(1f);
             FinishTurn();
         }
