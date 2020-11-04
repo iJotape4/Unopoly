@@ -113,8 +113,11 @@ public class CardsController : MonoBehaviour
             GoParkway();
 
         }
-        //2.Te vieron fumando en Banu, tienes que ir a bienestar.  
-        else if (elegida == 2)
+        //2.Te vieron fumando en Banu, tienes que ir a bienestar.
+        //12. Fuiste visto maltratando a una ardilla del campus. tienes que ir a bienestar.
+        //13.Un profesor denunció que te reunías con un grupo de amigos para jugar juegos
+          //  de azar dentro de la universidad.Bienestar te cita, ve allí.
+        else if (elegida == 2 || elegida ==12 || elegida ==13)
         {
             GoBienestar();
 
@@ -145,9 +148,51 @@ public class CardsController : MonoBehaviour
             GoToLaboratory();
         }
         //7. Tienes un taller de deporte, ve al CSU
-        else if (elegida == 7)
+        //10. Aún te falta completar tus horas libres. Habrá una película en el salón de proyecciones del CSU ,ve a la parada del bus.
+        else if (elegida == 7 || elegida==10)
         {
             CardMethodGoTo(13);
+        }
+        // Te sientes enfermo.Ve a la enfermería a que te revise el médico de bienestar.
+         else if (elegida == 8)
+        {
+            CardMethodGoTo(24);
+        }
+        // Vas atrasado con los módulos de inglés, paga 50 para ver un curso vacacional
+        else if (elegida == 9)
+        {
+            StartCoroutine(PlayerActual.Pagar(50));
+            StartCoroutine(Waiter());
+        }
+        //11. Estás interesado en una 
+        //conferencia sobre intercambios que habrá en el auditorio menor. Ve allí.
+        else if (elegida == 11)
+        {
+            CardMethodGoTo(27);
+        }
+        //14. Te está yendo mal en clase de cálculo.
+        //Ve a la Facultad de ingenierías para obtener información sobre tutorías.
+        else if (elegida == 14)
+        {
+            CardMethodGoTo(14);
+        }
+        //Solicitaste el préstamo de una laptop de la universidad. 
+        //Ve a multimedios para reclamarla.
+        else if (elegida == 15)
+        {
+            CardMethodGoTo(15);
+        }
+        //16. Necesitas expedir un certificado de estudios. 
+        //Ve a punto U para obtener información
+        else if (elegida == 16)
+        {
+            CardMethodGoTo(29);
+        }
+        //17. Retrocede 3 casillas
+        else if (elegida == 17)
+        {
+            PlayerActual.punto = -3;
+            StartCoroutine(PlayerActual.MoveInverso());
         }
         
     }
@@ -198,6 +243,79 @@ public class CardsController : MonoBehaviour
         else if (elegida == 7)
         {
             StartCoroutine(PlayerActual.GoBienestar());
+        }
+        //8.Te llegó un subsidio de sostenimiento del icetex.Cobra 200
+          else if (elegida == 8)
+        {
+            StartCoroutine(PlayerActual.Cobrar(200));
+            StartCoroutine(Waiter());
+        }
+        //9. Faltaste a un parcial y realizas una solicitud de supletorio. Paga 10.
+        else if (elegida == 9)
+        {
+            StartCoroutine(PlayerActual.Pagar(10));
+            StartCoroutine(Waiter());
+        }
+        //10. Perdiste tu carnet de estudiante. 
+        //Paga 50 para que te sea otorgado uno nuevo.
+
+        else if (elegida == 10)
+        {
+            StartCoroutine(PlayerActual.Pagar(50));
+            StartCoroutine(Waiter());
+        }
+        //11. Has sido seleccionado para un intercambio estudiantil 
+        //y recibes un desembolso por parte del programa. Cobra 300.
+        else if (elegida == 11)
+        {
+            StartCoroutine(PlayerActual.Cobrar(300));
+            StartCoroutine(Waiter());
+        }
+        //12. Te has roto una pierna en un campeonato de basketball de la universidad.
+        //Recibes 100 por la póliza del seguro.
+
+        //17. Eres elegido para presentar tu proyecto de semillero en una competencia nacional. 
+        //Recibes  200 para gastos de transporte. 
+        else if (elegida == 12 || elegida ==17)
+        {
+            StartCoroutine(PlayerActual.Cobrar(200));
+            StartCoroutine(Waiter());
+        }
+        //13. Hoy es tu cumpleaños. Cada jugador te paga 50.
+        else if (elegida == 13)
+        {
+            StartCoroutine(PlayerActual.Cobrar((ControlPlayer.LImitedeTurno - Player.eliminados -1) * 50));
+
+            foreach ( Player jugador in Casilla.Jugadores){
+                if(jugador != PlayerActual)
+                {
+                    StartCoroutine(jugador.Pagar(50));                                                         
+                }                
+            }
+            StartCoroutine(Waiter());
+        }
+        //14. Quedaste en primer lugar en ingeniotic y ganas bonos del garage.
+        //Cobra 10.
+        else if (elegida == 14)
+        {
+            StartCoroutine(PlayerActual.Cobrar(10));
+            StartCoroutine(Waiter());
+        }
+
+        //15. Quedaste en primer lugar en un torneo universitario de billar. 
+        //Reclama 100.
+        else if (elegida == 15)
+        {
+            StartCoroutine(PlayerActual.Cobrar(100));
+            StartCoroutine(Waiter());
+        }
+        //16. Cancelas una materia dentro de las fechas establecidas en el cronograma académico
+        //y recibes una devolución del valor de matrícula. Reclama 50.
+
+        else if (elegida == 16)
+        {
+            StartCoroutine(PlayerActual.Cobrar(50));
+            StartCoroutine(Waiter());
         }
        
     }

@@ -275,9 +275,9 @@ public class Player : MonoBehaviour
         return goal != (transform.position = Vector3.MoveTowards(transform.position, goal, 2f * Time.deltaTime));
     }
 
-    public void ComprobarOcupacion()
+    public void ComprobarOcupacion(int dirección)
     {
-        int posicion = tableroPos + 1;
+        int posicion = tableroPos + dirección;
 
 
         //Debug.Log(tableroPos);
@@ -478,7 +478,7 @@ public class Player : MonoBehaviour
         if (PlayerTurn.Equals(ControlPlayer.control.Turno))
             while (punto > 0)
             {
-                ComprobarOcupacion();
+                ComprobarOcupacion(1);
                 Vector3 nextPos = GO.tablero.Seleccionar(rpposiicion+0).position;
                 while (MoveToNexNode(nextPos)) { yield return null; }
                 yield return new WaitForSeconds(0.06f);
@@ -549,6 +549,31 @@ public class Player : MonoBehaviour
         }        
     }
 
+    public IEnumerator MoveInverso()
+    {
+        movimie = true;
+        if (PlayerTurn.Equals(ControlPlayer.control.Turno))
+            while (punto < 0)
+            {
+                ComprobarOcupacion(-1);
+                Vector3 nextPos = GO.tablero.Seleccionar(rpposiicion - 2).position;
+                while (MoveToNexNode(nextPos)) { yield return null; }
+                yield return new WaitForSeconds(0.06f);
+                punto++;
+                rpposiicion--;
+
+                tableroPos = rpposiicion - (40 * NumVueltas);
+            }
+
+        ComprobateCards();
+        ComprobateProperties();
+        while (Cards || Properties)
+        {
+            yield return new WaitForSeconds(0.1f);
+        }
+
+    }
+
 
     public void MoveTowards(int pos)
     {
@@ -564,6 +589,7 @@ public class Player : MonoBehaviour
         Debug.Log("se mueve hasta" + pos);
         StartCoroutine(Move());
     }
+
 
     public void ComprobateCards()
     {
@@ -640,7 +666,7 @@ public class Player : MonoBehaviour
             {
                 dinero--;
             }
-           
+            PlayerDinero.text = "$" + dinero.ToString();
             yield return new WaitForSeconds(0.015f);
         }            
     }

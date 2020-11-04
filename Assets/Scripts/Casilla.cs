@@ -12,7 +12,7 @@ public class Casilla : MonoBehaviour
     public bool ocupadaby3;
     public int Players;
 
-    public Player[] Jugadores;
+    public static Player[] Jugadores;
     public  Vector3 PosicionOriginal;
 
     
