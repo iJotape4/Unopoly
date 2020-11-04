@@ -481,7 +481,7 @@ public class Player : MonoBehaviour
                 ComprobarOcupacion(1);
                 Vector3 nextPos = GO.tablero.Seleccionar(rpposiicion+0).position;
                 while (MoveToNexNode(nextPos)) { yield return null; }
-                yield return new WaitForSeconds(0.06f);
+                yield return new WaitForSeconds(0.05f);
                 punto--;
                 rpposiicion++;
 
@@ -639,11 +639,12 @@ public class Player : MonoBehaviour
             else
             {
                 dinero++;
-                PlayerDinero.text = "$" + dinero.ToString();
+               
                 yield return new WaitForSeconds(0.015f);
 
+            }
+            PlayerDinero.text = "$" + dinero.ToString();
         }
-    }
     }
 
     public IEnumerator Pagar(int cantidad)
@@ -738,8 +739,9 @@ public class Player : MonoBehaviour
         IconPagar.enabled = true;
         if (Input.GetKeyDown(KeyCode.X))
         {
-            //PuedeTirar = false;
-            dado1 = GameObject.Find("Dado1").GetComponent<Dado>();
+                IconTirar.enabled = false;
+                IconPagar.enabled = false;
+                dado1 = GameObject.Find("Dado1").GetComponent<Dado>();
             dado2 = GameObject.Find("Dado2").GetComponent<Dado>();
 
             if (!dado1.IsMoving() && !dado2.IsMoving())
