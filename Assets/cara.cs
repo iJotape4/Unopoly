@@ -14,15 +14,9 @@ public class cara : MonoBehaviour
         Numero = int.Parse(GetComponent<cara>().name) ;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
      void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Tablero") ;
+        if (other.gameObject.tag == "Tablero")
         TocaSuelo = true;
     }
     private void OnTriggerExit(Collider other)

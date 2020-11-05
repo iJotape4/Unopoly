@@ -244,8 +244,6 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(0.001f);
         }
 
-        //yield return new WaitForSeconds(0.2f);
-
         OwnCamera.enabled = true;
         DadosCamera.enabled = false;
         punto = dado1.NumeroActual + dado2.NumeroActual;
@@ -673,17 +671,16 @@ public class Player : MonoBehaviour
     }
 
     public IEnumerator GoBienestar()
-    {
-        //Hay que corregirlo y hacer un teletransporte animado como el de monopoly 64 https://www.youtube.com/watch?v=CyDnh7eVCl8 19:40    
+    {        
         Vector3 bienestarPos;
-
+        //Permite que cuando más de un jugador cae en bienestar, no se paren el uno sobre el otro.
         if (bienestar.ocupada)
         {
             bienestar.transform.localPosition = new Vector3(-10.9f, bienestar.PosicionOriginal.y, bienestar.PosicionOriginal.z);
         }
 
         bienestarPos = bienestar.transform.position;
-
+        //Esto ocasiona que la ficha caiga.
         HuecoVisible = true;
         rigi.isKinematic = false;
 
@@ -700,7 +697,7 @@ public class Player : MonoBehaviour
             OwnCamera.transform.SetParent(parent.transform);
         }
         TridiModel.transform.rotation = GirarIzq;
-        //Esto es para que caiga
+        //Esto ocasiona que la ficha deje de caer.
         rigi.isKinematic = true;
         rpposiicion = 10*(NumVueltas+1);
         tableroPos = 10;

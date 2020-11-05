@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6920718687360582420}
   m_Layer: 0
   m_Name: Player Blue
-  m_TagString: Player2
+  m_TagString: Player3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,6 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59091316852044349a346c12022dabe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Resultado: {fileID: 0}
   Rott: {fileID: 0}
   rpposiicion: 0
   punto: 0
@@ -103,11 +104,11 @@ MonoBehaviour:
   PlayerDinero: {fileID: 0}
   DadosCamera: {fileID: 0}
   OwnCamera: {fileID: 0}
-  BienestarCamera: {fileID: 0}
   PlayerText: {fileID: 0}
-  TextoTirar: {fileID: 0}
-  UseCard: {fileID: 0}
-  TextoPagar: {fileID: 0}
+  IconTirar: {fileID: 0}
+  IconUseCard: {fileID: 0}
+  IconPagar: {fileID: 0}
+  ChibiIcon: {fileID: 0}
   casiillaSiguiente: {fileID: 0}
   bienestar: {fileID: 0}
   ExitCards: 0
@@ -115,15 +116,13 @@ MonoBehaviour:
   RepiteTurno: 0
   PlayerTurn: 2
   InBienestar: 0
-  inChameraRotateChange: 0
   NumVueltas: 0
-  MeshSeted: 
   dado1: {fileID: 0}
   dado2: {fileID: 0}
   rigi: {fileID: 0}
   self: {fileID: 0}
-  MeshFilter: {fileID: 0}
-  rotationActual: {x: 0, y: 0, z: 0, w: 0}
+  TridiModel: {fileID: 0}
+  PauseMenu: {fileID: 0}
   GirarAbajo: {x: 0, y: 0, z: 0, w: 0}
   GirarIzq: {x: 0, y: 0, z: 0, w: 0}
   GirarArriba: {x: 0, y: 0, z: 0, w: 0}

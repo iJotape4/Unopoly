@@ -10,8 +10,6 @@ public class Dado : MonoBehaviour
     public int NumeroActual;
     public Vector3 PosInicial;
 
-    Player PlayerActual;
-    public string Tag;
     public bool moviendo;
 
     // Start is called before the first frame update
@@ -46,8 +44,6 @@ public class Dado : MonoBehaviour
 
     public void TirarDado()
     {
-        Tag = ("Player" + ControlPlayer.control.Turno);
-        PlayerActual = GameObject.FindGameObjectWithTag(Tag).GetComponent<Player>();
 
         transform.position = PosInicial;
         float FuerzaInicial = Random.Range(-10, 10 );
@@ -56,8 +52,6 @@ public class Dado : MonoBehaviour
         GetComponent<Rigidbody>().isKinematic = false;
         GetComponent<Rigidbody>().AddForce(new Vector3(FuerzaInicial * multplier, 0, FuerzaInicial2* multplier));
         GetComponent<Rigidbody>().rotation = Random.rotation;
-     
-        //StartCoroutine(TirarDado());
     }
 
     public bool IsMoving()

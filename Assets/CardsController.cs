@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.UI;
 
 public class CardsController : MonoBehaviour
@@ -38,6 +40,20 @@ public class CardsController : MonoBehaviour
         CardImage.enabled = false;          
     }
 
+    private void Sort()
+    {
+        Sprite[] temporal = new Sprite[18];
+        int var = 0;
+        foreach (Sprite elemento in ChanceCards)
+        {
+            Debug.Log(int.Parse(elemento.name));
+            temporal[(int.Parse(elemento.name))] = elemento;
+            var++;
+        }
+        ChanceCards = temporal;
+        
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -67,7 +83,7 @@ public class CardsController : MonoBehaviour
             }
             CardImage.rectTransform.sizeDelta = new Vector2(1500, 822);
             CardImage.enabled = true;
-            elegida = Random.Range(0, Cards.Length);
+            elegida = UnityEngine.Random.Range(0, Cards.Length);
             Debug.Log("carta el" +elegida);
             CardImage.sprite = Cards[elegida];                
         }
@@ -102,13 +118,13 @@ public class CardsController : MonoBehaviour
     public  void CallCardMethodChances(int elegida)
     {
         //0. Te dio hambre, ve a la cafetería más cercana, si pasas por la salida, cobra.
-        if (elegida == 0)
+        if (elegida == 00)
         {
             Cafetería();
 
         }
         //1. Tienes tu carro en el parqueadero, avanza hasta ahí para recogerlo.
-        else if (elegida == 1)
+        else if (elegida == 01)
         {
             GoParkway();
 
@@ -117,49 +133,49 @@ public class CardsController : MonoBehaviour
         //12. Fuiste visto maltratando a una ardilla del campus. tienes que ir a bienestar.
         //13.Un profesor denunció que te reunías con un grupo de amigos para jugar juegos
           //  de azar dentro de la universidad.Bienestar te cita, ve allí.
-        else if (elegida == 2 || elegida ==12 || elegida ==13)
+        else if (elegida == 02 || elegida ==12 || elegida ==13)
         {
             GoBienestar();
 
         }
         //3. Perdiste un libro de la biblioteca, paga 200
-        else if (elegida == 3)
+        else if (elegida == 03)
         {
-            StartCoroutine(PlayerActual.Pagar(100));
+            StartCoroutine(PlayerActual.Pagar(200));
             StartCoroutine(Waiter());
 
         }
         //4.Avanza hasta la salida, cobra 200
-        else if (elegida == 4)
+        else if (elegida == 04)
         {
             GoToGo();
         }
 
         //5.Puedes salir de bienestar gratis
-        else if (elegida == 5)
+        else if (elegida == 05)
         {
             PlayerActual.ExitCards++;
             StartCoroutine(Waiter());
         }
         //6. Ve al laboratorio de telecomunicaciones
-        else if (elegida == 6)
+        else if (elegida == 06)
         {
 
             GoToLaboratory();
         }
         //7. Tienes un taller de deporte, ve al CSU
         //10. Aún te falta completar tus horas libres. Habrá una película en el salón de proyecciones del CSU ,ve a la parada del bus.
-        else if (elegida == 7 || elegida==10)
+        else if (elegida == 07 || elegida==10)
         {
             CardMethodGoTo(13);
         }
         // Te sientes enfermo.Ve a la enfermería a que te revise el médico de bienestar.
-         else if (elegida == 8)
+         else if (elegida == 08)
         {
             CardMethodGoTo(24);
         }
         // Vas atrasado con los módulos de inglés, paga 50 para ver un curso vacacional
-        else if (elegida == 9)
+        else if (elegida == 09)
         {
             StartCoroutine(PlayerActual.Pagar(50));
             StartCoroutine(Waiter());
@@ -202,7 +218,7 @@ public class CardsController : MonoBehaviour
     {
         //0. Te has roto una pierna en un campeonato de basketball de la universidad.
         //Recibes 100 por la póliza del seguro.
-        if (elegida == 0)
+        if (elegida == 00)
         {
             StartCoroutine(PlayerActual.Pagar(100));
             StartCoroutine(Waiter());
@@ -212,14 +228,14 @@ public class CardsController : MonoBehaviour
         //3.En bienestar te matricularon en un taller contra tu voluntad, paga 200 para cancelarlo
         //12.Como perdiste tu matricula por no presentar la solicitud en 2 años, tienes que empezar de 0 otra carrera, paga 200 de matricula.
 
-        else if (elegida == 1 || elegida == 3 || elegida == 12 )
+        else if (elegida == 01 || elegida == 03 || elegida == 12 )
         {
             StartCoroutine(PlayerActual.Pagar(200));
             StartCoroutine(Waiter());
 
         }
         //2.Se venció tu prestamo universitario, paga 400 para buscar uno nuevo
-        else if (elegida == 2)
+        else if (elegida == 02)
         {
             StartCoroutine(PlayerActual.Pagar(400));
             StartCoroutine(Waiter());
@@ -227,7 +243,7 @@ public class CardsController : MonoBehaviour
         }
        
         //4.Rompiste un pc del edificio de ingenierías, paga 100
-        else if (elegida == 4)
+        else if (elegida == 04)
         {
             StartCoroutine(PlayerActual.Pagar(100));
             StartCoroutine(Waiter());
@@ -237,27 +253,27 @@ public class CardsController : MonoBehaviour
         //6.Faltaste al 20 % de clases, paga 50 para cancelar el curso
         //10. Perdiste tu carnet de estudiante. 
         //Paga 50 para que te sea otorgado uno nuevo.
-        else if (elegida == 5 || elegida == 6 || elegida ==10)
+        else if (elegida == 05 || elegida == 06 || elegida ==10)
         {
             StartCoroutine(PlayerActual.Pagar(50));
             StartCoroutine(Waiter());
 
         }
         //7.Estás faltando mucho a clases, bienestar te cita, ve allí
-        else if (elegida == 7)
+        else if (elegida == 07)
         {
             StartCoroutine(PlayerActual.GoBienestar());
         }
         //8.Te llegó un subsidio de sostenimiento del icetex.Cobra 200
         //17. Eres elegido para presentar tu proyecto de semillero en una competencia nacional. 
         //Recibes  200 para gastos de transporte. 
-        else if (elegida == 8 || elegida == 17)
+        else if (elegida == 08 || elegida == 17)
         {
             StartCoroutine(PlayerActual.Cobrar(200));
             StartCoroutine(Waiter());
         }
         //9. Faltaste a un parcial y realizas una solicitud de supletorio. Paga 10.
-        else if (elegida == 9)
+        else if (elegida == 09)
         {
             StartCoroutine(PlayerActual.Pagar(10));
             StartCoroutine(Waiter());

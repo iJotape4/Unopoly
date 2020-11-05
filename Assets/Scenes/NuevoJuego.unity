@@ -414,7 +414,6 @@ MonoBehaviour:
   caras: []
   NumeroActual: 0
   PosInicial: {x: 0, y: 0, z: 0}
-  Tag: 
   moviendo: 0
 --- !u!65 &124400144
 BoxCollider:
@@ -3006,7 +3005,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cbc60ef485db3a54e9654c3488542080, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9bce23946e8366f4db8959b396e38374, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4002,9 +4001,26 @@ PrefabInstance:
     - target: {fileID: -3255643355379017767, guid: 5311bff3cb11f5a4584876f60558c0fc,
         type: 3}
       propertyPath: m_Materials.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3255643355379017767, guid: 5311bff3cb11f5a4584876f60558c0fc,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 824015559753126921, guid: 5311bff3cb11f5a4584876f60558c0fc,
+        type: 3}
+    - target: {fileID: -3255643355379017767, guid: 5311bff3cb11f5a4584876f60558c0fc,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 824015559753126921, guid: 5311bff3cb11f5a4584876f60558c0fc,
+        type: 3}
+    - target: {fileID: -1504981713932161579, guid: 5311bff3cb11f5a4584876f60558c0fc,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: 5311bff3cb11f5a4584876f60558c0fc,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
@@ -26173,7 +26189,6 @@ MonoBehaviour:
   caras: []
   NumeroActual: 0
   PosInicial: {x: 0, y: 0, z: 0}
-  Tag: 
   moviendo: 0
 --- !u!23 &4700010696978566178
 MeshRenderer:
