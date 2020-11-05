@@ -15,7 +15,7 @@ public class RedPlayer : Player
         ChibiIcon = GameObject.Find("ImageBook").GetComponent<Image>();
         WinSprite = Resources.Load<Sprite>("BookWins");
         base.Start();
-        StartCoroutine(PlayerFontText());
+      
 
 
           GirarAbajo = new Quaternion(-0.5f, 0.5f, -0.5f, 0.5f);

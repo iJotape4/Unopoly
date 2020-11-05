@@ -15,9 +15,9 @@ public class GreenPlayer : Player
         WinSprite = Resources.Load<Sprite>("LeafWins");
         base.Start();
 
-        GirarAbajo = new Quaternion(-0.5f, 0.5f, 0.5f, -0.5f);
-        GirarIzq = new Quaternion(0f, 0f, 0.7f, -0.7f);
-        GirarArriba = new Quaternion(-0.5f, 0.5f, -0.7f, 0.7f);
-        GirarDerecha = new Quaternion(-0.7f, 0.7f, 0f, 0f);
+        GirarAbajo = new Quaternion(-0.6914649f, -0.132073f, 0.132073f, 0.6973236f);
+        GirarIzq = new Quaternion(-0.4699396f, 0.3331037f, 0.5423005f, 0.6116446f);
+        GirarArriba = new Quaternion(0.132073f, 0.6973236f , 0.6973236f, 0.132073f);
+        GirarDerecha = new Quaternion(0.5423005f, 0.6116446f, 0.3331037f, -0.4699396f);
     }
 }
