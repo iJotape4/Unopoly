@@ -200,7 +200,8 @@ public class CardsController : MonoBehaviour
 
     public void CallCardMethodComArcs(int elegida)
     {
-        //0. Te enfermaste, tienes que pagarle al medico de bienestar 100
+        //0. Te has roto una pierna en un campeonato de basketball de la universidad.
+        //Recibes 100 por la póliza del seguro.
         if (elegida == 0)
         {
             StartCoroutine(PlayerActual.Pagar(100));
@@ -209,8 +210,9 @@ public class CardsController : MonoBehaviour
         }
         //1.Se venció tu plazo para pagar el semestre, paga 200 de penalización
         //3.En bienestar te matricularon en un taller contra tu voluntad, paga 200 para cancelarlo
-        //8.Como perdiste tu matricula por no presentar la solicitud en 2 años, tienes que empezar de 0 otra carrera, paga 200 de matricula.
-        else if (elegida == 1 || elegida == 3 || elegida == 8)
+        //12.Como perdiste tu matricula por no presentar la solicitud en 2 años, tienes que empezar de 0 otra carrera, paga 200 de matricula.
+
+        else if (elegida == 1 || elegida == 3 || elegida == 12 )
         {
             StartCoroutine(PlayerActual.Pagar(200));
             StartCoroutine(Waiter());
@@ -224,7 +226,7 @@ public class CardsController : MonoBehaviour
 
         }
        
-        //4.Rompiste un pc del bloque L, paga 100
+        //4.Rompiste un pc del edificio de ingenierías, paga 100
         else if (elegida == 4)
         {
             StartCoroutine(PlayerActual.Pagar(100));
@@ -233,7 +235,9 @@ public class CardsController : MonoBehaviour
         }
         //5. Perdiste un curso en 2.5, puedes habilitarlo, paga 50 
         //6.Faltaste al 20 % de clases, paga 50 para cancelar el curso
-        else if (elegida == 5 || elegida == 6)
+        //10. Perdiste tu carnet de estudiante. 
+        //Paga 50 para que te sea otorgado uno nuevo.
+        else if (elegida == 5 || elegida == 6 || elegida ==10)
         {
             StartCoroutine(PlayerActual.Pagar(50));
             StartCoroutine(Waiter());
@@ -245,7 +249,9 @@ public class CardsController : MonoBehaviour
             StartCoroutine(PlayerActual.GoBienestar());
         }
         //8.Te llegó un subsidio de sostenimiento del icetex.Cobra 200
-          else if (elegida == 8)
+        //17. Eres elegido para presentar tu proyecto de semillero en una competencia nacional. 
+        //Recibes  200 para gastos de transporte. 
+        else if (elegida == 8 || elegida == 17)
         {
             StartCoroutine(PlayerActual.Cobrar(200));
             StartCoroutine(Waiter());
@@ -256,31 +262,16 @@ public class CardsController : MonoBehaviour
             StartCoroutine(PlayerActual.Pagar(10));
             StartCoroutine(Waiter());
         }
-        //10. Perdiste tu carnet de estudiante. 
-        //Paga 50 para que te sea otorgado uno nuevo.
 
-        else if (elegida == 10)
-        {
-            StartCoroutine(PlayerActual.Pagar(50));
-            StartCoroutine(Waiter());
-        }
         //11. Has sido seleccionado para un intercambio estudiantil 
         //y recibes un desembolso por parte del programa. Cobra 300.
         else if (elegida == 11)
         {
             StartCoroutine(PlayerActual.Cobrar(300));
             StartCoroutine(Waiter());
-        }
-        //12. Te has roto una pierna en un campeonato de basketball de la universidad.
-        //Recibes 100 por la póliza del seguro.
 
-        //17. Eres elegido para presentar tu proyecto de semillero en una competencia nacional. 
-        //Recibes  200 para gastos de transporte. 
-        else if (elegida == 12 || elegida ==17)
-        {
-            StartCoroutine(PlayerActual.Cobrar(200));
-            StartCoroutine(Waiter());
         }
+        
         //13. Hoy es tu cumpleaños. Cada jugador te paga 50.
         else if (elegida == 13)
         {
