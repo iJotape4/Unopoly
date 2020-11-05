@@ -15,10 +15,12 @@ public class RedPlayer : Player
         ChibiIcon = GameObject.Find("ImageBook").GetComponent<Image>();
         WinSprite = Resources.Load<Sprite>("BookWins");
         base.Start();
+        StartCoroutine(PlayerFontText());
 
-        GirarAbajo = new Quaternion(1f, 0f, 0f, -0f);
-        GirarIzq = new Quaternion(0.7f, 0f, -0.7f, 0f);
-        GirarArriba = new Quaternion(0f, 0f, -1f, 0f);
-        GirarDerecha = new Quaternion(0.7f, 0f, 0.7f, 0f);
+
+          GirarAbajo = new Quaternion(-0.5f, 0.5f, -0.5f, 0.5f);
+         GirarIzq = new Quaternion( 0.7071068f, -0.7071068f, -0f,0f );
+        GirarArriba = new Quaternion(0.5f, -0.5f, -0.5f, 0.5f);
+        GirarDerecha = new Quaternion(0f, 0f, -0.7071068f, 0.7071068f);
     }   
 }
